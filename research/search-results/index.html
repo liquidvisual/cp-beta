@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        
+        
+            
+                Checkpoint Prototype - 
+            
+        
+    </title>
+
+    <link rel="canonical" href="/research/search-results/">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <link rel="stylesheet" href="/assets/css/optimized.css"/>
+
+    <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
+
+    <script src="/assets/scripts/priority-optimized.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super developerX">
+        <div class="lv-page  ">
+
+            <!-- HEADER -->
+            <header class="lv-header">
+                <section class="text-center large-text-left">
+
+	<!-- Mobile Buttons -->
+	<div class="left">
+		<a class="mobile-nav-btn left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a id="context-menu-btn" class="mobile-nav-btn left " href="#"><i class="fi-widget"></i></a>
+	</div>
+
+	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+
+	<ul class="lv-inline-list logo-switcher-wrapper">
+		<li>
+			<!-- Logo -->
+			<a title="Checkpoint®" class="logo show-for-medium-up" href="/.DS_Store">
+				<img src="/assets/img/content/logo.png" alt="Thomson Reuters Checkpoint">
+			</a>
+		</li>
+		<li>
+			<!-- Country Toggle -->
+			<div class="country-toggle">
+				<select>
+					<option value="au">Australia</option>
+					<option value="nz">New Zealand</option>
+				</select>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<!-- User Profile -->
+<section class="user-profile right text-right show-for-large-up">
+	<div class="left">
+		<strong class="user-profile-title">Jason Chen</strong>
+		<a class="logout-btn" href="#">LOGOUT</a>
+	</div>
+	<a class="right user-profile-pic" href="#">
+		<img width="40" src="/assets/img/ui/no-face.png" alt="Profile Pic">
+	</a>
+</section>
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="lv-topbar show-for-large-up">
+                <section class="primary-nav">
+    <ul>
+        <li class=""><a href="/.DS_Store"> Home</a></li>
+        <li class=""><a href="/research/"> Research</a></li>
+
+        <!-- <li class=""><a href="/workflow/"> Workflow</a></li>
+        <li class=""><a href="/tools/"> Tools</a></li>
+        <li class=""><a href="/learning/"> Learning</a></li> -->
+    </ul>
+</section>
+            </nav>
+
+            <!-- STAGE -->
+            <section class="lv-stage">
+
+                <!-- CONTEXT MENU -->
+                <nav class="lv-context-menu">
+                    <div class="lv-inner">
+    <section class="secondary-nav">
+
+        
+            <!-- UNTOUCHED OUTPUT FROM CHECKPOINT -->
+
+<section id="sidebar" style="height: 273px;">
+    <h1>Search Summary</h1>
+    <div id="searchsummary">
+
+        <ul id="resultsummary">
+            <li class="searchInfo">
+                <span class="title">Documents matched: </span>
+                <span id="totalDocumentCount" class="result searchDataForDev">39</span>
+            </li>
+            <li class="searchInfo">
+                <span class="title">Search terms: </span>
+                <span class="result">Free Text (politis)</span>
+                <strong>
+                <span style="font-size:x-small;" id="filterStatus"></span>
+                </strong>
+            </li>
+        </ul>
+
+        <div class="separador"></div>
+        <ul id="searchoptions">
+            <li id="editsearch" class="searchInfo">
+                <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=false" id="lnkEditSearch">Edit Search</a>
+            </li>
+            <li id="newsearch" class="searchInfo">
+                <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=true" id="lnkNewSearch">New Search</a>
+            </li>
+            <li id="savesearch" class="searchInfo">
+                <a href="#" id="add2Fav" title="Save Search">Save this search to my folders</a>
+                <div id="favFormContainerPopup">
+                    <div id="closeFavFormContainer" class="closeFavFormContainer">&nbsp;</div>
+                </div>
+            </li>
+
+        </ul>
+
+        <div id="refinesearch">
+            <h3>Filter your Search</h3>
+            <form id="metadocs" class="leftResultColumn" action="/maf/app/search/filter">
+                <ul>
+                    <li class="collapsed hasChildren"><a id="productTypeLink" field="product.type" href="#" class="resultMetadocLink">&nbsp;</a>Content Type
+                <ul id="productTypeMetadoc" class="resultMetadoc"></ul>
+            </li>
+            <li class="collapsed hasChildren"><a id="practiceAreaLink" href="#" field="subject.area" class="resultMetadocLink">&nbsp;</a>Subject Area
+            <ul id="practiceAreaMetadoc" class="resultMetadoc"></ul>
+    </li>
+
+    <li class="collapsed hasChildren"><a field="product" id="productLink" href="#" class="resultMetadocLink">&nbsp;</a>Product Title
+        <ul id="productMetadoc" class="resultMetadoc"></ul>
+    </li>
+
+    <li class="collapsed hasChildren"><a id="jurisLink" href="#" field="juris.l1" class="resultMetadocLink">&nbsp;</a>Jurisdiction
+        <ul id="jurisMetadoc" class="resultMetadoc"></ul>
+    </li>
+</ul>
+
+<input type="hidden" name="resultHandle" value="ia744d064000001497915dfa27d189d43">
+<input type="hidden" name="ao" value="o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca">
+<input type="hidden" name="resultType" value="SEARCH">
+<input type="hidden" name="trail" value="false">
+<input type="hidden" name="predefinedRelationshipsType" value="resultList">
+<input type="hidden" name="originates-from-link" value="false">
+<input type="hidden" name="originates-from-link-before" value="false">
+<input type="hidden" name="backToOrigResults" value="true">
+<input type="hidden" name="sortid" value="Relevancy">
+<input type="hidden" name="tab" value="research">
+<input id="goButton" type="submit" value="Go" class="goDisabled" disabled="disabled">
+</form>
+</div>
+</div>
+</section>
+        
+
+    </section> <!-- .secondary-nav -->
+</div> <!-- .lv-inner -->
+                </nav>
+
+                <!-- MAIN -->
+                <main class="lv-main">
+                    <div class="row">
+                        <div class="columns">
+                            <div class="row">
+    <div class="columns">
+        <h3>Refine your Search</h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 large-10 large-centered columns">
+        <form data-abide novalidate id="contact" action="/" method="post">
+            <div class="row collapse postfix-radius">
+                <div class="small-12 medium-9 columns">
+                    <input name="q" class="text-center" type="text" placeholder="Type Keywords to Refine Search">
+                </div>
+                <div class="hide-for-small medium-3 columns">
+                    <button type="submit" class="button flat radius postfix">Refine Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+        <h3>Search Results <span class="label round secondary">35</span></h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="medium-6 columns">
+        <a href="#" class="button medium radius">Actions</a>
+    </div>
+    <div class="medium-6 columns">
+        <div class="row">
+            <div class="medium-4 columns">
+                <select>
+                    <option value="">Most</option>
+                    <option value="">Westlaw NZ</option>
+                    <option value="">Westlaw USA</option>
+                    <option value="">Westlaw CAN</option>
+                </select>
+            </div>
+            <div class="medium-8 columns">
+                <select>
+                    <option value="">Relevance</option>
+                    <option value="">Westlaw NZ</option>
+                    <option value="">Westlaw USA</option>
+                    <option value="">Westlaw CAN</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+
+        <div id="documentlistcontainer">
+            <div id="" class="clearfix">
+
+
+
+
+
+
+<div id="viewas">
+                                    <a href="/maf/api/tocwithhit/navigate?ndd=2&amp;bcguid=AUNZ_TOC%7C%7Canzcproot&amp;searchFrom=&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;fullResult=true&amp;resultType=toc&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;use-summarization=true" id="lnkResultToc">Tree of Contents</a>
+     |
+                        <span class="disableType">Document List</span>
+    </div>
+            </div>
+            <div id="resultstopheaderoptions" class="clearfix">
+                <div id="selectAllCheckbox">
+    <input type="checkbox" id="selectAll" name="selectAll" value=""><label for="selectAll" id="selectAllLabel">Select All</label></div>             <div id="pagertop">
+
+
+
+
+
+                </div>
+            </div>
+
+            <div id="resultsContainer">
+
+
+
+
+
+
+
+
+
+                                                                                <!--?xml version="1.0" encoding="UTF-8"?--><form id="resultsContainerForm"><div order="1" class="result clearfix"><div class="resultCheckBox"><input value="1" class="documentSelection" type="checkBox"></div><dl class="resultMetadata clearfix"><dt class="titleLabel"><strong>Title:</strong></dt><dd class="titleBody"><span class="docRank">1. </span><strong><a href="/maf/app/document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;docguid=I631e24289eaf11e0a619d462427863b2&amp;startChunk=1&amp;endChunk=1&amp;epos=1&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC" class="documentLink" id="lnkResultDoc_I631e24289eaf11e0a619d462427863b2">Commissioner of State Revenue (Vic) v Politis</a></strong></dd><dt class="itemLabel"><strong>Content type: </strong></dt><dd class="contentTypeBody">Cases</dd><dt class="itemLabel"><strong>Court: </strong></dt><dd class="courtBody">Supreme Court of Victoria</dd><dt class="itemLabel"><strong>Jurisdiction: </strong></dt><dd class="jurisdictionBody">Australia (VIC)</dd><dt class="itemLabel"><strong>Judgment date: </strong></dt><dd class="judgmentDateBody">20/4/2004</dd><dt class="itemLabel"><strong>Citations: </strong></dt><dd class="citationBody">[2004] VSC 126, (2004) 55 ATR 491, 22 VAR 112, 2004 ATC 4442, [2004] V ConvR 54-693, [2004] ALMD 4896</dd><dt class="itemLabel"><strong>Court File Number: </strong></dt><dd class="courtFileNumberBody">8321 of 2003</dd><dt class="itemLabel"><strong>Document:</strong></dt><dd class="documentBody">(2004) 55 ATR 491<a class="rendDownloadPDF" href="/maf/app/blob?blobguid=Ic09546c0cc8511e08eefa443f89988a0&amp;file=(2004)_55_ATR_491.pdf" id="Ic09546c0cc8511e08eefa443f89988a0" name="blob">&nbsp;<img src="/cpau/images/docicons/ico-pdf.png" alt="Click to view PDF." class="rendDownloadPDF"></a></dd><dt class="itemLabel" style="display: block;"><strong>Hit terms in context:&nbsp;</strong></dt><dd class="hitTermsInContextBody" style="display: block;"><p class="snippet">...
+                Con, George and Steven Politis. 5 By contract of sale of land dated 29 June 2002 (the first agreement) Vittorio <span style="background-color:#FFE8B2;padding:2px;" class="nhit"><a href="/maf/app/document?&amp;src=search&amp;docguid=I631e24289eaf11e0a619d462427863b2&amp;epos=1&amp;snippets=true&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;fcwh=true&amp;startChunk=1&amp;endChunk=1&amp;nstid=std-anz-highlight&amp;nsds=AUNZ_CA_TAXRP&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC&amp;context=25&amp;extLink=false&amp;anchor=nhit-1291" class="documentLink" name="docPosition1" docguid="I631e24289eaf11e0a619d462427863b2" id="lnkResultDoc_I631e24289eaf11e0a619d462427863b2">Orlando</a></span> Mirasco agreed to sell to the first respondent, Angela Politis, or her nominee the land situate at 53 Janet Crescent
+            ...</p></dd></dl></div><div order="2" class="result clearfix"><div class="resultCheckBox"><input value="2" class="documentSelection" type="checkBox"></div><dl class="resultMetadata clearfix"><dt class="titleLabel"><strong>Title:</strong></dt><dd class="titleBody"><span class="docRank">2. </span><strong><a href="/maf/app/document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;docguid=Ib8b45aca9cc611e0a619d462427863b2&amp;startChunk=1&amp;endChunk=1&amp;epos=2&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC" class="documentLink" id="lnkResultDoc_Ib8b45aca9cc611e0a619d462427863b2">Shand v Commissioner of Taxation</a></strong></dd><dt class="itemLabel"><strong>Content type: </strong></dt><dd class="contentTypeBody">Cases</dd><dt class="itemLabel"><strong>Court: </strong></dt><dd class="courtBody">Administrative Appeals Tribunal of Australia</dd><dt class="itemLabel"><strong>Jurisdiction: </strong></dt><dd class="jurisdictionBody">Australia (CTH)</dd><dt class="itemLabel"><strong>Judgment date: </strong></dt><dd class="judgmentDateBody">26/3/2003</dd><dt class="itemLabel"><strong>Citations: </strong></dt><dd class="citationBody">[2003] AATA 279, (2003) 52 ATR 1088, 2003 ATC 2080</dd><dt class="itemLabel"><strong>Court File Number: </strong></dt><dd class="courtFileNumberBody">QT2000/142 , QT2001/96</dd><dt class="itemLabel"><strong>Document:</strong></dt><dd class="documentBody">(2003) 52 ATR 1088<a class="rendDownloadPDF" href="/maf/app/blob?blobguid=I0e504790cc7f11e08eefa443f89988a0&amp;file=(2003)_52_ATR_1088.pdf" id="I0e504790cc7f11e08eefa443f89988a0" name="blob">&nbsp;<img src="/cpau/images/docicons/ico-pdf.png" alt="Click to view PDF." class="rendDownloadPDF"></a></dd><dt class="itemLabel" style="display: block;"><strong>Hit terms in context:&nbsp;</strong></dt><dd class="hitTermsInContextBody" style="display: block;"><p class="snippet">...
+                he departed Australia via Singapore to Kuwait, where he stayed for 32 days, before attending an international dealer conference in <span style="background-color:#FFE8B2;padding:2px;" class="nhit"><a href="/maf/app/document?&amp;src=search&amp;docguid=Ib8b45aca9cc611e0a619d462427863b2&amp;epos=2&amp;snippets=true&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;fcwh=true&amp;startChunk=1&amp;endChunk=1&amp;nstid=std-anz-highlight&amp;nsds=AUNZ_CA_TAXRP&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC&amp;context=25&amp;extLink=false&amp;anchor=nhit-8092" class="documentLink" name="docPosition2" docguid="Ib8b45aca9cc611e0a619d462427863b2" id="lnkResultDoc_Ib8b45aca9cc611e0a619d462427863b2">Orlando</a></span>, Florida (for 3 days). He arrived in Australia via Canada on 28 October 1995. (91) In September 1995, Mr Shand
+            ...</p></dd></dl></div><div order="3" class="result clearfix"><div class="resultCheckBox"><input value="3" class="documentSelection" type="checkBox"></div><dl class="resultMetadata clearfix"><dt class="titleLabel"><strong>Title:</strong></dt><dd class="titleBody"><span class="docRank">3. </span><strong><a href="/maf/app/document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;docguid=I950a28fa9cf011e0a619d462427863b2&amp;startChunk=1&amp;endChunk=1&amp;epos=3&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC" class="documentLink" id="lnkResultDoc_I950a28fa9cf011e0a619d462427863b2">Mistmorn Pty Ltd (In Liq) v Yasseen</a></strong></dd><dt class="itemLabel"><strong>Content type: </strong></dt><dd class="contentTypeBody">Cases</dd><dt class="itemLabel"><strong>Court: </strong></dt><dd class="courtBody">Federal Court of Australia</dd><dt class="itemLabel"><strong>Jurisdiction: </strong></dt><dd class="jurisdictionBody">Australia (CTH)</dd><dt class="itemLabel"><strong>Judgment date: </strong></dt><dd class="judgmentDateBody">2/8/1996</dd><dt class="itemLabel"><strong>Citations: </strong></dt><dd class="citationBody">(1996) 33 ATR 332, 21 ACSR 173, 14 ACLC 1,387</dd><dt class="itemLabel"><strong>Document:</strong></dt><dd class="documentBody">(1996) 33 ATR 332<a class="rendDownloadPDF" href="/maf/app/blob?blobguid=Id806ebc0cc7f11e08eefa443f89988a0&amp;file=(1996)_33_ATR_332.pdf" id="Id806ebc0cc7f11e08eefa443f89988a0" name="blob">&nbsp;<img src="/cpau/images/docicons/ico-pdf.png" alt="Click to view PDF." class="rendDownloadPDF"></a></dd><dt class="itemLabel" style="display: block;"><strong>Hit terms in context:&nbsp;</strong></dt><dd class="hitTermsInContextBody" style="display: block;"><p class="snippet">...
+                said that Mr Yasseen normally ordered the goods and attended to payment. Mr Richard Ayson, formerly an employee of the <span style="background-color:#FFE8B2;padding:2px;" class="nhit"><a href="/maf/app/document?&amp;src=search&amp;docguid=I950a28fa9cf011e0a619d462427863b2&amp;epos=3&amp;snippets=true&amp;srguid=ia744cc6400000148866b9250729a94f9&amp;fcwh=true&amp;startChunk=1&amp;endChunk=1&amp;nstid=std-anz-highlight&amp;nsds=AUNZ_CA_TAXRP&amp;isTocNav=true&amp;tocDs=AUNZ_CASES_TOC&amp;context=25&amp;extLink=false&amp;anchor=nhit-5759" class="documentLink" name="docPosition3" docguid="I950a28fa9cf011e0a619d462427863b2" id="lnkResultDoc_I950a28fa9cf011e0a619d462427863b2">Orlando</a></span> Wyndham Group, gave evidence that he met Mr Yasseen at Campsie Duty Free on 11 February 1992 and received an
+            ...</p></dd></dl></div></form>
+
+            </div>
+            <div id="pagerbottom" class="clearfix">
+
+            </div>
+        </div>
+
+
+
+
+
+   </div>
+</div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- SIDEBAR -->
+                <aside class="lv-sidebar">
+                    <ul class="tabs text-center" data-tab role="tablist">
+	<li class="tab-title active">
+		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
+	</li>
+	<li class="tab-title">
+		<a title="Links" href="#lv-links" role="tab"><i class="fi-bookmark"></i> <span class="text">Links</span></a>
+	</li>
+	<li class="tab-title collapse-btn">
+		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
+	</li>
+</ul>
+
+<!-- TABS CONTENT -->
+<div class="tabs-content">
+
+	<!-- DETAILS -->
+	<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
+		
+			<h4>How Sorting is Ordered</h4><p>Relevance is determined by two factors (1) the number of times your search terms appear in a document and (2) the proximity of those search terms to each other.</p><p>Weighted is based upon the location of the keywords in a document (hits). Hits found in one document field will be assigned priority (weighting) over hits in another document field.</p><p><strong>Note: All current documents will have precedence over archived documents</strong></p>
+		
+	</section>
+
+	<!-- LINKS -->
+	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
+		<h3>My Quicklinks</h3>
+		<br>
+		<ul class="lv-quicklinks content-block">
+			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+			<li class="li"><a href="#">This is an example of a quicklink</a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+			<li class="li"><a href="#">This is an example of a quicklink</a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+		</ul>
+	</section>
+</div>
+                </aside>
+
+            </section> <!-- .stage -->
+
+            <!-- FOOTER -->
+            <footer class="lv-footer">
+                <div class="row collapse is-full-width">
+    <div class="medium-6 medium-push-6 columns">
+        <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </div>
+    <div class="medium-6 medium-pull-6 columns">
+        <div class="text-center medium-text-left">
+            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+        </div>
+    </div>
+</div>
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        <ul>
+    <li class=""><a href="/.DS_Store"><i class="fi-home"></i>&nbsp; Home</a></li>
+    <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a></li>
+</ul>
+
+<!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li> -->
+    <!-- <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li> -->
+    <!-- <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li> -->
+    <!-- <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li> -->
+    <!-- <li class=""><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li> -->
+
+<!-- <ul class="no-bullet">
+    <li class="active"><a href="/research/cases/">Basic</a></li>
+    <li><a href="/research/cases/">Cases</a></li>
+    <li><a href="/research/cases/">Legislation / Commentary</a></li>
+    <li><a href="/research/cases/">Journals</a></li>
+    <li><a href="/research/cases/">News</a></li>
+    <li><a href="/research/cases/">Government and Regulatory</a></li>
+</ul> -->
+    </nav>
+
+    <!-- OFF-CANVAS MENU (RIGHT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        <ul>
+    <li><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="#">History</a></li>
+    <li><a href="#">Preferences</a></li>
+    <li><a href="#">Client ID</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Feedback</a></li>
+</ul>
+    </nav>
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <script src="/assets/scripts/optimized.js"></script>
+
+    <script>
+        $(document).foundation();
+
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
+
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
+               }
+            });
+         });
+
+        $(function() {
+            FastClick.attach(document.body);
+        });
+
+    </script>
+
+    <!-- Analytics Scripts Here -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Robots.txt file created by http://www.webtoolcentral.com
+
+User-agent: *
+Disallow: /
