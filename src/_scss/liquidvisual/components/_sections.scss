@@ -1,0 +1,174 @@
+/*
+	LIQUIDVISUAL SECTIONS :: A Personal Framework
+
+	- updated: 21.10.14
+	- liquidvisual.com
+
+	- Notes -
+
+	- Repeatable patterns for content sections (chunks)
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$section-bottom: rem-calc(30) !default;
+
+$color-section-bg-1: $primary-color !default;
+$color-section-bg-2: $secondary-color !default;
+$color-section-bg-3: $tertiary-color !default;
+$color-section-bg-4: #8BCCB9 !default;
+$color-section-bg-5: aqua !default;
+
+//-----------------------------------------------------------------
+// Section Types
+//
+// 01. Section
+// Apply styles to all sections
+//-----------------------------------------------------------------
+
+.section {
+    position: relative;
+    margin-bottom: rem-calc(30);
+
+    &.has-small-padding  { padding: rem-calc(20 0);  }
+    &.has-medium-padding { padding: rem-calc(30 0);  }
+    &.has-large-padding  { padding: rem-calc(50 0);  }
+    &.has-xlarge-padding { padding: rem-calc(100 0); }
+
+    &.has-no-margin {
+        margin: 0;
+    }
+}
+
+//-----------------------------------------------------------------
+// Color Section
+//-----------------------------------------------------------------
+
+.color-section {
+    h1, h2 {
+        color: #222;
+    }
+
+    p {
+        // color: #222;
+    }
+
+    &.light {
+        h2, p, .button {
+            color: #222;
+            border-color: #222;
+        }
+    }
+
+    &.dark {
+        h2, p, .button {
+            color: white;
+            border-color: white;
+        }
+    }
+
+    &.color-1 { background-color: $color-section-bg-1; }
+    &.color-2 { background-color: $color-section-bg-2; }
+    &.color-3 { background-color: $color-section-bg-3; }
+    &.color-4 { background-color: $color-section-bg-4; }
+    &.color-5 { background-color: $color-section-bg-5; }
+}
+
+//-----------------------------------------------------------------
+// Image Section
+//-----------------------------------------------------------------
+
+.image-section {
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+
+    //=========================================
+    // Buttons
+    //=========================================
+
+    h2, p, .button {
+        color: white; // add variable
+        border-color: white; // add variable
+    }
+
+    //=========================================
+    // has-fixed-bg
+    //=========================================
+
+    &.has-fixed-bg {
+        background-attachment: fixed;
+    }
+
+    //=========================================
+    // has-color-overlay
+    //=========================================
+
+    &.has-color-overlay:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(#222, 0.5);
+
+    }
+}
+
+//-----------------------------------------------------------------
+// Claim Section
+//-----------------------------------------------------------------
+
+.claim-section {
+    background: white;
+    border-bottom: 1px solid #e1e1e1;
+
+    .divider {
+        @media #{$medium-up} {
+            background: #e1e1e1;
+            width: 1px;
+            height: 130px;
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            margin-top: -65px;
+        }
+        @media #{$large-up} {
+            left: 0;
+        }
+        @media #{$xlarge-up} {
+            left: 10%;
+        }
+    }
+}
+
+//=========================================
+//
+//=========================================
+
+.claim-section .button-list {
+    position: relative;
+
+    @media #{$medium-up} {
+        padding: rem-calc(50 0);
+    }
+
+    a {
+        margin: rem-calc(10 0);
+
+        @media #{$large-up} {
+            margin: rem-calc(10 0);
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+

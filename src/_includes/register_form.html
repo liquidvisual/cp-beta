@@ -1,0 +1,36 @@
+<!-- Note: Client side error checking is handled by Foundation Abide JS. -->
+
+<form data-abideX novalidate id="contact-form" class="custom" action="/" method="post">
+
+    <select name="Platform">
+        <option selected disabled>Platform</option>
+        {% for product in site.data.products %}
+            <option value="{{ product.title }}">{{ product.title }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="title">
+        <option selected disabled>Title</option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Dr">Dr</option>
+        <option value="etc">etc</option>
+    </select>
+
+    <input type="text" name="first-name" placeholder="First Name*" required>
+    <!--<small class="error">Please provide name</small>-->
+    <input type="text" name="last-name" placeholder="Last Name*" required>
+    <!--<small class="error">Please provide name</small>-->
+    <input type="text" name="email" placeholder="email*" required>
+    <!--<small class="error">Please provide name</small>-->
+    <input type="text" name="company-name" placeholder="Company Name*" required>
+    <!--<small class="error">Please provide name</small>-->
+    <input type="text" name="job-title" placeholder="Job Title" required>
+    <!--<small class="error">Please provide name</small>-->
+    <textarea rows="10" name="topics" placeholder="Please describe what topics you'd like the training session to cover" required></textarea>
+    <!--<small class="error">Please provide message</small> -->
+
+    <button class="lv-button expand-for-small center" type="submit">Register Now</button>
+    <p class="right"><small>*required fields</small></p>
+
+</form> <!-- .custom -->

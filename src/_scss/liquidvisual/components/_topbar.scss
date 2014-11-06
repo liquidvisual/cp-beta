@@ -1,0 +1,153 @@
+/*
+	LIQUIDVISUAL TOPBAR :: A Personal Framework
+
+	- updated: 16.10.14
+	- liquidvisual.com
+
+	- Notes -
+	- Requires Modernizr
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+.topbar {
+	z-index: 1;
+}
+
+.topbar ul {
+	// margin-bottom: 0;
+	// font-size: rem-calc(17);
+	// background: red;
+	margin: 0;
+	padding-bottom: rem-calc(10);
+	// padding-bottom: rem-calc(4);
+
+	@media #{$medium-up} {
+		width: 100%;
+		display: table;
+		text-align: center;
+	}
+}
+
+.topbar li {
+	display: inline-block;
+	display: table-cell;
+
+	@media #{$large-up} {
+
+	}
+}
+
+.topbar li.has-dropdown a:after {
+	content: "\f0d7";
+	font-family: "FontAwesome";
+	padding-left: rem-calc(5);
+}
+
+.topbar a {
+	@extend .transition;
+	display: block;
+	padding: rem-calc(5 12);
+	margin: rem-calc(0 2);
+	// margin: rem-calc(10 0);
+	color: white;
+	font-weight: 500;
+
+	@media #{$large-up} {
+		color: white;
+	}
+}
+
+.topbar a:active,
+.topbar .active > a {
+	background: darken($secondary-color, 10%);
+	border-radius: $global-radius;
+}
+
+.no-touch .topbar a:hover {
+	color: white;
+	// background: #222;
+	background: rgba(0, 0, 0, .5);
+	border-radius: $global-radius;
+}
+
+//=========================================
+// Nested Dropdowns
+//=========================================
+
+.topbar .has-dropdown:hover > a {
+	// background: #3B6871;
+}
+
+/* UX decision, dropdowns are fiddly on tablets */
+.no-touch .topbar .has-dropdown:hover > .dropdown {
+	opacity: 1;
+	height: auto;
+	overflow: visible;
+}
+
+.no-touch .topbar .dropdown .has-dropdown:hover > .dropdown {
+	opacity: 1;
+	height: auto;
+}
+
+.topbar .dropdown {
+	@extend .transition;
+	position: absolute;
+	opacity: 0;
+	height: 0; // so hit areas aren't triggered
+	overflow: hidden; // so hit areas aren't triggered
+	top: 50px;
+	left: auto;
+	width: rem-calc(300);
+	background: #3B6871;
+	margin: 0;
+}
+
+/* Third level nesting */
+.topbar .dropdown .dropdown {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.topbar .dropdown li {
+	position: relative;
+	float: none;
+	display: block;
+}
+
+.topbar .dropdown a {
+	border-bottom: 1px solid rgba(255,255,255,.1);
+	margin: 0;
+}
+
+.topbar .dropdown li:last-child a {
+	border-bottom: 0;
+}
+
+.topbar .dropdown a:hover {
+	background: #4A757E;
+}
+
+
+
+.transition {
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+	    -ms-transition: all .2s linear;
+	        transition: all .2s linear;
+
+	-webkit-transition-property: opacity, color, background;
+	   -moz-transition-property: opacity, color, background;
+	     -o-transition-property: opacity, color, background;
+	    -ms-transition-property: opacity, color, background;
+            transition-property: opacity, color, background;
+}

@@ -1,0 +1,123 @@
+/*
+    LEGACY.CSS
+
+    - Last updated: 18.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Context Menu
+//-----------------------------------------------------------------
+
+.lv-context-menu ul {
+	list-style: none;
+	margin: 0;
+}
+
+.lv-context-menu h1 {
+	font-size: rem-calc(20); // style has H4
+	text-align: center;
+	// background: aqua;
+	margin: rem-calc(15);
+}
+
+.lv-context-menu .searchTemplateHelpIcon {
+	display: none; // remove until later, hard to implement responsive
+}
+
+//-----------------------------------------------------------------
+// Research Search Form
+//-----------------------------------------------------------------
+
+#documentoptionicons span[title="Print documents"],
+#documentoptionicons span[title="Download documents"],
+#documentoptionicons span[title="Email documents"],
+#documentoptionicons span[title="Create Individual alert"],
+#documentoptionicons span[title="Create Organisational alert"],
+#documentoptionicons #rsslink {
+
+	width: rem-calc(40);
+	height: rem-calc(40);
+	position: relative;
+
+
+	img {
+		position: absolute;
+		top: -10px;
+		left: 0;
+		width: rem-calc(40);
+		height: rem-calc(40);
+		visibility: hidden;
+	}
+
+	&:before {
+		@extend .foundation-icons;
+		content: "\f19f";
+		font-size: rem-calc(30);
+		padding: 5px;
+	}
+}
+
+//-----------------------------------------------------------------
+// Results
+//-----------------------------------------------------------------
+
+#resultsContainerForm {
+	margin-bottom: 50px;
+}
+
+#navbar {
+	padding: 0 !important;
+	width: auto !important;
+	margin-bottom: 20px;
+}
+
+#deliveryForm {
+	display: none !important;
+}
+
+#documentNavPadOut {
+	display: none !important;
+}
+
+#documentDisplay,
+#resultsContainerForm .result {
+	background: white;
+	padding: 20px;
+	border: 1px solid #DDDDDD;
+	// border-radius: 5px;
+	margin-bottom: 20px;
+	box-shadow: 0px 2px 3px 2px rgba(0,0,0,0.05);
+}
+
+#resultsContainerForm ul {
+	list-style: none;
+	margin: 0;
+}
+
+#resultsContainerForm dt.titleLabel {
+	display: none;
+}
+
+/* title header */
+#resultsContainerForm dd.titleBody {
+	font-size: 22px;
+}
+
+.resultMetadata dt,
+.resultTitle dt {
+	clear: left;
+	float: left;
+	width: 130px;
+	padding: 2px 0;
+	margin-right: 15px;
+}
+
+.resultMetadata dd,
+.resultTitle dd {
+	float: left;
+	width: 80%;
+	padding: 2px 0;
+}

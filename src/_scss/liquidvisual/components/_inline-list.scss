@@ -1,0 +1,67 @@
+/*
+	LIQUIDVISUAL INLINE LIST :: A Personal Framework
+
+	- updated: 22.10.14
+	- liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$inline-list-spacing: rem-calc(10) !default;
+
+//-----------------------------------------------------------------
+// Inline List
+//-----------------------------------------------------------------
+
+.lv-inline-list {
+	margin: 0; /* failsafe */
+	clear: both;
+
+	li {
+		float: left;
+		display: inline-block;
+		padding-left: $inline-list-spacing;
+
+		&:first-child {
+			padding-left: rem-calc(15) !important; // getting complex...
+		}
+
+		a {
+			display: inline-block; /* for padding */
+		}
+	}
+
+	&.medium-gaps li {
+		padding-left: $inline-list-spacing * 2;
+	}
+
+	&.large-gaps li {
+		padding-left: $inline-list-spacing * 4;
+	}
+
+	&.close-gaps li {
+		padding-left: 0;
+	}
+
+	@media #{$medium-up} {
+		display: inherit;
+	}
+}
+
+//-----------------------------------------------------------------
+// Assume if there's text-left, text-right etc classes on it
+// we'll let those take care of the positioning, no floats.
+//-----------------------------------------------------------------
+
+.lv-inline-list[class*='text']
+{
+	width: 100%;
+
+	li {
+		float: none;
+		// aligns properly on stack
+		padding-left: $inline-list-spacing;
+		padding-right: $inline-list-spacing;
+	}
+}

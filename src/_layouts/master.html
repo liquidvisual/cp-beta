@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>       <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if lt IE 9]>       <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>          <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        {% comment %} SEO IMPLEMENTATION {% endcomment %}
+        {% if page.url == '/' %}
+            {{ site.data.settings.seo_title }}
+        {% else %}
+            {% if page.seo_title %}
+                {{ page.title }} - {{ page.seo_title }}
+            {% else %}
+                {{ page.title }} - {{ site.data.settings.seo_title }}
+            {% endif %}
+        {% endif %}
+    </title>
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+
+    <!-- Google Fonts CDN -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+
+    <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
+    <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="/css/foundation/app.css">
+    <link rel="stylesheet" href="/css/liquidvisual/liquidvisual.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
+
+    <!-- build:js(src) /assets/scripts/priority-optimized.js -->
+    <script src="/scripts/legacy/jquery-1.11.1.min.js"></script>
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <!--[if lt IE 9]>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="lv-super developerX">
+        <div class="lv-page {% if page.exclude_menu %} exclude-menu {% endif %} {% if page.url == "/" %} homepage {% endif %}">
+
+            <!-- HEADER -->
+            <header class="lv-header">
+                {% include header.html %}
+            </header>
+
+            <!-- NAVIGATION -->
+            <nav class="lv-topbar show-for-large-up">
+                {% include topbar.html %}
+            </nav>
+
+            <!-- STAGE -->
+            <section class="lv-stage">
+
+                <!-- CONTEXT MENU -->
+                <nav class="lv-context-menu">
+                    {% include context_menu.html %}
+                </nav>
+
+                <!-- MAIN -->
+                <main class="lv-main">
+                    <div class="row">
+                        <div class="columns">
+                            {{ content }}
+                        </div>
+                    </div>
+                </main>
+
+                <!-- SIDEBAR -->
+                <aside class="lv-sidebar">
+                    {% include sidebar.html %}
+                </aside>
+
+            </section> <!-- .stage -->
+
+            <!-- FOOTER -->
+            <footer class="lv-footer">
+                {% include footer.html %}
+            </footer>
+
+        </div> <!-- .lv-page -->
+    </div> <!-- .lv-super -->
+
+    <!-- OFF-CANVAS MENU (LEFT) -->
+    <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
+        {% include navigation_off_canvas.html %}
+    </nav>
+
+    <!-- OFF-CANVAS MENU (RIGHT) -->
+    <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
+        {% include navigation_off_canvas_right.html %}
+    </nav>
+
+    <!-- ***** JAVASCRIPT ***** -->
+
+    <!-- build:js(src) /assets/scripts/optimized.js -->
+    <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
+    <script src="/_bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+    <script src="/_bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="/_bower_components/jquery.transit/jquery.transit.js"></script>
+    <script src="/_bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="/_bower_components/nprogress/nprogress.js"></script>
+    <script src="/_bower_components/WOW/dist/wow.min.js"></script>
+    <script src="/scripts/legacy/foundation.js"></script>
+    <script src="/scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        $(document).foundation();
+
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
+
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
+               }
+            });
+         });
+
+        $(function() {
+            FastClick.attach(document.body);
+        });
+
+    </script>
+
+    <!-- Analytics Scripts Here -->
+
+    <!-- No Javascript Warning -->
+    <noscript>
+        <div class="lv-alert lv-unselectable">
+            <p>Your browser has Javascript disabled. Some features may be limited.</p>
+        </div>
+    </noscript>
+
+</body>
+</html>

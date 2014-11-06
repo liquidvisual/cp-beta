@@ -1,0 +1,23 @@
+# GLOBAL SITE SETTINGS
+
+# General
+seo_title: ""
+title: ""
+company: ""
+logo: "/img/content/logo.png"
+description: ""
+
+# Contact Info
+email: test@example.com
+phone: (05) 555 555
+fax: (05) 555 555
+address: "ABC Street, Earth"
+
+# Social Networks
+facebook: ""
+
+# Google Map
+google_map: ""
+
+# Google Analytics
+google_analytics: "UA-XXXXXXXX-X"

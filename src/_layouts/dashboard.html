@@ -1,0 +1,116 @@
+---
+layout: master
+exclude_menu: true
+---
+
+<div class="row">
+    <div class="columns">
+        <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
+            <li>
+                <!-- BASIC SEARCH -->
+
+                {% capture body_text %}
+                    <p><a href="#">Need help? Hints and tips on advanced searching techniques.</a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <div class="row collapse postfix-radius">
+                            <div class="small-12 medium-8 columns">
+                                <input name="q" class="text-center" type="text" placeholder="Type Keywords">
+                            </div>
+                            <div class="hide-for-small medium-4 columns">
+                                <button type="submit" class="button flat radius postfix">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                {% endcapture %}
+                {% include dash_block.html header="Basic Search" body=body_text %}
+
+                <!-- ADVANCED SEARCH -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include dash_block.html header="Advanced Search" body=body_text %}
+
+            </li>
+            <li>
+                <!-- MY PINS (Quicklinks) -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">abc</a></li>
+                        <li><a href="#">Some other stuff</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include dash_block.html header="My Quicklinks" body=body_text %}
+
+                <!-- MY CLEARDOCS -->
+
+                {% capture body_text %}
+                    <h5 class="subheader"><i>There have been no assembled documents saved.</i></h5>
+                {% endcapture %}
+                {% include dash_block.html header="My Cleardocs" body=body_text %}
+
+                <!-- MY PRODUCTS -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include dash_block.html header="My Products" body=body_text %}
+
+            </li>
+            <li>
+                <!-- CUSTOMER SERVICES -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include dash_block.html header="Customer Services" body=body_text %}
+
+                <!-- TAX AND ACCOUNTING COMPLIANCE CALENDAR -->
+
+                {% capture body_text %}
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam natus enim esse, dicta unde suscipit eligendi id atque omnis fugiat quis ex delectus quibusdam alias quos reiciendis beatae architecto odio.</p>
+                {% endcapture %}
+                {% include dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
+
+                <!-- MY TOOLS -->
+
+                {% capture body_text %}
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam natus enim esse, dicta unde suscipit eligendi id atque omnis fugiat quis ex delectus quibusdam alias quos reiciendis beatae architecto odio.</p>
+                {% endcapture %}
+                {% include dash_block.html header="My Tools" body=body_text %}
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+{{ content }}

@@ -1,0 +1,440 @@
+@import "foundation/settings";
+/*
+    MAIN.CSS
+
+    - Last updated: 30.10.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$primary-color: #FC8946;
+$secondary-color: #FEA66C; //#2C2C2C;
+$dark-grey: #2C2C2C;
+$border-color-light: #D4DCE3;
+
+$header-height: 60px;
+$primary-nav-width: 65px;
+$primary-nav-height: 40px;
+$secondary-nav-width: 260px;
+$sidebar-width: 300px;
+$sidebar-width-collapsed: 50px;
+$footer-height: 40px;
+$footer-background: #222222;
+
+//-----------------------------------------------------------------
+// Global
+//-----------------------------------------------------------------
+
+html, body {
+	// overflow-x: hidden;
+}
+
+//-----------------------------------------------------------------
+// lv-super: top-most non-visual wrapper | lv-page: visual wrapper
+//-----------------------------------------------------------------
+
+.lv-page {
+
+	@media #{$medium-up} {
+		// padding-top: 0;
+	}
+}
+
+//-----------------------------------------------------------------
+// Icons - Use to extend
+//-----------------------------------------------------------------
+
+.foundation-icons {
+	font-family: "foundation-icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+}
+
+//-----------------------------------------------------------------
+// Header
+//-----------------------------------------------------------------
+
+.lv-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
+	height: $header-height;
+	overflow: hidden;
+	z-index: 100;
+
+	.logo {
+		// padding: rem-calc(0 15);
+	}
+}
+
+//=========================================
+// Mobile Nav
+//=========================================
+
+.user-profile {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	height: $header-height;
+	padding: 9px;
+}
+
+.user-profile-title {
+	display: block;
+	color: white;
+	line-height: 1;
+	font-size: 18px;
+}
+
+.user-profile-pic {
+	position: relative;
+	margin-left: 10px;
+	box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26)
+}
+
+.user-profile-pic:after {
+	position: absolute;
+	top: 50%;
+	right: -16px;
+	margin-top: -4px;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: white;
+	border-width: 5px;
+	margin-left: -5px;
+	z-index: 10000;
+}
+
+.user-profile .logout-btn {
+	color: #222;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.logo-switcher-wrapper {
+	display: inline-block;
+	margin: 0;
+}
+
+.mobile-nav-btn {
+	width: 50px;
+	height: $header-height;
+	line-height: $header-height;
+	color: white;
+	text-align: center;
+	font-size: 26px;
+	/* refactor */
+	display: none;
+
+	// Removed on dashboard
+	&.remove {
+		display: none !important;
+	}
+
+	@media (max-width: 900px) {
+		// display: block !important;
+		display: block;
+	}
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+
+
+//=========================================
+// refactor
+//=========================================
+
+.exclude-menu {
+
+	.lv-sidebar {
+		display: none;
+	}
+
+	.lv-context-menu {
+		// width: $primary-nav-width;
+		display: none;
+
+		.secondary-nav {
+			display: none;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Banner
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Breadcrumbs
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Stage
+//-----------------------------------------------------------------
+
+.lv-stage {
+	position: relative;
+	display: table;
+	width: 100%; /* added 3.11.14 for toolbar at weird small breakpoint */
+	overflow-x: hidden; /* stops sidebar breaking out with the -1px x value */
+	// top: $header-height;
+	top: $header-height;
+	overflow-y: scroll;
+
+	@media #{$large-up} {
+		top: $header-height + $primary-nav-height;
+	}
+
+	@media #{$medium-up} {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+}
+
+.homepage .lv-stage {
+	background: #DEDEDE;
+}
+
+//-----------------------------------------------------------------
+// Main Content Area
+//-----------------------------------------------------------------
+
+.lv-main {
+	padding-top: rem-calc(20);
+
+	@media #{$medium-up} {
+		padding: rem-calc(20 ($sidebar-width-collapsed+20) 50 20);
+	}
+
+	@media #{$large-up} {
+	    padding: rem-calc(20);
+	}
+}
+
+// Ignore gaps left for sidebar on internal pages
+.homepage .lv-main {
+	@media #{$medium-up} {
+	    padding: rem-calc(20 20 50 20);
+	}
+}
+
+//-----------------------------------------------------------------
+// Sections
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Media Object
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Modules
+//-----------------------------------------------------------------
+//=========================================
+// Modal
+//=========================================
+
+
+
+//=========================================
+// Country Toggle
+//=========================================
+
+.country-toggle {
+	display: inline-block;
+	margin-top: 11px;
+}
+
+.country-toggle select {
+	border-radius: $global-radius;
+	border: 1px solid white;
+	background: transparent;
+	color: white;
+	padding-right: 0;
+	width: 130px;
+	text-align: center;
+}
+
+.country-toggle {
+	position: relative;
+}
+
+.country-toggle:after {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -9px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: white;
+	border-width: 5px;
+	margin-left: -5px;
+}
+
+//-----------------------------------------------------------------
+// Footer
+//-----------------------------------------------------------------
+
+.lv-footer {
+	position: relative;
+	padding: rem-calc(5 15 10 15);
+	// border-top: 1px solid $border-color-light;
+	background: $footer-background;
+	overflow: hidden;
+	z-index: 10;
+
+	a {
+		color: white;
+	}
+
+	@media #{$medium-up} {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: $footer-height;
+		line-height: $footer-height;
+		padding: rem-calc(0 15);
+	}
+}
+
+//=========================================
+// Footer Links
+//=========================================
+
+.lv-footer-links a {
+	font-size: rem-calc(12);
+	line-height: $footer-height;
+	/* needs some bigger gaps */
+	@media #{$medium-up} {
+		padding: rem-calc(0 5);
+	}
+}
+
+//=========================================
+// Footer Legal
+//=========================================
+
+.lv-footer-legal {
+	font-size: rem-calc(11);
+	line-height: 0;
+	color: grey;
+}
+
+//-----------------------------------------------------------------
+// Social Networks
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Template Buttons
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Forms
+//-----------------------------------------------------------------
+
+.lv-form-restrictor {
+	max-height: 210px;
+	overflow: hidden;
+	margin-bottom: 20px;
+
+	@media #{$medium-up} {
+	    max-height: none;
+	}
+}
+
+.lv-actions {
+	font-size: rem-calc(25);
+	background: white;
+	overflow: hidden;
+	border: 1px solid #DDDDDD;
+	border-radius: $global-radius;
+}
+
+//-----------------------------------------------------------------
+// Tooltips
+//-----------------------------------------------------------------
+
+.lv-tooltip {
+	@media #{$medium-up} {
+	    background: url(../img/ui/dots-black.png) repeat-x bottom;
+	}
+}
+
+//-----------------------------------------------------------------
+// Misc
+//-----------------------------------------------------------------
+
+.postfix {
+	position: relative;
+	left: -2px;
+}
+
+.table-cell {
+	position: relative;
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+}
+
+.tooltip-icon {
+	padding-left: 10px;
+	font-size: 20px;
+}
+
+.row.is-full-width {
+	max-width: none;
+}
+
+//-----------------------------------------------------------------
+// Animations
+//-----------------------------------------------------------------
+
+.transition {
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+	    -ms-transition: all .2s linear;
+	        transition: all .2s linear;
+
+	-webkit-transition-property: opacity, color, width, background, transform;
+	   -moz-transition-property: opacity, color, width, background, transform;
+	     -o-transition-property: opacity, color, width, background, transform;
+	    -ms-transition-property: opacity, color, width, background, transform;
+            transition-property: opacity, color, width, background, transform;
+}
+
+//-----------------------------------------------------------------
+// Themes
+//-----------------------------------------------------------------
+
+@import "partials/dashboard";
+@import "partials/context_menu";
+@import "partials/topbar";
+@import "partials/sidebar";
+@import "partials/legacy";
+@import "partials/modal";
+@import "partials/fonts";
+@import "partials/foundation-icons";
+
+//=========================================
+//
+//=========================================

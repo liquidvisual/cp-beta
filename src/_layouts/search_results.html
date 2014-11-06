@@ -1,0 +1,35 @@
+---
+layout: master
+context_menu: "CM_search_summary.html"
+---
+
+<div class="row">
+    <div class="columns">
+        <h3>Refine your Search</h3>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 large-10 large-centered columns">
+        <form data-abide novalidate id="contact" action="/" method="post">
+            <div class="row collapse postfix-radius">
+                <div class="small-12 medium-9 columns">
+                    <input name="q" class="text-center" type="text" placeholder="Type Keywords to Refine Search">
+                </div>
+                <div class="hide-for-small medium-3 columns">
+                    <button type="submit" class="button flat radius postfix">Refine Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+        <h3>Search Results <span class="label round secondary">35</span></h3>
+        <hr>
+    </div>
+</div>
+
+{{ content }}

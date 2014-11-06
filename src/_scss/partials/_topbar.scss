@@ -1,0 +1,57 @@
+/*
+    TOPBAR.CSS
+
+    - Last updated: 18.09.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Topbar (Container)
+//-----------------------------------------------------------------
+
+.lv-topbar {
+	position: fixed;
+	top: $header-height;
+	width: 100%;
+	// overflow: hidden;
+	background: $dark-grey;
+	z-index: 100;
+}
+
+//=========================================
+// Primary Nav (Tools Nav)
+//=========================================
+
+.primary-nav {
+	width: 100%;
+	background: $dark-grey;
+	height: $primary-nav-height;
+
+	ul {
+		// margin-left: rem-calc(5);
+	}
+
+	li {
+		display: inline-block;
+
+		&.active a {
+			background: darken($dark-grey, 30%);
+			// color: $primary-color;
+		}
+	}
+
+	a {
+		color: lighten($dark-grey, 60%);
+		display: block;
+		padding: rem-calc(0 15);
+		font-size: rem-calc(14);
+		line-height: $primary-nav-height;
+
+		&:hover {
+			@extend .transition;
+			color: $secondary-color;
+		}
+	}
+}

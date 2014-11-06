@@ -1,0 +1,246 @@
+/*
+	LIQUIDVISUAL TOOLBOX :: A Personal Framework
+
+	- updated: 07.07.14
+	- liquidvisual.com
+	- licensed under MIT Open Source
+
+	- This file features specific additions and overrides to
+	  Foundation's framework that help liquidvisual sites have
+	  their own unique feel and behavior.
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$body-bg: #fff !default; // Override in F5 settings
+$font-smoothing: antialiased !default; // Override in F5 settings
+$primary-color: #008CBA !default; // Override in F5 settings
+$table-thead-border-bottom: 2px solid #555 !default;
+$include-code-styles: true !default;
+$include-developer-styles: true !default;
+$include-example-styles: true !default;
+$include-form-styles: true !default;
+$include-helper-styles: true !default;
+$include-hr-styles: true !default;
+$include-prevent-horizontal-scrolling: false !default;
+$include-snap-grid: true !default;
+$include-table-styles: true !default;
+$include-text-selection-styles: true !default;
+
+//-----------------------------------------------------------------
+// Snap Grid
+//
+// Tells the grid to "snap" into place at each breakpoint.
+// This removes the issue of seeing elements super large before
+// they fall into place naturally.
+//-----------------------------------------------------------------
+
+// @if $include-snap-grid {
+// 	@media #{$medium-up}  { .row { max-width: upper-bound($medium-range)  } }
+// 	@media #{$large-up}   { .row { max-width: upper-bound($large-range)   } }
+// 	@media #{$xlarge-up}  { .row { max-width: upper-bound($xlarge-range)  } }
+// 	@media #{$xxlarge-up} { .row { max-width: upper-bound($xxlarge-range) } }
+// }
+
+//-----------------------------------------------------------------
+// Font Smoothing
+//-----------------------------------------------------------------
+
+@if $font-smoothing == "antialiased" {
+	body {
+		 -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		         font-smoothing: antialised;
+	}
+}
+
+//-----------------------------------------------------------------
+// Prevent Horizontal Scrolling
+//-----------------------------------------------------------------
+
+@if $include-prevent-horizontal-scrolling {
+	body {
+		overflow-x: hidden;
+	}
+}
+
+//-----------------------------------------------------------------
+// Text Selection (keep separate)
+//-----------------------------------------------------------------
+
+@if $include-text-selection-styles {
+	::-moz-selection {
+		background: lighten($primary-color, 10%);
+		color: white;
+		text-shadow: none;
+	}
+
+	::selection {
+		background: lighten($primary-color, 10%);
+		color: white;
+		text-shadow: none;
+	}
+}
+
+//-----------------------------------------------------------------
+// Example Text
+//-----------------------------------------------------------------
+
+@if $include-example-styles {
+	.example {
+		border: 1px dashed #CFCCCF;
+		box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.26);
+		padding: 1.250em;
+		margin-bottom: 1.875em;
+		background: white;
+	}
+}
+
+//-----------------------------------------------------------------
+// Liquid Visual Defaults
+//-----------------------------------------------------------------
+
+@if $include-hr-styles {
+	hr {
+		background: $body-bg;
+		box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.26);
+		height: 10px;
+		border-top: 0;
+		border-bottom: 1px solid #DDDDDD;
+	}
+}
+
+//=============================================
+// Code Styles
+//=============================================
+
+@if $include-code-styles {
+	code {
+		background-color: #DAE0E7;
+		border-radius: 3px;
+		padding: 2px 4px;
+	}
+}
+
+//-----------------------------------------------------------------
+// Forms
+//-----------------------------------------------------------------
+
+// Lingering outlines look weird in Foundation.
+// @todo: Need to solve accessibility concern.
+
+@if $include-form-styles {
+	select {
+		outline: none;
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0b3AtY29sb3I9IiNmZWZlZmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjRmNGY0IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	}
+}
+
+//-----------------------------------------------------------------
+// Tables
+//-----------------------------------------------------------------
+
+@if $include-table-styles {
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	table thead,
+	table tfoot {
+		border-bottom: $table-thead-border-bottom;
+	}
+}
+
+//-----------------------------------------------------------------
+// Helper Classes
+//-----------------------------------------------------------------
+
+@if $include-helper-styles {
+
+	//=========================================
+	// Radius Prefix / Postfix (F5 patch)
+	//=========================================
+
+	.lv-super .prefix.radius {
+		border-radius: $global-radius 0 0 $global-radius;
+		text-align: left;
+	}
+
+	.lv-super .postfix.radius {
+		border-radius: 0 $global-radius $global-radius 0;
+	}
+
+	//=========================================
+	// Box-shadow Classes - for rapid prototyping
+	//=========================================
+
+	.normal-shadow { box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.5); }
+	.full-shadow   { box-shadow: 0 0 .625em rgba(0, 0, 0, 0.5); }
+	.bottom-shadow { box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); }
+	.sharp-shadow  { box-shadow: 0 0 5px rgba(0,0,0,0.2); }
+	.weak-shadow   { box-shadow: 0 3px 5px -4px rgba(0, 0, 0, 0.26); }
+	.deep-shadow   { box-shadow: 0 10px 13px rgba(0, 0, 0, 0.26); }
+	.inset-shadow  { box-shadow: inset 0 3px 5px -3px rgba(0, 0, 0, 0.5); }
+	.text-shadow   { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
+
+	//=========================================
+	// Prevent Flicker on Webkit
+	//=========================================
+
+	.lv-no-flicker {
+		-webkit-transition: translate3d(0,0,0);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+		-webkit-transform-style: preserve-3d;
+	}
+
+	//=========================================
+	// First char in sentence is pronounced
+	//=========================================
+
+	.lv-drop-cap:first-letter {
+		float: left;
+		color: $primary-color;
+		font-size: 6.250em;
+		line-height: 5.000em;
+		margin-right: 0.625em;
+	}
+
+	//=========================================
+	// Unselectable Elements
+	//=========================================
+
+	.lv-unselectable,
+	.lv-unselectable * {
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	   -khtml-user-select: none;
+	     -moz-user-select: none;
+	       -o-user-select: none;
+	      -ms-user-select: none;
+	          user-select: none;
+	}
+}
+
+//-----------------------------------------------------------------
+// Developer Mode - Foundation Grid Highlighting
+//
+// Usage: <body class="developer">
+//-----------------------------------------------------------------
+
+@if $include-developer-styles {
+	.developer .row:nth-child(odd) { background-color: #6AE1CC !important; }
+	.developer .row:nth-child(even),
+	.developer > .row:nth-child(odd) { background-color: #61CFBC !important; }
+	.developer .columns { background-color: #46B0FB !important; }
+	.developer hr { border-bottom: 1px solid yellow !important; }
+
+	.lv-super .fill-1 { background-color: #E94144; }
+	.lv-super .fill-2 { background-color: #46B0FB; }
+	.lv-super .fill-3 { background-color: #6AE1CC; }
+	.lv-super .fill-4 { background-color: #FECB6D; }
+	.lv-super .fill-5 { background-color: #E7E7E7; }
+	.lv-super .fill-6 { background-color: #61CFBC; }
+}

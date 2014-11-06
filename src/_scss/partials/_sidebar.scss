@@ -1,0 +1,182 @@
+/*
+    SIDEBAR.CSS
+
+    - Last updated: 03.10.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$sidebar-width: rem-calc(300) !default;
+$sidebar-width-collapsed: rem-calc(50) !default;
+
+//-----------------------------------------------------------------
+// Sidebar
+//-----------------------------------------------------------------
+
+.lv-sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	background: #EDEFEF;
+	box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4);
+	z-index: 10;
+
+	@media (max-width: 767px) {
+	    display: none;
+	}
+
+	@media #{$medium-up} {
+		position: fixed;
+		top: $header-height;
+		bottom: $footer-height;
+	    width: $sidebar-width;
+	    overflow-y: auto; /* for desktop scroll bars logic */
+	    -webkit-overflow-scrolling: touch;
+	}
+
+	@media #{$large-up} {
+	    @extend .table-cell;
+	    position: relative; /* needed for shadow */
+	    top: 0;
+	    overflow: hidden; /* no scrollbars */
+	}
+}
+
+//=========================================
+// State Change
+//=========================================
+
+.lv-sidebar.is-collapsed {
+	// position: fixed;
+
+	// top: $header-height + $primary-nav-height;
+	width: $sidebar-width-collapsed;
+	// right: 0;
+	overflow: hidden;
+
+	.tabs li {
+		float: none;
+		width: 100%;
+	}
+
+	.tabs li a {
+		padding: rem-calc(15 0);
+		border-right: 0;
+	}
+
+	.tabs .text,
+	.tabs .collapse-btn,
+	.tabs-content {
+		display: none;
+	}
+}
+
+//=========================================
+// Shadow Piece Overlay
+//=========================================
+
+.lv-sidebar:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4);
+	bottom: 0;
+	width: 10px;
+	z-index: 10;
+}
+
+.lt-ie9 .lv-sidebar {
+	border-left: 1px solid #CACDCD;
+}
+
+//=========================================
+// lv-Sidebar Content
+//=========================================
+
+.lv-sidebar p {
+    font-size: 14px;
+}
+
+//=========================================
+// Sidebar Tabs
+//=========================================
+
+.lv-sidebar .tabs {
+	position: relative;
+	width: 100%;
+	background: #EDEFEF;
+	padding-bottom: rem-calc(10);
+	z-index: 1;
+
+	i {
+		display: block;
+		font-size: rem-calc(21);
+		line-height: 1;
+	}
+
+	li {
+		width: 33.3333333%;
+	}
+
+	li:last-child a {
+		border-right: 0;
+	}
+
+	a {
+		outline: none;
+		padding: rem-calc(10 0);
+		border-bottom: 1px solid #CACDCD;
+		border-right: 1px solid #CACDCD;
+	}
+
+	.active a {
+		border-bottom: 0;
+	}
+}
+
+.lv-sidebar .tabs-content {
+	padding: rem-calc(15 30 30 30);
+}
+
+// State change - tabs stick to top on collapsed
+
+.lv-sidebar.is-collapsed .tabs {
+	position: fixed;
+	top: $header-height;
+	width: $sidebar-width-collapsed;
+
+	@media #{$large-up} {
+	    top: $header-height + $primary-nav-height;
+	}
+}
+
+//=========================================
+// Quicklinks
+//=========================================
+
+.lv-quicklinks {
+	background: white;
+	list-style: none;
+	margin: 0;
+	padding: rem-calc(15);
+	font-size: 14px;
+
+	li {
+		margin-bottom: rem-calc(10);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
