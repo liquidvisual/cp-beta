@@ -25,7 +25,7 @@ module.exports = function (grunt) {
       dist: 'dist',
       assets: 'dist/assets',
       port: '9292',
-      git: 'git@github.com:liquidvisual/cpbeta.git',
+      git: 'git@github.com:liquidvisual/cp-beta.git',
       // IMPORTANT: Set a baseurl on line 364
     },
     //-----------------------------------------------------
@@ -475,7 +475,7 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     //'check',
     // 'test',
-    //'build',
+    'build',
     'buildcontrol:master'
     // 'buildcontrol:pages'
     ]);

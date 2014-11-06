@@ -1,6 +1,6 @@
-checkpoint-prototype
+CP BETA 2014
 ====================
 
 Client Website
 
-[http://cpbeta.uat.liquidvisual.net](Live Site Here)
+[http://cp-beta.uat.liquidvisual.net](Live Site Here)
