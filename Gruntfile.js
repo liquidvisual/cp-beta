@@ -365,8 +365,8 @@ module.exports = function (grunt) {
             var baseurl = '';
             if (url.indexOf('/img') === 0)
               return baseurl+'/assets'+url; // add query string to all other URLs
-            else
-            return baseurl+url; // leave data URIs untouched
+            else if (url.indexOf('http://') !== 0) // don't affect CDNs
+              return baseurl+url; // leave data URIs untouched
           }
         },
         files: [{
