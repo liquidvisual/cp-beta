@@ -475,9 +475,9 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', [
     //'check',
     // 'test',
-    'build',
-    'buildcontrol:master'
-    // 'buildcontrol:pages'
+    // 'build',
+    'buildcontrol:master',
+    'buildcontrol:pages'
     ]);
 
   //=======================================
