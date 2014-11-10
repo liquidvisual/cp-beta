@@ -1,11 +1,9 @@
 ---
 layout: master
-context_menu: "CM_search_templates.html"
+context_menu: "context_menu/search_templates.html"
 cases: "Free Text_Case Title/Party Name_Citation_Catchwords_Judge(s)_Court"
 cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title)_Legislation Cited (Provision)_Words & Phrases_Reported / Unreported_Cases Updated"
 ---
-
-{% include modal.html %}
 
 <div class="row">
     <div class="columns">
@@ -57,10 +55,10 @@ cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title
                     <div class="medium-9 columns">
                         <div class="row">
                             <div class="medium-4 columns">
-                                <input type="text" placeholder="Start Date" id="">
+                                <input class="ui-datepicker" type="text" placeholder="Start Date" id="">
                             </div>
                             <div class="medium-4 columns">
-                                <input type="text" placeholder="End Date" id="">
+                                <input class="ui-datepicker" type="text" placeholder="End Date" id="">
                             </div>
                             <div class="medium-4 columns">
                                 <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
@@ -110,8 +108,6 @@ cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title
                     </div>
                 </div>
 
-
-
             <!-- Submit -->
 
             <div class="row">
@@ -138,17 +134,16 @@ cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title
 <div class="row">
     <div class="columns">
         <hr>
-        <ul class="lv-actions lv-inline-list medium-gaps">
-            <li><a title="Print Documents" href="#"><i class="fi-print"></i></a></li>
-            <li><a title="Download Documents" href="#"><i class="fi-download"></i></a></li>
-            <li><a title="Email Documents" href="#"><i class="fi-mail"></i></a></li>
-            <li><a title="Create Email Alert" href="#"><i class="fi-alert"></i></a></li>
-            <li><a title="Create Organisational Alert" href="#"><i class="fi-calendar"></i></a></li>
-            <li><a title="Create RSS Feed" href="#"><i class="fi-rss"></i></a></li>
-        </ul>
+        {% include document_options/search.html %}
+        <br>
     </div>
 </div>
 
+<div class="row">
+    <div class="columns">
+        {% include TOC.html %}
+    </div>
+</div>
 
 <script>
     // Toggle fields INSIDE of form

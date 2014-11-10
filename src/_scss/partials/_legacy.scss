@@ -1,12 +1,216 @@
 /*
     LEGACY.CSS
 
-    - Last updated: 18.09.14
+    - Last updated: 06.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Search Summary (Context Menu)
+//-----------------------------------------------------------------
+
+.lv-context-menu #resultsummary {
+	padding: 15px;
+	font-size: 14px;
+
+	#totalDocumentCount,
+	.result {
+		font-weight: bold;
+	}
+}
+
+.lv-context-menu #searchoptions {
+
+	a:before {
+		@extend .foundation-icons;
+		display: inline-block;
+		margin-right: 10px;
+		color: $primary-color;
+		font-size: 18px;
+	}
+
+	#editsearch a:before {
+		content: "\f194"; // Pencil
+	}
+
+	#newsearch a:before {
+		content: "\f16c"; // magnifying glass
+	}
+
+	#savesearch a:before {
+		content: "\f1ac"; // Save
+	}
+
+	#origresults a:before {
+		content: "\f10a"; // go back
+	}
+}
+
+
+
+//-----------------------------------------------------------------
+// TOC
+//-----------------------------------------------------------------
+
+.toc-root ul {
+	// margin: 0;
+	list-style: none;
+}
+
+.toc-root ul {
+	@media #{$small-only} {
+	    margin-left: 0;
+	}
+}
+
+.toc-root ul ul li.plus input {
+	margin-bottom: 0;
+}
+
+.toc-root .plus .expanded,
+.toc-root .plus .collapsed {
+	cursor: pointer;
+}
+
+.toc-root a {
+	color: #125BA2;
+	font-size: rem-calc(14);
+
+	@media #{$medium-up} {
+	    font-size: rem-calc(15);
+	}
+}
+
+.toc-root input[type="checkbox"] {
+	margin-right: rem-calc(10);
+}
+
+/* Stars/Icons - saved / not saved */
+
+.toc-root .qlimg {
+	@media #{$small-only} {
+	    display: none;
+	}
+}
+
+.toc-root .qlimg:before {
+	@extend .foundation-icons;
+	content: "\f1ee";
+	padding: rem-calc(0 5 0 0);
+}
+
+.toc-root .qlimg.noSaved:before {
+	color: lighten($tertiary-color, 40%);
+}
+
+.toc-root .lnkProductInfo:before {
+	@media #{$medium-up} {
+	    @extend .foundation-icons;
+		content: "\f15e"; // info
+	}
+}
+
+
+////////---------------------
+
+/* PLUS MINUS BUTTONS */
+
+.toc-root .plus .expanded:before,
+.toc-root .plus .collapsed:before,
+.toc-root .plus .docLeaf:before
+{
+	@extend .foundation-icons;
+	content: "\f176";
+	color: $primary-color;
+	padding: rem-calc(0 5);
+
+	@media #{$small-only} {
+	    // font-size: rem-calc(25);
+	    // padding: rem-calc(10);
+	    width: 30px;
+	    height: 30px;
+	    line-height: 30px;
+	    text-align: center;
+	    margin: 2px;
+	    border-radius: 3px;
+	    border: 1px solid #B3B3B3;
+	}
+}
+
+/* lead node is invisible - so all lines up */
+
+.toc-root .plus .docLeaf:before {
+	color: $body-bg;
+}
+
+/* prevent divs causing line breaks */
+
+.inline,
+.inline div {
+	display: inline;
+}
+
+// the minus shows where new nodes OPEN UP
+.toc-root .plus .expanded:before {
+	@media #{$small-only} {
+	    background: $primary-color;
+	    color: white;
+	    border-color: $primary-color;
+	}
+}
+
+.toc-root .plus .plus .plus {
+	@for $i from 1 through 20 {
+		&:nth-child(#{$i}) {
+			.collapsed:before {
+				@media #{$small-only} {
+					background: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+					border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+					color: white;
+				}
+			}
+		}
+	}
+	// all the rest are just solid colors
+	&:nth-child(n+20) .collapsed:before {
+		@media #{$small-only} {
+			background: lighten(lighten(desaturate($primary-color, 10%), 15%), 20 * 0.5%);
+			border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), 20 * 0.5%);
+			color: white;
+		}
+	}
+}
+
+.toc-root ul li.docLeaf {
+	@for $i from 1 through 20 {
+		&:nth-child(#{$i}):before {
+			@media #{$small-only} {
+				background: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+				border-color: lighten(lighten(desaturate($primary-color, 10%), 15%), $i * 0.5%);
+				color: transparent;
+			}
+		}
+	}
+}
+
+
+
+.toc-root .plus .collapsed:before {
+	content: "\f199";
+	color: lighten(#808080, 20%);
+}
+
+#tree li:first-child .expanded {
+	// display: none;
+}
+
+.toc-root .plus img {
+	display: none;
+}
+
 //-----------------------------------------------------------------
 // Context Menu
 //-----------------------------------------------------------------
@@ -16,11 +220,14 @@
 	margin: 0;
 }
 
-.lv-context-menu h1 {
-	font-size: rem-calc(20); // style has H4
+// All headings should be the same level heirarchically
+
+.lv-context-menu h1,
+.lv-context-menu h2,
+.lv-context-menu h3 {
+	font-size: 20px; // style has H4
 	text-align: center;
-	// background: aqua;
-	margin: rem-calc(15);
+	margin: 15px;
 }
 
 .lv-context-menu .searchTemplateHelpIcon {

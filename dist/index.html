@@ -18,8 +18,9 @@
 
     <link rel="canonical" href="/">
 
-    <!-- Google Fonts CDN -->
+    <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
@@ -116,6 +117,37 @@
     <div class="columns">
         <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
             <li>
+                <!-- CALENDAR -->
+
+                
+                <div class="content-block">
+    <div class="content-block-header">
+        <h3>Tax and Accounting Compliance Calendar</h3>
+        <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
+    </div>
+    <div class="content-block-inner">
+        
+                    <p><a href="#"></a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <select name="budget" class="radius">
+                            <option selected disabled>All Events</option>
+                            <option value="Tax">Tax</option>
+                            <option value="PAYG">PAYG</option>
+                            <option value="BAS">BAS</option>
+                            <option value="Superannuation">Superannuation</option>
+                            <option value="SGC">SGC</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="ASIC and Accounting">ASIC and Accounting</option>
+                            <option value="Public Holiday">Public Holiday</option>
+                            <option value="FBT">FBT</option>
+                        </select>
+                    </form>
+                    <div id="datepicker"></div>
+
+                
+    </div>
+</div>
+
                 <!-- BASIC SEARCH -->
 
                 
@@ -298,7 +330,7 @@
 		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
 	</li>
 	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-bookmark"></i> <span class="text">Links</span></a>
+		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
 	</li>
 	<li class="tab-title collapse-btn">
 		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
@@ -406,6 +438,9 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
+    <!-- CDN -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
     <script src="/assets/scripts/optimized.js"></script>
 
     <script>
@@ -427,6 +462,11 @@
 
         $(function() {
             FastClick.attach(document.body);
+        });
+
+        $(function() {
+            $(".ui-datepicker").datepicker();
+            $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
     </script>

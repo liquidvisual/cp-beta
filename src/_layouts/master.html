@@ -24,8 +24,9 @@
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
-    <!-- Google Fonts CDN -->
+    <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
@@ -105,6 +106,9 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
+    <!-- CDN -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
     <!-- build:js(src) /assets/scripts/optimized.js -->
     <script src="/_bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/_bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all.js"></script>
@@ -137,6 +141,11 @@
 
         $(function() {
             FastClick.attach(document.body);
+        });
+
+        $(function() {
+            $(".ui-datepicker").datepicker();
+            $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
     </script>

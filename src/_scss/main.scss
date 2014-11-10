@@ -11,6 +11,7 @@
 
 $primary-color: #FC8946;
 $secondary-color: #FEA66C; //#2C2C2C;
+$tertiary-color: #5E6E7E; //#125BA2;
 $dark-grey: #2C2C2C;
 $border-color-light: #D4DCE3;
 
@@ -219,19 +220,24 @@ html, body {
 //-----------------------------------------------------------------
 
 .lv-main {
-	padding-top: rem-calc(20);
+	padding: rem-calc(20 0 80 0);
 
 	@media #{$medium-up} {
-		padding: rem-calc(20 ($sidebar-width-collapsed+20) 50 20);
+		padding: rem-calc(20 ($sidebar-width-collapsed + 20) 60 20);
 	}
 
 	@media #{$large-up} {
-	    padding: rem-calc(20);
+	    padding-right: rem-calc(20);
 	}
 }
 
 // Ignore gaps left for sidebar on internal pages
 .homepage .lv-main {
+
+	.row {
+		max-width: 1200px;
+	}
+
 	@media #{$medium-up} {
 	    padding: rem-calc(20 20 50 20);
 	}
@@ -377,6 +383,37 @@ html, body {
 	@media #{$medium-up} {
 	    background: url(../img/ui/dots-black.png) repeat-x bottom;
 	}
+}
+
+//-----------------------------------------------------------------
+// Jquery UI Datepicker
+//-----------------------------------------------------------------
+
+.ui-widget-content {
+	width: 100%;
+}
+
+.ui-datepicker {
+	border-color: #CCCCCC;
+	border-radius: 0;
+	 // box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+
+	 thead {
+	 	border: 0;
+	 	color: grey;
+	 }
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	background: none;
+	border-color: #DEDEDE;
+}
+
+.ui-datepicker-header {
+	background: url(../img/template/nav-gradient.png) repeat-x;
+	border: 0;
 }
 
 //-----------------------------------------------------------------

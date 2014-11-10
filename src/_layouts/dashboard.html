@@ -7,6 +7,29 @@ exclude_menu: true
     <div class="columns">
         <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
             <li>
+                <!-- CALENDAR -->
+
+                {% capture body_text %}
+                    <p><a href="#"></a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <select name="budget" class="radius">
+                            <option selected disabled>All Events</option>
+                            <option value="Tax">Tax</option>
+                            <option value="PAYG">PAYG</option>
+                            <option value="BAS">BAS</option>
+                            <option value="Superannuation">Superannuation</option>
+                            <option value="SGC">SGC</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="ASIC and Accounting">ASIC and Accounting</option>
+                            <option value="Public Holiday">Public Holiday</option>
+                            <option value="FBT">FBT</option>
+                        </select>
+                    </form>
+                    <div id="datepicker"></div>
+
+                {% endcapture %}
+                {% include dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
+
                 <!-- BASIC SEARCH -->
 
                 {% capture body_text %}
