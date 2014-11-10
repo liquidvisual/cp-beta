@@ -20,8 +20,9 @@
 
     <link rel="canonical" href="/research/document/">
 
-    <!-- Google Fonts CDN -->
+    <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
@@ -1228,7 +1229,7 @@ $(function() {
 		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
 	</li>
 	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-bookmark"></i> <span class="text">Links</span></a>
+		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
 	</li>
 	<li class="tab-title collapse-btn">
 		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
@@ -1336,6 +1337,9 @@ $(function() {
 
     <!-- ***** JAVASCRIPT ***** -->
 
+    <!-- CDN -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
     <script src="/assets/scripts/optimized.js"></script>
 
     <script>
@@ -1357,6 +1361,11 @@ $(function() {
 
         $(function() {
             FastClick.attach(document.body);
+        });
+
+        $(function() {
+            $(".ui-datepicker").datepicker();
+            $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
     </script>

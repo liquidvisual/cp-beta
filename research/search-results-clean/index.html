@@ -20,8 +20,9 @@
 
     <link rel="canonical" href="/research/search-results-clean/">
 
-    <!-- Google Fonts CDN -->
+    <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
@@ -107,18 +108,18 @@
         
             <!-- UNTOUCHED OUTPUT FROM CHECKPOINT -->
 
-<section id="sidebar" style="height: 273px;">
+<section id="sidebar" style="height: 335px;">
     <h1>Search Summary</h1>
     <div id="searchsummary">
 
         <ul id="resultsummary">
             <li class="searchInfo">
                 <span class="title">Documents matched: </span>
-                <span id="totalDocumentCount" class="result searchDataForDev">39</span>
+                <span id="totalDocumentCount" class="result searchDataForDev">37</span>
             </li>
             <li class="searchInfo">
                 <span class="title">Search terms: </span>
-                <span class="result">Free Text (politis)</span>
+                <span class="result">Free Text (orlando)</span>
                 <strong>
                 <span style="font-size:x-small;" id="filterStatus"></span>
                 </strong>
@@ -143,26 +144,57 @@
         </ul>
 
         <div id="refinesearch">
+
             <h3>Filter your Search</h3>
+
             <form id="metadocs" class="leftResultColumn" action="/maf/app/search/filter">
                 <ul>
+
                     <li class="collapsed hasChildren"><a id="productTypeLink" field="product.type" href="#" class="resultMetadocLink">&nbsp;</a>Content Type
                 <ul id="productTypeMetadoc" class="resultMetadoc"></ul>
             </li>
+
             <li class="collapsed hasChildren"><a id="practiceAreaLink" href="#" field="subject.area" class="resultMetadocLink">&nbsp;</a>Subject Area
-            <ul id="practiceAreaMetadoc" class="resultMetadoc"></ul>
+        <ul id="practiceAreaMetadoc" class="resultMetadoc"></ul>
     </li>
 
     <li class="collapsed hasChildren"><a field="product" id="productLink" href="#" class="resultMetadocLink">&nbsp;</a>Product Title
-        <ul id="productMetadoc" class="resultMetadoc"></ul>
-    </li>
+<ul id="productMetadoc" class="resultMetadoc"></ul>
+</li>
 
-    <li class="collapsed hasChildren"><a id="jurisLink" href="#" field="juris.l1" class="resultMetadocLink">&nbsp;</a>Jurisdiction
-        <ul id="jurisMetadoc" class="resultMetadoc"></ul>
-    </li>
+<li class="hasChildren expanded"><a id="jurisLink" href="#" field="juris.l1" class="resultMetadocLink">&nbsp;</a>Jurisdiction
+<ul id="jurisMetadoc" class="resultMetadoc" style="display: block;">
+
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_Commonwealth" type="checkbox" name="filter" value="juris.l2::Commonwealth">
+    <a id="lnkAUMetadocSum_Commonwealth" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth">Commonwealth (3)</a>
+</li>
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_CommonwealthofAustralia" type="checkbox" name="filter" value="juris.l2::Commonwealth of Australia">
+    <a id="lnkAUMetadocSum_CommonwealthofAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth+of+Australia">Commonwealth of Australia (2)</a>
+</li>
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_NewSouthWales" type="checkbox" name="filter" value="juris.l2::New South Wales">
+    <a id="lnkAUMetadocSum_NewSouthWales" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ANew+South+Wales">New South Wales (2)</a>
+</li>
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_SouthAustralia" type="checkbox" name="filter" value="juris.l2::South Australia">
+    <a id="lnkAUMetadocSum_SouthAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ASouth+Australia">South Australia (6)</a>
+</li>
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_Victoria" type="checkbox" name="filter" value="juris.l2::Victoria">
+    <a id="lnkAUMetadocSum_Victoria" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AVictoria">Victoria (1)</a>
+</li>
+<li class="clearfix">
+    <input id="chkAU}MetadocSum_WesternAustralia" type="checkbox" name="filter" value="juris.l2::Western Australia">
+    <a id="lnkAUMetadocSum_WesternAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AWestern+Australia">Western Australia (1)</a>
+</li>
+
 </ul>
+</li>
 
-<input type="hidden" name="resultHandle" value="ia744d064000001497915dfa27d189d43">
+</ul>
+<input type="hidden" name="resultHandle" value="i0ad629030000014996d6cc88b4a7ea3f">
 <input type="hidden" name="ao" value="o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca">
 <input type="hidden" name="resultType" value="SEARCH">
 <input type="hidden" name="trail" value="false">
@@ -187,34 +219,7 @@
                 <main class="lv-main">
                     <div class="row">
                         <div class="columns">
-                            <div class="row">
-    <div class="columns">
-        <h3>Refine your Search</h3>
-        <hr>
-    </div>
-</div>
-
-<div class="row">
-    <div class="small-12 large-10 large-centered columns">
-        <form data-abide novalidate id="contact" action="/" method="post">
-            <div class="row collapse postfix-radius">
-                <div class="small-12 medium-9 columns">
-                    <input name="q" class="text-center" type="text" placeholder="Type Keywords to Refine Search">
-                </div>
-                <div class="hide-for-small medium-3 columns">
-                    <button type="submit" class="button flat radius postfix">Refine Search</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="row">
-    <div class="columns">
-        <h3>Search Results <span class="label round secondary">35</span></h3>
-        <hr>
-    </div>
-</div>
+                            
 
 <div class="row">
     <div class="medium-6 columns">
@@ -351,7 +356,7 @@
 		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
 	</li>
 	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-bookmark"></i> <span class="text">Links</span></a>
+		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
 	</li>
 	<li class="tab-title collapse-btn">
 		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
@@ -452,6 +457,9 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
+    <!-- CDN -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
     <script src="/assets/scripts/optimized.js"></script>
 
     <script>
@@ -473,6 +481,11 @@
 
         $(function() {
             FastClick.attach(document.body);
+        });
+
+        $(function() {
+            $(".ui-datepicker").datepicker();
+            $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
     </script>
