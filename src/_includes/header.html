@@ -33,7 +33,11 @@
 		<strong class="user-profile-title">Jason Chen</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
-	<a class="right user-profile-pic" href="#">
+	<div class="right user-profile-pic" href="#">
 		<img width="40" src="/img/ui/no-face.png" alt="Profile Pic">
-	</a>
+		<i class="fa fa-caret-down"></i>
+		<div class="user-profile-dropdown">
+			{% include user_menu.html %}
+		</div>
+	</div>
 </section>

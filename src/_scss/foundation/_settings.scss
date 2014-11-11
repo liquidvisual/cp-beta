@@ -41,7 +41,7 @@
 // Global
 
 // We use these to control various global styles
-$body-bg: #F5F6F6;
+$body-bg: #F5F6F6; // f6f6f6
 $body-font-color: #777;
 $body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -89,7 +89,7 @@ $small-range: (0em, 40em);             // 0-640px
 $medium-range: (48em, 48em);           // 768px
 $large-range: (64em, 64em);            // 1024px
 $xlarge-range: (71.250em, 71.250em);  // is 1140  // 73.125em, 73.125em // 1170px
-// $xxlarge-range: (90.000em, 90.000em);  // 1440px
+$xxlarge-range: (71.250em, 71.250em);  // 1440px
 //------------------------------------------------------------------
 
 $screen: "only screen";
@@ -109,8 +109,8 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
 $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
 
-// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
-// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
 // Legacy
 // $small: $medium-up;

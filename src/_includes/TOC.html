@@ -2,6 +2,7 @@
     $(document).ready(function(){
         $('.toc-root .plus .collapsed, .toc-root .plus .expanded').click(function(){
             var $this = $(this);
+
             // Default 'closed' state
             if ($this.hasClass('collapsed')){
 
@@ -14,13 +15,20 @@
                 $('ul', $this.parent()).first().hide();
             }
         });
+
+        // Doc Options only appear when something is selected (checked)
+
+        $("input[type='checkbox']").on("click", function() {
+            if ($('input:checked').length) {
+                $('.lv-doc-options').removeClass('disabled');
+            } else {
+                $('.lv-doc-options').addClass('disabled');
+            }
+        });
     });
 </script>
 
-
-
-
-
+<!-- OUTPUT FROM CHECKPOINT -->
 
 <div id="tocNodes" class="toc-root">
                         <div id="loadingToc" style="display: none;">Loading...</div>

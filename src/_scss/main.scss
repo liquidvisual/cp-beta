@@ -1,4 +1,5 @@
 @import "foundation/settings";
+@import "foundation/components/buttons";
 /*
     MAIN.CSS
 
@@ -69,8 +70,8 @@ html, body {
 	width: 100%;
 	background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
 	height: $header-height;
-	overflow: hidden;
-	z-index: 100;
+	// overflow: hidden;
+	z-index: 110; // bring above nav
 
 	.logo {
 		// padding: rem-calc(0 15);
@@ -99,36 +100,92 @@ html, body {
 .user-profile-pic {
 	position: relative;
 	margin-left: 10px;
-	box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26)
-}
+	box-shadow: 0 3px 5px -6px rgba(0, 0, 0, 0.26);
+	cursor: pointer;
 
-.user-profile-pic:after {
-	position: absolute;
-	top: 50%;
-	right: -16px;
-	margin-top: -4px;
-	border: solid transparent;
-	content: "";
-	height: 0;
-	width: 0;
-	pointer-events: none;
-	border-color: rgba(255, 255, 255, 0);
-	border-top-color: white;
-	border-width: 5px;
-	margin-left: -5px;
-	z-index: 10000;
+	padding-bottom: 9px; // allow hit area to extend to dropdown
+
+	i {
+		@extend .transition;
+		color: white;
+	}
 }
 
 .user-profile .logout-btn {
+	@extend .transition;
 	color: #222;
 	font-size: 11px;
 	font-weight: 600;
+
+	&:hover {
+		color: white;
+	}
 }
 
 .logo-switcher-wrapper {
 	display: inline-block;
 	margin: 0;
 }
+
+//=========================================
+// User Menu Dropdown
+//=========================================
+
+.user-profile-pic:hover .user-profile-dropdown {
+	height: auto;
+	opacity: 1;
+}
+
+.user-profile-pic:hover i.fa-caret-down {
+	color: #222;
+}
+
+.user-profile-pic a:hover i {
+	color: $primary-color;
+}
+
+.user-profile-dropdown {
+	@extend .transition;
+	opacity: 0;
+	height: 0;
+	box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
+	overflow: hidden;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background: white;
+	border-left: 1px solid #D4DCE3;
+	border-right: 1px solid #D4DCE3;
+	width: rem-calc(180);
+	border-radius: 0 0 $global-radius $global-radius;
+
+	ul {
+		font-size: rem-calc(14);
+		list-style: none;
+		margin: 0;
+		text-align: left;
+	}
+
+	i {
+		color: #666;
+	}
+
+	a {
+		@extend .transition;
+		display: block;
+		padding: rem-calc(10 15);
+		border-bottom: 1px solid #D4DCE3;
+		color: #676767;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+//=========================================
+// Mobile Nav Btn (user menu)
+//=========================================
 
 .mobile-nav-btn {
 	width: 50px;
@@ -306,7 +363,7 @@ html, body {
 	padding: rem-calc(5 15 10 15);
 	// border-top: 1px solid $border-color-light;
 	background: $footer-background;
-	overflow: hidden;
+	// overflow: hidden;
 	z-index: 10;
 
 	a {
@@ -347,12 +404,88 @@ html, body {
 	color: grey;
 }
 
+//=========================================
+// Dropdown
+//=========================================
+
+.lv-footer .has-dropdown {
+	position: relative;
+	display: none;
+
+	@media #{$large-up} {
+	    display: inline-block;
+	}
+
+	&:hover {
+		background: lighten($footer-background, 10%);
+	}
+
+	&:hover .lv-dropdown {
+		height: auto;
+		opacity: 1;
+	}
+}
+
+.lv-footer .lv-dropdown {
+	@extend .transition;
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	width: rem-calc(200);
+	list-style: none;
+	margin: 0;
+	text-align: left;
+	background: lighten($footer-background, 10%);
+	border-radius: $global-radius $global-radius 0 0;
+
+	a {
+		@extend .transition;
+		display: block;
+		padding: rem-calc(0 15);
+		border-top: 1px solid $footer-background;
+
+		&:hover {
+			color: $primary-color;
+		}
+
+		i {
+			padding-right: rem-calc(5);
+			color: $primary-color;
+		}
+	}
+
+	li:first-child a {
+		border: 0;
+	}
+}
+
 //-----------------------------------------------------------------
 // Social Networks
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 // Template Buttons
 //-----------------------------------------------------------------
+
+input[type="button"],
+input[type="submit"] {
+	@include button;
+	border-radius: $global-radius;
+	cursor: pointer;
+}
+
+.lv-super .pill {
+	padding: rem-calc(2 8);
+	background: grey;
+}
+
+.lv-sidebar .pill {
+	float: right;
+	margin-top: rem-calc(6);
+}
+
 //-----------------------------------------------------------------
 // Forms
 //-----------------------------------------------------------------
@@ -367,12 +500,47 @@ html, body {
 	}
 }
 
-.lv-actions {
-	font-size: rem-calc(25);
+.lv-doc-options {
+	position: relative;
 	background: white;
 	overflow: hidden;
 	border: 1px solid #DDDDDD;
 	border-radius: $global-radius;
+	padding: rem-calc(10);
+	margin-bottom: rem-calc(20);
+
+	ul {
+		font-size: rem-calc(25);
+		margin-bottom: rem-calc(20);
+
+		@media #{$large-up} {
+			margin-bottom: 0;
+		}
+	}
+
+	select {
+		@media #{$medium-up} {
+		    margin-bottom: 0;
+		}
+	}
+
+	// Buttons are unclickable when disabled
+
+	&.disabled {
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		a {
+			color: #DDDDDD;
+			cursor: default;
+		}
+	}
 }
 
 //-----------------------------------------------------------------

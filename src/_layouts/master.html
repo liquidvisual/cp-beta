@@ -26,7 +26,8 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
@@ -101,7 +102,7 @@
 
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
-        {% include navigation_off_canvas_right.html %}
+        {% include user_menu.html %}
     </nav>
 
     <!-- ***** JAVASCRIPT ***** -->
@@ -147,6 +148,10 @@
             $(".ui-datepicker").datepicker();
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
+
+        $(function() {
+            $( "#docoptionstabs" ).tabs();
+          });
 
     </script>
 

@@ -1,7 +1,7 @@
 /*
 	LIQUIDVISUAL INLINE LIST :: A Personal Framework
 
-	- updated: 22.10.14
+	- updated: 11.11.14
 	- liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -15,33 +15,35 @@ $inline-list-spacing: rem-calc(10) !default;
 //-----------------------------------------------------------------
 
 .lv-inline-list {
+	position: relative;
+	left: -$inline-list-spacing / 2; // compensate for left right padding. This is fixed no matter smallgaps etc
 	margin: 0; /* failsafe */
 	clear: both;
 
-	li {
+	> li {
 		float: left;
 		display: inline-block;
-		padding-left: $inline-list-spacing;
-
-		&:first-child {
-			padding-left: rem-calc(15) !important; // getting complex...
-		}
+		padding: 0 ($inline-list-spacing / 2) $inline-list-spacing;
 
 		a {
 			display: inline-block; /* for padding */
 		}
 	}
 
-	&.medium-gaps li {
-		padding-left: $inline-list-spacing * 2;
+	&.small-gaps > li {
+		padding: 0 $inline-list-spacing;
 	}
 
-	&.large-gaps li {
-		padding-left: $inline-list-spacing * 4;
+	&.medium-gaps > li {
+		padding: 0 ($inline-list-spacing * 2);
 	}
 
-	&.close-gaps li {
-		padding-left: 0;
+	&.large-gaps > li {
+		padding: 0 ($inline-list-spacing * 4);
+	}
+
+	&.close-gaps > li {
+		padding: 0;
 	}
 
 	@media #{$medium-up} {
@@ -54,14 +56,47 @@ $inline-list-spacing: rem-calc(10) !default;
 // we'll let those take care of the positioning, no floats.
 //-----------------------------------------------------------------
 
-.lv-inline-list[class*='text']
-{
-	width: 100%;
+@mixin inline-list-align($direction) {
+	left: auto; // flush right, not left (default)
+	right: -$inline-list-spacing / 2;
+}
 
-	li {
-		float: none;
-		// aligns properly on stack
-		padding-left: $inline-list-spacing;
-		padding-right: $inline-list-spacing;
+.lv-inline-list {
+	&[class*='text'] {
+		width: 100%;
+
+		li {
+			float: none;
+		}
+	}
+
+	&[class*='text-center'] {
+		@media #{$small-only} {
+			left: 0; // force equal sides
+		}
+	}
+
+	&[class*='medium-text-right'] {
+		@media #{$medium-up} {
+			@include inline-list-align(right);
+		}
+	}
+
+	&[class*='large-text-right'] {
+		@media #{$large-up} {
+			@include inline-list-align(right);
+		}
+	}
+
+	&[class*='xlarge-text-right'] {
+		@media #{$xlarge-up} {
+			@include inline-list-align(right);
+		}
+	}
+
+	&[class*='xxlarge-text-right'] {
+		@media #{$xxlarge-up} {
+			@include inline-list-align(right);
+		}
 	}
 }

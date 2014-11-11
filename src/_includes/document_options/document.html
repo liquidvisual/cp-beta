@@ -1,8 +1,137 @@
-<ul class="lv-actions lv-inline-list medium-gaps">
-    <li><a title="Save to My Folders" class="ajax-modal" href="/hints/save-to-my-folders.html"><i class="fi-save"></i></a></li>
-    <li><a title="Print Documents" class="ajax-modal" href="/hints/print-documents.html"><i class="fi-print"></i></a></li>
-    <li><a title="Download Documents" class="ajax-modal" href="/hints/download-documents.html"><i class="fi-download"></i></a></li>
-    <li><a title="Email Documents" class="ajax-modal" href="/hints/email-documents.html"><i class="fi-mail"></i></a></li>
-    <li><a title="Add to My Quicklinks" class="ajax-modal" href="/hints/add-to-my-quicklinks.html"><i class="fi-bookmark"></i></a></li>
-    <li><a title="Fullscreen" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-arrows-out"></i></a></li>
-</ul>
+<div class="lv-doc-options">
+    <ul class="lv-inline-list small-gaps text-center medium-text-left">
+        <li><a title="Save to My Folders" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-save"></i></a></li>
+        <li><a title="Print" class="ajax-modal" href="/hints/print-document.html"><i class="fi-print"></i></a></li>
+        <li><a title="Export" class="ajax-modal" href="/hints/export-document.html"><i class="fi-page-export-doc"></i></a></li>
+        <li><a title="Email" class="ajax-modal" href="/hints/email-document.html"><i class="fi-mail"></i></a></li>
+        <li><a title="Add to My Quicklinks" class="ajax-modal" href="/hints/add-to-my-quicklinks.html"><i class="fi-star"></i></a></li>
+        <!-- <li><a title="Fullscreen" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-arrows-out"></i></a></li> -->
+    </ul>
+</div>
+
+<!-- OUTPUT FROM CHECKPOINT -->
+
+{% comment %}
+// My Stuff
+<style>
+    #documentnavigation .navgroup {
+    display: inline-block;
+    float: right;
+}
+
+#documentnavigation .navgroup > div {
+    display: inline-block;
+    float: left;
+}
+
+#documentnavigation .nextD,
+#documentnavigation .prev {
+    position: relative;
+    display: block;
+    background: $primary-color;
+    width: 40px;
+    height: 40px;
+    text-indent: -9999px;
+}
+</style>
+
+<div id="documentoptions" class="clearfix">
+
+    <div id="documentoptionicons">
+        <span class="save2icon" id="save2Container">
+            <a href="#" id="add2FavNew" class="save2Link"><img src="/cpau/images/ico_save16.png" alt="" title="Save to my folders"></a>
+        </span>
+        <span class="deliveryicon" id="printContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_print.png" alt="" title="Print"></a>
+        </span>
+        <span class="saveicon" id="saveContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_export16.png" alt="" title="Export"></a>
+        </span>
+        <span class="deliveryicon" id="emailContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_email.png" alt="" title="E-mail"></a>
+        </span>
+        <span class="deliveryicon">
+            <b class="qlimg noSaved">
+            <img src="/cpau/images/ico_staradd.png" alt="" title="Add to My Quick Links" class="imgNoSaved" id="btnAUFavOn_Ifc3193e04bdd11e38fa3f057ed117a82">
+            <img src="/cpau/images/ico_staradd_ghost.png" alt="" title="This is already stored in your shortcuts" class="imgSaved" id="btnAUFavOff_Ifc3193e04bdd11e38fa3f057ed117a82">
+            </b>
+        </span>
+        <span class="fullpageicon" id="fullpageContainer">
+            <a href="#" onclick="fullpagetoggle()" class="fullpageLink"><img src="/cpau/images/ico-fullpageout.png" alt="View in full page mode" id="icoFullPage"></a>
+        </span>
+        <!--<span class="fontchangericon" id="fontchangerContainer">
+        <a href="#" class="fontchangerLink"><img src="/cpau/images/ico_fontchanger.png" alt=""  title="Change the font of this document" ></a>
+        </span>-->
+    </div>
+    <div id="documentoptionsnotes"></div>
+    <div id="deliveryButtonsContainer">
+        <form method="get" action="/maf/app/delivery/document" id="deliveryForm" class="hidden">
+            <fieldset>
+                <input type="hidden" name="srguid" value="i0ad69f8e000001499c1452ea5529d5dd">
+                <input type="hidden" name="docRange" id="docRange">
+                <input type="hidden" name="fulltext" value="true">
+                <input type="hidden" name="td" value="37">
+                <input type="hidden" name="preselected" id="preselected" value="">
+                <input type="hidden" name="deliveryTarget" id="deliveryTarget">
+                <input type="hidden" name="docguid" id="docguid" value="Ifc3193e04bdd11e38fa3f057ed117a82">
+                <input type="hidden" name="deliveryOptions" id="deliveryOptions">
+                <input type="hidden" name="tocguid" value="[Ljava.lang.String;@c60514">
+                <input type="hidden" name="ao" value="[Ljava.lang.String;@776992">
+                <input type="hidden" name="tocDs" value="AUNZ_AU_ACCTING_TOC">
+            </fieldset>
+        </form>
+    </div>
+    <ul id="ulDeliveryContainer"></ul>
+        <div id="documentnavigation" class="clearfix">
+            <div id="searchnavBar">
+                <div class="navgroup clearfix">
+                    <div class="prevDoc">
+                        <div class="prevghost">No previous document</div>
+                    </div>
+                    <div class="navigationText navlabel">Result</div>
+                    <div class="nextDoc">
+                        <a class="nextD" id="lnkNextDoc" href="document?src=docnav&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;fromrend=&amp;srguid=i0ad69f8e000001499c1452ea5529d5dd&amp;epos=2&amp;spos=2&amp;page=0&amp;td=37&amp;savedSearch=&amp;searchFrom=&amp;context=9&amp;resultType=list&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC" title="View next search result">
+                            Next
+                        </a>
+                    </div>
+                </div>
+
+                <div class="navgroup clearfix" id="termNavGroup">
+                    <div class="prevDoc">
+                        <a class="prev" href="javascript:void(0)" id="prevTermImg" title="Jump to previous search term location" style="display: none;">
+                            Previous Document
+                        </a>
+                        <div id="prevTermHide" class="prevghost" style="">No previous term</div>
+                    </div>
+
+                    <div class="navigationText navlabel">Term</div>
+
+                    <div class="nextDoc">
+                        <a class="nextD" href="javascript:void(0)" id="nextTermImg" title="Jump to next search term location">
+                            Next document
+                        </a>
+                        <div id="nextTermHide" class="nextghost" style="display:none">No next term</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="docnavBar" class="clearfix">
+                <div class="navgroup clearfix">
+                    <div class="prevDoc">
+                        <a class="prev" href="document?docguid=Ifc3193d34bdd11e38fa3f057ed117a82&amp;resultType=list&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC&amp;tocGuid=AUNZ_AU_ACCTING_TOC||Ifc316ddb4bdd11e38fa3f057ed117a82&amp;bcguid=AUNZ_TOC||I8b0a65d4e6f43a24995634a1869deac5&amp;startChunk=1&amp;endChunk=1&amp;epos=1" title="View the previous document in the publication">
+                            Prev
+                        </a>
+                    </div>
+                    <div class="navigationText navlabel">
+                        <span class="tocDocNavText">Doc</span>
+                    </div>
+                    <div class="nextDoc">
+                        <a class="nextD" href="document?ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;docguid=Ifc316d724bdd11e38fa3f057ed117a82&amp;resultType=list&amp;isTocNav=true&amp;tocDs=AUNZ_AU_ACCTING_TOC&amp;tocGuid=AUNZ_AU_ACCTING_TOC||Ifc3193e54bdd11e38fa3f057ed117a82&amp;bcguid=AUNZ_TOC||I8b0a65d4e6f43a24995634a1869deac5&amp;startChunk=1&amp;endChunk=1&amp;epos=1" title="View the next document in the publication">
+                            Next
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endcomment %}

@@ -43,6 +43,40 @@ $(window).load(function() {
 });
 
 //-----------------------------------------------------------------
+// Search Filter (mini-toc)
+// http://stackoverflow.com/questions/3442394/jquery-using-text-to-retrieve-only-text-not-nested-in-child-tags
+//-----------------------------------------------------------------
+
+// We need to rip out the text and place it inside the next adjacent anchor
+
+$(function() {
+    $("#searchsummary #metadocs > ul > li").each(function(){
+        var textTitle = $(this).contents().filter(function(){return this.nodeType == 3})[0];
+        $('a', $(this)).first().text(textTitle.nodeValue);
+        textTitle.nodeValue = '';
+    });
+});
+
+// Mini toc behavior
+
+$(function() {
+    $('#refinesearch .collapsed > .resultMetadocLink, #refinesearch .expanded > .resultMetadocLink').click(function(){
+        var $this = $(this);
+        // Default 'closed' state
+        if ($this.parent().hasClass('collapsed')){
+
+            $this.parent().removeClass('collapsed').addClass('expanded');
+            $('ul', $this.parent()).first().show();
+
+        } else if ($this.parent().hasClass('expanded')) {
+
+            $this.parent().removeClass('expanded').addClass('collapsed');
+            $('ul', $this.parent()).first().hide();
+        }
+    });
+});
+
+//-----------------------------------------------------------------
 // Resize
 //-----------------------------------------------------------------
 
