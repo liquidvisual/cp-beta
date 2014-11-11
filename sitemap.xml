@@ -2,43 +2,60 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/research/cases/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/research/document/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/history/</loc>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>/research/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/preferences/</loc>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/research/search-results-clean/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/research/search-results/</loc>
-    <lastmod>2014-11-10T11:36:03+11:00</lastmod>
+    <lastmod>2014-11-11T21:13:24+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/hints/add-to-my-quicklinks.html</loc>
     <lastmod>2014-11-06T17:30:21+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/change-client-id.html</loc>
+    <lastmod>2014-11-11T13:05:26+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -52,23 +69,48 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/download-documents.html</loc>
+    <loc>/hints/download-search.html</loc>
     <lastmod>2014-11-06T17:43:53+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/email-documents.html</loc>
+    <loc>/hints/email-document.html</loc>
+    <lastmod>2014-11-11T19:41:23+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/email-results.html</loc>
     <lastmod>2014-11-06T17:13:58+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/print-documents.html</loc>
+    <loc>/hints/email-search.html</loc>
+    <lastmod>2014-11-11T19:38:04+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/export-document.html</loc>
+    <lastmod>2014-11-11T19:26:34+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/export-results.html</loc>
+    <lastmod>2014-11-11T19:46:51+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/print-document.html</loc>
+    <lastmod>2014-11-11T19:34:03+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/hints/print-results.html</loc>
     <lastmod>2014-11-06T17:00:01+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/save-to-my-folders.html</loc>
-    <lastmod>2014-11-06T17:05:53+11:00</lastmod>
+    <loc>/hints/print-search.html</loc>
+    <lastmod>2014-11-11T19:56:14+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>

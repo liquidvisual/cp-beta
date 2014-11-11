@@ -22,7 +22,8 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
@@ -77,9 +78,20 @@
 		<strong class="user-profile-title">Jason Chen</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
-	<a class="right user-profile-pic" href="#">
+	<div class="right user-profile-pic" href="#">
 		<img width="40" src="/assets/img/ui/no-face.png" alt="Profile Pic">
-	</a>
+		<i class="fa fa-caret-down"></i>
+		<div class="user-profile-dropdown">
+			<ul>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
+</ul>
+		</div>
+	</div>
 </section>
             </header>
 
@@ -401,7 +413,7 @@
             <div class="row">
                 <div class="medium-offset-3 medium-9 columns">
                     <!-- <button value="submit" class="button radius medium">Search</button> -->
-                    <a href="/research/search-results-clean/" class="button radius medium">Search</a>
+                    <a href="/research/search-results/" class="button radius medium">Search</a>
                 </div>
             </div>
 
@@ -422,47 +434,18 @@
 <div class="row">
     <div class="columns">
         <hr>
-        <ul class="lv-actions lv-inline-list medium-gaps">
-    <li><a title="Print Documents" class="ajax-modal" href="/hints/print-documents.html"><i class="fi-print"></i></a></li>
-    <li><a title="Download Documents" class="ajax-modal" href="/hints/download-documents.html"><i class="fi-download"></i></a></li>
-    <li><a title="Email Documents" class="ajax-modal" href="/hints/email-documents.html"><i class="fi-mail"></i></a></li>
-    <li><a title="Create Email Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-alert"></i></a></li>
-    <li><a title="Create Organisational Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-calendar"></i></a></li>
-    <li><a title="Create RSS Feed" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-rss"></i></a></li>
-</ul>
+        <div class="lv-doc-options disabledX">
+    <ul class="lv-inline-list small-gaps text-center medium-text-left">
+        <li><a title="Print Documents" class="ajax-modal" href="/hints/print-search.html"><i class="fi-print"></i></a></li>
+        <li><a title="Download Documents" class="ajax-modal" href="/hints/export-document.html"><i class="fi-page-export-doc"></i></a></li>
+        <li><a title="Email Documents" class="ajax-modal" href="/hints/email-search.html"><i class="fi-mail"></i></a></li>
+        <li><a title="Create Email Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-alert"></i></a></li>
+        <li><a title="Create Organisational Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-calendar"></i></a></li>
+        <li><a title="Create RSS Feed" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-rss"></i></a></li>
+    </ul>
+</div>
 
-<!-- OUTPUT FROM CHECKPOINT -->
 
-<!-- <div id="browsetoc">
-    <div id="documentoptions" class="clearfix">
-        <form method="POST" class="tocDelivery" target="delivFrame" action="/maf/app/delivery/document" id="deliveryFormToc">
-            <div id="documentoptionicons">
-                <span class="deliveryicon" title="Print documents"><img src="/cpau/images/ico_print.png" alt="Print documents" id="printBrowseToc"></span>
-                <span class="deliveryicon" title="Download documents"><img src="/cpau/images/ico_export16.png" alt="Download documents" id="saveBrowseToc"></span>
-                <span class="deliveryicon" title="Email documents"><img src="/cpau/images/ico_email.png" alt="Email documents" id="emailBrowseToc"></span>
-
-                <span class="deliveryicon" title="Create Individual alert">
-                    <a id="indAlertCTA"><img src="/cpau/images/ico-alert.png" alt="" title="Create my email alert" id="indAlertContainer" my="" email="" alertisindalert="true" data-newalert-url="/maf/api/alerts/individual/form" data-editalert-url="/maf/api/alerts/individual/alerts" data-alert-subsid="" data-success-redirect="/maf/app/individual/view"></a>
-                    <div title="Edit Alert" style="display:none" id="indAlertDialog" data-alertname-url="/maf/api/alerts/individual/.json"></div>
-                </span>
-
-                <span class="deliveryicon" title="Create Organisational alert">
-                    <img src="/cpau/images/ico_orgalert.png" alt="" click="" to="" create="" an="" organisational="" alert"="" "="" id="orgAlertContainer" title="Click to create an Organisational Alert" isorgalert="true" data-newalert-url="/maf/api/alertctr/alerts/organizational/settings" data-editalert-url="/maf/api/alertctr/alerts//organizational" data-alert-guid="" data-success-redirect="/maf/api/alertctr/alerts/organizational/view" data-alert-subsid="">
-                    <div title="Edit Alert" style="display:none" id="orgAlertDialog" data-alertname-url="/maf/api/alertctr/alerts//organizational/name"></div>
-                </span>
-
-                <a id="rsslink">
-                    <img src="/cpau/images/icons/ico-rss.png" alt="Create RSS Feed" title="Create RSS Feed" id="rssContainer">
-                </a>
-            </div>
-            <fieldset>
-                <input type="hidden" name="deliveryTarget" id="deliveryTargetToc">
-                <input type="hidden" name="isMultiDoc" value="true">
-            </fieldset>
-        </form>
-    </div>
-</div> -->
-        <br>
     </div>
 </div>
 
@@ -472,6 +455,7 @@
     $(document).ready(function(){
         $('.toc-root .plus .collapsed, .toc-root .plus .expanded').click(function(){
             var $this = $(this);
+
             // Default 'closed' state
             if ($this.hasClass('collapsed')){
 
@@ -484,13 +468,20 @@
                 $('ul', $this.parent()).first().hide();
             }
         });
+
+        // Doc Options only appear when something is selected (checked)
+
+        $("input[type='checkbox']").on("click", function() {
+            if ($('input:checked').length) {
+                $('.lv-doc-options').removeClass('disabled');
+            } else {
+                $('.lv-doc-options').addClass('disabled');
+            }
+        });
     });
 </script>
 
-
-
-
-
+<!-- OUTPUT FROM CHECKPOINT -->
 
 <div id="tocNodes" class="toc-root">
                         <div id="loadingToc" style="display: none;">Loading...</div>
@@ -9739,7 +9730,7 @@
 
 	<!-- LINKS -->
 	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-		<h3>My Quicklinks</h3>
+		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
 		<br>
 		<ul class="lv-quicklinks content-block">
 			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
@@ -9763,21 +9754,30 @@
 
             <!-- FOOTER -->
             <footer class="lv-footer">
-                <div class="row collapse is-full-width">
+                
+
+<div class="row collapse is-full-width">
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a target="_blank" href="http://training.thomsonreuters.com.au/products/checkpoint/">Help</a></li>
+            <li class="has-dropdown"><a href="#">Sites</a>
+                <ul class="lv-dropdown">
+                    <li><a href="https://www.checkpointworld.com"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                </ul>
+            </li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx">Privacy Policy</a></li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx">Terms of Use</a></li>
         </ul>
     </div>
     <div class="medium-6 medium-pull-6 columns">
         <div class="text-center medium-text-left">
-            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
         </div>
     </div>
-</div>
+</div> <!-- .row -->
             </footer>
 
         </div> <!-- .lv-page -->
@@ -9809,13 +9809,12 @@
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         <ul>
-    <li><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
-    <li><a href="#">Contacts</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Preferences</a></li>
-    <li><a href="#">Client ID</a></li>
-    <li><a href="#">Help</a></li>
-    <li><a href="#">Feedback</a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
     </nav>
 
@@ -9851,6 +9850,10 @@
             $(".ui-datepicker").datepicker();
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
+
+        $(function() {
+            $( "#docoptionstabs" ).tabs();
+          });
 
     </script>
 

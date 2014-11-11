@@ -22,7 +22,8 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
     <link rel="stylesheet" href="/assets/css/optimized.css">
 
@@ -77,9 +78,20 @@
 		<strong class="user-profile-title">Jason Chen</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
-	<a class="right user-profile-pic" href="#">
+	<div class="right user-profile-pic" href="#">
 		<img width="40" src="/assets/img/ui/no-face.png" alt="Profile Pic">
-	</a>
+		<i class="fa fa-caret-down"></i>
+		<div class="user-profile-dropdown">
+			<ul>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
+</ul>
+		</div>
+	</div>
 </section>
             </header>
 
@@ -109,106 +121,467 @@
             <!-- UNTOUCHED OUTPUT FROM CHECKPOINT -->
 
 <section id="sidebar" style="height: 335px;">
-    <h1>Search Summary</h1>
-    <div id="searchsummary">
+        <h1>Search Summary</h1>
+        <div id="searchsummary">
 
-        <ul id="resultsummary">
-            <li class="searchInfo">
-                <span class="title">Documents matched: </span>
-                <span id="totalDocumentCount" class="result searchDataForDev">37</span>
-            </li>
-            <li class="searchInfo">
-                <span class="title">Search terms: </span>
-                <span class="result">Free Text (orlando)</span>
-                <strong>
-                <span style="font-size:x-small;" id="filterStatus"></span>
-                </strong>
-            </li>
-        </ul>
+                    <ul id="resultsummary">
+                <li class="searchInfo">
+                    <span class="title">Documents matched: </span>
+                    <span id="totalDocumentCount" class="result searchDataForDev">37</span>
+                </li>
 
-        <div class="separador"></div>
-        <ul id="searchoptions">
+                <li class="searchInfo">
+                    <span class="title">Search terms: </span>
+                                            <span class="result">Free Text (orlando)</span>
+                    <strong>
+                        <span style="font-size:x-small;" id="filterStatus"></span>
+                    </strong>
+                </li>
+            </ul>
+
+
+
+                                    <div class="separador"></div>
+                                <ul id="searchoptions">
+
             <li id="editsearch" class="searchInfo">
-                <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=false" id="lnkEditSearch">Edit Search</a>
+                        <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=false" id="lnkEditSearch">Edit Search</a>
             </li>
-            <li id="newsearch" class="searchInfo">
-                <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=true" id="lnkNewSearch">New Search</a>
-            </li>
-            <li id="savesearch" class="searchInfo">
-                <a href="#" id="add2Fav" title="Save Search">Save this search to my folders</a>
-                <div id="favFormContainerPopup">
+        <li id="newsearch" class="searchInfo">
+                    <a href="/maf/api/tocectory?ndd=2&amp;stid=std-anz-default&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;stnew=true" id="lnkNewSearch">New Search</a>
+        </li>
+                <li id="savesearch" class="searchInfo">
+                            <a href="#" id="add2Fav" title="Save Search">Save this search to my folders</a>
+                                <div id="favFormContainerPopup">
                     <div id="closeFavFormContainer" class="closeFavFormContainer">&nbsp;</div>
                 </div>
-            </li>
+                    </li>
 
-        </ul>
+                </ul>
 
-        <div id="refinesearch">
 
-            <h3>Filter your Search</h3>
 
-            <form id="metadocs" class="leftResultColumn" action="/maf/app/search/filter">
-                <ul>
 
-                    <li class="collapsed hasChildren"><a id="productTypeLink" field="product.type" href="#" class="resultMetadocLink">&nbsp;</a>Content Type
-                <ul id="productTypeMetadoc" class="resultMetadoc"></ul>
-            </li>
 
-            <li class="collapsed hasChildren"><a id="practiceAreaLink" href="#" field="subject.area" class="resultMetadocLink">&nbsp;</a>Subject Area
-        <ul id="practiceAreaMetadoc" class="resultMetadoc"></ul>
-    </li>
 
-    <li class="collapsed hasChildren"><a field="product" id="productLink" href="#" class="resultMetadocLink">&nbsp;</a>Product Title
-<ul id="productMetadoc" class="resultMetadoc"></ul>
-</li>
+            <div id="refinesearch">
 
-<li class="hasChildren expanded"><a id="jurisLink" href="#" field="juris.l1" class="resultMetadocLink">&nbsp;</a>Jurisdiction
-<ul id="jurisMetadoc" class="resultMetadoc" style="display: block;">
 
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_Commonwealth" type="checkbox" name="filter" value="juris.l2::Commonwealth">
-    <a id="lnkAUMetadocSum_Commonwealth" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth">Commonwealth (3)</a>
-</li>
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_CommonwealthofAustralia" type="checkbox" name="filter" value="juris.l2::Commonwealth of Australia">
-    <a id="lnkAUMetadocSum_CommonwealthofAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth+of+Australia">Commonwealth of Australia (2)</a>
-</li>
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_NewSouthWales" type="checkbox" name="filter" value="juris.l2::New South Wales">
-    <a id="lnkAUMetadocSum_NewSouthWales" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ANew+South+Wales">New South Wales (2)</a>
-</li>
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_SouthAustralia" type="checkbox" name="filter" value="juris.l2::South Australia">
-    <a id="lnkAUMetadocSum_SouthAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ASouth+Australia">South Australia (6)</a>
-</li>
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_Victoria" type="checkbox" name="filter" value="juris.l2::Victoria">
-    <a id="lnkAUMetadocSum_Victoria" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AVictoria">Victoria (1)</a>
-</li>
-<li class="clearfix">
-    <input id="chkAU}MetadocSum_WesternAustralia" type="checkbox" name="filter" value="juris.l2::Western Australia">
-    <a id="lnkAUMetadocSum_WesternAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014996d6cc88b4a7ea3f&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AWestern+Australia">Western Australia (1)</a>
-</li>
+
+
+
+                     <h3>Filter your Search</h3>
+
+
+             <form id="metadocs" class="leftResultColumn" action="/maf/app/search/filter">
+                 <ul>
+
+
+
+
+
+
+                             <li class="hasChildren collapsed"><a id="productTypeLink" field="product.type" href="#" class="resultMetadocLink">&nbsp;</a>Content Type
+                                <ul id="productTypeMetadoc" class="resultMetadoc" style="display: none;">
+
+
+
+
+
+
+
+                         <li class="clearfix">
+                                 <input id="chkAUMetadocSum_ATO" type="checkbox" name="filter" value="product.type::ATO">
+                 <a id="lnkAUMetadocSum_ATO" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3AATO">ATO (4)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAUMetadocSum_BusinessNewsandAlerts" type="checkbox" name="filter" value="product.type::Business News and Alerts">
+                 <a id="lnkAUMetadocSum_BusinessNewsandAlerts" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3ABusiness+News+and+Alerts">Business News and Alerts (17)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAUMetadocSum_Cases" type="checkbox" name="filter" value="product.type::Cases">
+                 <a id="lnkAUMetadocSum_Cases" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3ACases">Cases (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAUMetadocSum_Commentary" type="checkbox" name="filter" value="product.type::Commentary">
+                 <a id="lnkAUMetadocSum_Commentary" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3ACommentary">Commentary (8)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAUMetadocSum_Journals" type="checkbox" name="filter" value="product.type::Journals">
+                 <a id="lnkAUMetadocSum_Journals" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3AJournals">Journals (4)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAUMetadocSum_Legislation" type="checkbox" name="filter" value="product.type::Legislation">
+                 <a id="lnkAUMetadocSum_Legislation" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product.type%3A%3ALegislation">Legislation (1)</a>
+             </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ul>
-</li>
+                             </li>
+
+
+                                                                 <li class="hasChildren collapsed"><a id="practiceAreaLink" href="#" field="subject.area" class="resultMetadocLink">&nbsp;</a>Subject Area
+                             <ul id="practiceAreaMetadoc" class="resultMetadoc" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+                         <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_AdministrativeLaw" type="checkbox" name="filter" value="subject.area::Administrative Law">
+                 <a id="lnkAUMetadocSum_AdministrativeLaw" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AAdministrative+Law">Administrative Law (2)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Bankruptcy&amp;Insolvency" type="checkbox" name="filter" value="subject.area::Bankruptcy &amp; Insolvency">
+                 <a id="lnkAUMetadocSum_Bankruptcy&amp;Insolvency" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ABankruptcy+%26+Insolvency">Bankruptcy &amp; Insolvency (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_CGT" type="checkbox" name="filter" value="subject.area::CGT">
+                 <a id="lnkAUMetadocSum_CGT" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ACGT">CGT (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Company&amp;BusinessLaw" type="checkbox" name="filter" value="subject.area::Company &amp; Business Law">
+                 <a id="lnkAUMetadocSum_Company&amp;BusinessLaw" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ACompany+%26+Business+Law">Company &amp; Business Law (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Corporations" type="checkbox" name="filter" value="subject.area::Corporations">
+                 <a id="lnkAUMetadocSum_Corporations" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ACorporations">Corporations (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Employment" type="checkbox" name="filter" value="subject.area::Employment">
+                 <a id="lnkAUMetadocSum_Employment" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AEmployment">Employment (8)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Environment" type="checkbox" name="filter" value="subject.area::Environment">
+                 <a id="lnkAUMetadocSum_Environment" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AEnvironment">Environment (6)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_FBT" type="checkbox" name="filter" value="subject.area::FBT">
+                 <a id="lnkAUMetadocSum_FBT" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AFBT">FBT (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Family" type="checkbox" name="filter" value="subject.area::Family">
+                 <a id="lnkAUMetadocSum_Family" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AFamily">Family (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_FinancialServices" type="checkbox" name="filter" value="subject.area::Financial Services">
+                 <a id="lnkAUMetadocSum_FinancialServices" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AFinancial+Services">Financial Services (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_GST" type="checkbox" name="filter" value="subject.area::GST">
+                 <a id="lnkAUMetadocSum_GST" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AGST">GST (4)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_IncomeTax" type="checkbox" name="filter" value="subject.area::Income Tax">
+                 <a id="lnkAUMetadocSum_IncomeTax" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AIncome+Tax">Income Tax (9)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_IntellectualProperty" type="checkbox" name="filter" value="subject.area::Intellectual Property">
+                 <a id="lnkAUMetadocSum_IntellectualProperty" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AIntellectual+Property">Intellectual Property (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Legal" type="checkbox" name="filter" value="subject.area::Legal">
+                 <a id="lnkAUMetadocSum_Legal" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ALegal">Legal (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_LocalGovernment" type="checkbox" name="filter" value="subject.area::Local Government">
+                 <a id="lnkAUMetadocSum_LocalGovernment" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ALocal+Government">Local Government (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Manufacturing" type="checkbox" name="filter" value="subject.area::Manufacturing">
+                 <a id="lnkAUMetadocSum_Manufacturing" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AManufacturing">Manufacturing (2)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Media" type="checkbox" name="filter" value="subject.area::Media">
+                 <a id="lnkAUMetadocSum_Media" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3AMedia">Media (1)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_News" type="checkbox" name="filter" value="subject.area::News">
+                 <a id="lnkAUMetadocSum_News" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ANews">News (17)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_PublicSector" type="checkbox" name="filter" value="subject.area::Public Sector">
+                 <a id="lnkAUMetadocSum_PublicSector" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3APublic+Sector">Public Sector (4)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_TaxNews" type="checkbox" name="filter" value="subject.area::Tax News">
+                 <a id="lnkAUMetadocSum_TaxNews" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ATax+News">Tax News (3)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Transport" type="checkbox" name="filter" value="subject.area::Transport">
+                 <a id="lnkAUMetadocSum_Transport" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ATransport">Transport (2)</a>
+             </li>
+                     <li class="clearfix">
+                                 <input id="chkAU}MetadocSum_Trusts" type="checkbox" name="filter" value="subject.area::Trusts">
+                 <a id="lnkAUMetadocSum_Trusts" href="/maf/app/search/filter?ndd=6&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=subject.area%3A%3ATrusts">Trusts (3)</a>
+             </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ul>
-<input type="hidden" name="resultHandle" value="i0ad629030000014996d6cc88b4a7ea3f">
-<input type="hidden" name="ao" value="o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca">
-<input type="hidden" name="resultType" value="SEARCH">
-<input type="hidden" name="trail" value="false">
-<input type="hidden" name="predefinedRelationshipsType" value="resultList">
-<input type="hidden" name="originates-from-link" value="false">
-<input type="hidden" name="originates-from-link-before" value="false">
-<input type="hidden" name="backToOrigResults" value="true">
-<input type="hidden" name="sortid" value="Relevancy">
-<input type="hidden" name="tab" value="research">
-<input id="goButton" type="submit" value="Go" class="goDisabled" disabled="disabled">
-</form>
-</div>
-</div>
-</section>
+                         </li>
+
+                                                                 <li class="hasChildren collapsed"><a field="product" id="productLink" href="#" class="resultMetadocLink">&nbsp;</a>Product Title
+                            <ul id="productMetadoc" class="resultMetadoc" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_ATOMIN" type="checkbox" name="filter" value="product::AUNZ_CA_ATOMIN">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_ATOMIN" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_ATOMIN">ATO Liaison Group Minutes (3)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_ATOFED" type="checkbox" name="filter" value="product::AUNZ_CA_ATOFED">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_ATOFED" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_ATOFED">ATO Website (4)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_24ADMIN" type="checkbox" name="filter" value="product::AUNZ_CA_24ADMIN">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_24ADMIN" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_24ADMIN">Alert24 - Administrative Law (2)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_24FAMILY" type="checkbox" name="filter" value="product::AUNZ_CA_24FAMILY">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_24FAMILY" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_24FAMILY">Alert24 - Family Law (3)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_24INTELPRP" type="checkbox" name="filter" value="product::AUNZ_CA_24INTELPRP">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_24INTELPRP" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_24INTELPRP">Alert24 - Intellectual Property (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_24MEDIACMM" type="checkbox" name="filter" value="product::AUNZ_CA_24MEDIACMM">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_24MEDIACMM" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_24MEDIACMM">Alert24 - Media &amp; Communications (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_24PROPENV" type="checkbox" name="filter" value="product::AUNZ_CA_24PROPENV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_24PROPENV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_24PROPENV">Alert24 - Property, Planning &amp; Environment (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_BANKRPTLW" type="checkbox" name="filter" value="product::AUNZ_CA_BANKRPTLW">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_BANKRPTLW" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_BANKRPTLW">Australian Bankruptcy Law and Practice (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JLBUSLAW" type="checkbox" name="filter" value="product::AUNZ_CA_JLBUSLAW">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JLBUSLAW" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JLBUSLAW">Australian Business Law Review (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JNLAGST" type="checkbox" name="filter" value="product::AUNZ_CA_JNLAGST">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JNLAGST" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JNLAGST">Australian GST Journal (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_TAXRP" type="checkbox" name="filter" value="product::AUNZ_CA_TAXRP">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_TAXRP" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_TAXRP">Australian Tax Reports (3)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JLTAXREV" type="checkbox" name="filter" value="product::AUNZ_CA_JLTAXREV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JLTAXREV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JLTAXREV">Australian Tax Review (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JLTAXRVV30" type="checkbox" name="filter" value="product::AUNZ_CA_JLTAXRVV30">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JLTAXRVV30" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JLTAXRVV30">Australian Tax Review (Vol 25+) (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_BANKRPTGB" type="checkbox" name="filter" value="product::AUNZ_CA_BANKRPTGB">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_BANKRPTGB" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_BANKRPTGB">Bankruptcy in Australia - A Guidebook (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_ENVAUGUIDE" type="checkbox" name="filter" value="product::AUNZ_CA_ENVAUGUIDE">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_ENVAUGUIDE" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_ENVAUGUIDE">Environmental Audit Guidebook (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JLINSOLV" type="checkbox" name="filter" value="product::AUNZ_CA_JLINSOLV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JLINSOLV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JLINSOLV">Insolvency Law Journal (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_JLINSOLV9" type="checkbox" name="filter" value="product::AUNZ_CA_JLINSOLV9">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_JLINSOLV9" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_JLINSOLV9">Insolvency Law Journal (Vol 9+) (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_NTLWRKREL" type="checkbox" name="filter" value="product::AUNZ_CA_NTLWRKREL">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_NTLWRKREL" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_NTLWRKREL">National Workplace Relations (2)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAENVIRON" type="checkbox" name="filter" value="product::AUNZ_CA_CAENVIRON">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAENVIRON" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAENVIRON">PSN - Environmental Manager (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAENERGY" type="checkbox" name="filter" value="product::AUNZ_CA_CAENERGY">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAENERGY" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAENERGY">PSN - Executive Compliance News - Energy &amp; Water (3)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAFINSERV" type="checkbox" name="filter" value="product::AUNZ_CA_CAFINSERV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAFINSERV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAFINSERV">PSN - Executive Compliance News - Financial Services (3)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CALEGSERV" type="checkbox" name="filter" value="product::AUNZ_CA_CALEGSERV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CALEGSERV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CALEGSERV">PSN - Executive Compliance News - Legal Services (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CALOCGOV" type="checkbox" name="filter" value="product::AUNZ_CA_CALOCGOV">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CALOCGOV" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CALOCGOV">PSN - Executive Compliance News - Local Government (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAMANUF" type="checkbox" name="filter" value="product::AUNZ_CA_CAMANUF">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAMANUF" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAMANUF">PSN - Executive Compliance News - Manufacturing (2)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAMINING" type="checkbox" name="filter" value="product::AUNZ_CA_CAMINING">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAMINING" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAMINING">PSN - Executive Compliance News - Mining &amp; Petroleum (1)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAPUBSEC" type="checkbox" name="filter" value="product::AUNZ_CA_CAPUBSEC">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAPUBSEC" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAPUBSEC">PSN - Executive Compliance News - Public Sector (4)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CATRANSLOG" type="checkbox" name="filter" value="product::AUNZ_CA_CATRANSLOG">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CATRANSLOG" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CATRANSLOG">PSN - Executive Compliance News - Transport &amp; Logistics (2)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAOCCUPNWS" type="checkbox" name="filter" value="product::AUNZ_CA_CAOCCUPNWS">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAOCCUPNWS" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAOCCUPNWS">PSN - Occupational Health News (2)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_CAWORKCMP" type="checkbox" name="filter" value="product::AUNZ_CA_CAWORKCMP">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_CAWORKCMP" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_CAWORKCMP">PSN - Workers Compensation Report (4)</a>
+                 </li>
+                                                 <li class="clearfix">
+                     <input id="chkAU}MetadocSum_AUNZ_CA_LGBILLEMS" type="checkbox" name="filter" value="product::AUNZ_CA_LGBILLEMS">
+                     <a id="lnkAUMetadocSum_AUNZ_CA_LGBILLEMS" href="/maf/app/search/filter?ndd=6&amp;originates-from-link=false&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;context=3&amp;sortid=Relevancy&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=product%3A%3AAUNZ_CA_LGBILLEMS">Tax Bills and Explanatory Memoranda (1)</a>
+                 </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+                         </li>
+
+                                                                 <li class="hasChildren collapsed"><a id="jurisLink" href="#" field="juris.l1" class="resultMetadocLink">&nbsp;</a>Jurisdiction
+                            <ul id="jurisMetadoc" class="resultMetadoc" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+
+                                                                  <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_Commonwealth" type="checkbox" name="filter" value="juris.l2::Commonwealth">
+                            <a id="lnkAUMetadocSum_Commonwealth" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth">Commonwealth (3)</a>
+                        </li>
+                                        <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_CommonwealthofAustralia" type="checkbox" name="filter" value="juris.l2::Commonwealth of Australia">
+                            <a id="lnkAUMetadocSum_CommonwealthofAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ACommonwealth+of+Australia">Commonwealth of Australia (2)</a>
+                        </li>
+                                        <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_NewSouthWales" type="checkbox" name="filter" value="juris.l2::New South Wales">
+                            <a id="lnkAUMetadocSum_NewSouthWales" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ANew+South+Wales">New South Wales (2)</a>
+                        </li>
+                                        <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_SouthAustralia" type="checkbox" name="filter" value="juris.l2::South Australia">
+                            <a id="lnkAUMetadocSum_SouthAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3ASouth+Australia">South Australia (6)</a>
+                        </li>
+                                        <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_Victoria" type="checkbox" name="filter" value="juris.l2::Victoria">
+                            <a id="lnkAUMetadocSum_Victoria" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AVictoria">Victoria (1)</a>
+                        </li>
+                                        <li class="clearfix">
+                                                        <input id="chkAU}MetadocSum_WesternAustralia" type="checkbox" name="filter" value="juris.l2::Western Australia">
+                            <a id="lnkAUMetadocSum_WesternAustralia" href="/maf/app/search/filter?ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;resultHandle=i0ad629030000014997e3ded898a8cc7a&amp;trail=false&amp;predefinedRelationshipsType=resultList&amp;resultType=SEARCH&amp;filter=juris.l2%3A%3AWestern+Australia">Western Australia (1)</a>
+                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+                         </li>
+
+
+
+
+
+
+                                     </ul>
+                 <input type="hidden" name="resultHandle" value="i0ad629030000014997e3ded898a8cc7a">
+                 <input type="hidden" name="ao" value="o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca">
+                 <input type="hidden" name="resultType" value="SEARCH">
+                 <input type="hidden" name="trail" value="false">
+                 <input type="hidden" name="predefinedRelationshipsType" value="resultList">
+                 <input type="hidden" name="originates-from-link" value="false">
+                 <input type="hidden" name="originates-from-link-before" value="false">
+                 <input type="hidden" name="backToOrigResults" value="true">
+                 <input type="hidden" name="sortid" value="Relevancy">
+                 <input type="hidden" name="tab" value="research">
+                 <!-- <input id="goButton" type="submit" value="Go" class="goDisabled" disabled="disabled"> -->
+                 <button href="/research/" style="margin: 10px 15px;" class="button radius">Go</button>
+            </form>
+        </div>
+
+
+
+
+
+
+        </div>
+    </section>
         
 
     </section> <!-- .secondary-nav -->
@@ -220,6 +593,69 @@
                     <div class="row">
                         <div class="columns">
                             
+
+
+<!-- Hint - mobile only -->
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Search Results</h3>
+        <p class="right"><a href="/hints/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<div class="lv-doc-options disabled">
+    <div class="row">
+        <div class="large-5 columns">
+            <ul class="lv-inline-list small-gaps text-center medium-text-left">
+                <li><a title="Save to My Folders" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-save"></i></a></li>
+                <li><a title="Print" class="ajax-modal" href="/hints/print-results.html"><i class="fi-print"></i></a></li>
+                <li><a title="Export" class="ajax-modal" href="/hints/export-results.html"><i class="fi-page-export-doc"></i></a></li>
+                <li><a title="Email" class="ajax-modal" href="/hints/email-results.html"><i class="fi-mail"></i></a></li>
+                <li><a title="Add to My Quicklinks" class="ajax-modal" href="/hints/add-to-my-quicklinks.html"><i class="fi-star"></i></a></li>
+                <li><a title="Create Email Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-alert"></i></a></li>
+                <li><a title="Create Organisational Alert" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-calendar"></i></a></li>
+                <li><a title="Create RSS Feed" class="ajax-modal" href="/hints/coming-soon.html"><i class="fi-rss"></i></a></li>
+            </ul>
+        </div> <!-- .columns -->
+        <div class="large-7 columns">
+            <form class="" method="post" action="/maf/app/search/sort">
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <div class="row">
+                            <div class="large-5 columns text-center large-text-right">
+                                <label class="inline">Details:</label>
+                            </div>
+                            <div class="large-7 columns">
+                                <select id="details" name="details">
+                                    <option value="most" selected="">Most</option>
+                                    <option value="least">Least</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> <!-- .medium-6 -->
+                    <div class="medium-6 columns">
+                        <div class="row">
+                            <div class="large-5 columns text-center large-text-right">
+                                <label class="inline">Sort By:</label>
+                            </div>
+                            <div class="large-7 columns">
+                                <select name="sortid" id="sortBy">
+                                    <option value="Weight">Weighted</option>
+                                    <option value="Relevancy" selected="">Relevance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> <!-- .medium-6 -->
+                </div> <!-- .row -->
+            </form>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .lv-doc-options -->
+
+
+
+
 
 <div class="row">
     <div class="medium-6 columns">
@@ -345,6 +781,8 @@
 
    </div>
 </div>
+
+
                         </div>
                     </div>
                 </main>
@@ -375,7 +813,7 @@
 
 	<!-- LINKS -->
 	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-		<h3>My Quicklinks</h3>
+		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
 		<br>
 		<ul class="lv-quicklinks content-block">
 			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
@@ -399,21 +837,30 @@
 
             <!-- FOOTER -->
             <footer class="lv-footer">
-                <div class="row collapse is-full-width">
+                
+
+<div class="row collapse is-full-width">
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a target="_blank" href="http://training.thomsonreuters.com.au/products/checkpoint/">Help</a></li>
+            <li class="has-dropdown"><a href="#">Sites</a>
+                <ul class="lv-dropdown">
+                    <li><a href="https://www.checkpointworld.com"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                </ul>
+            </li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx">Privacy Policy</a></li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx">Terms of Use</a></li>
         </ul>
     </div>
     <div class="medium-6 medium-pull-6 columns">
         <div class="text-center medium-text-left">
-            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="#">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
+            <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
         </div>
     </div>
-</div>
+</div> <!-- .row -->
             </footer>
 
         </div> <!-- .lv-page -->
@@ -445,13 +892,12 @@
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         <ul>
-    <li><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
-    <li><a href="#">Contacts</a></li>
-    <li><a href="#">History</a></li>
-    <li><a href="#">Preferences</a></li>
-    <li><a href="#">Client ID</a></li>
-    <li><a href="#">Help</a></li>
-    <li><a href="#">Feedback</a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
     </nav>
 
@@ -487,6 +933,10 @@
             $(".ui-datepicker").datepicker();
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
+
+        $(function() {
+            $( "#docoptionstabs" ).tabs();
+          });
 
     </script>
 
