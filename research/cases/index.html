@@ -25,7 +25,7 @@
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
-    <link rel="stylesheet" href="/assets/css/optimized.8ffe.css">
+    <link rel="stylesheet" href="/assets/css/optimized.e98e.css">
 
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
 
@@ -62,7 +62,14 @@
 		</li>
 		<li>
 			<!-- Country Toggle -->
-			
+
+			<div class="country-toggle">
+				<select>
+					<option value="au">Australia</option>
+					<option value="nz">New Zealand</option>
+				</select>
+			</div>
+
 		</li>
 	</ul>
 </section>
@@ -163,16 +170,158 @@
     </div>
 </div>
 
-<form class="lv-form-restrictor" novalidate action="/research/results" method="post">
+<form class="" novalidate action="/research/results" method="post">
 
+    <div class="row">
+
+        <div class="medium-10 columns">
+
+        <!-- First 3 -->
+
+        
+        
         <div class="row">
-            <div class="medium-10 columns">
-            
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Free Text</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Case Title/Party Name</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Citation</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+
+
+        <!-- After -->
+        <div class="lv-form-restrictor">
+        
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Catchwords</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Judge(s)</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Court</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        
+
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Jurisdiction</label>
+                </div>
+                <div class="medium-9 columns">
+                    <select>
+                        <option selected disabled>All Jurisdictions</option>
+                        
+                        <option value="Australian Capital Territory">Australian Capital Territory</option>
+                        
+                        <option value="Christmas Island">Christmas Island</option>
+                        
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        
+                        <option value="Commonwealth of Australia">Commonwealth of Australia</option>
+                        
+                        <option value="New South Wales">New South Wales</option>
+                        
+                        <option value="New Zealand">New Zealand</option>
+                        
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        
+                        <option value="Northern Territory">Northern Territory</option>
+                        
+                        <option value="Queensland">Queensland</option>
+                        
+                        <option value="South Australia">South Australia</option>
+                        
+                        <option value="Tasmania">Tasmania</option>
+                        
+                        <option value="Victoria">Victoria</option>
+                        
+                        <option value="Western Australia">Western Australia</option>
+                        
+
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dates -->
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Judgement Date</label>
+                </div>
+                <div class="medium-9 columns">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" placeholder="Start Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" placeholder="End Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MORE OPTIONS (hidden) -->
+            <div class="lv-more-options hide">
+                
                 
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Free Text</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Cases Cited (Title)</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -183,7 +332,7 @@
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Case Title/Party Name</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Cases Cited (Citation)</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -194,7 +343,7 @@
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Citation</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Legislation Cited (Title)</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -205,7 +354,7 @@
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Catchwords</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Legislation Cited (Provision)</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -216,7 +365,7 @@
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Judge(s)</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Words & Phrases</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -227,7 +376,7 @@
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">Court</span>
+                            <span class="text lv-tooltip" title="Tooltip here">Reported / Unreported</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -235,174 +384,44 @@
                     </div>
                 </div>
                 
-
                 <div class="row">
                     <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Jurisdiction</label>
+                        <label for="" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="Tooltip here">Cases Updated</span>
+                        </label>
                     </div>
                     <div class="medium-9 columns">
-                        <select>
-                            <option selected disabled>All Jurisdictions</option>
-                            
-                            <option value="Australian Capital Territory">Australian Capital Territory</option>
-                            
-                            <option value="Christmas Island">Christmas Island</option>
-                            
-                            <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                            
-                            <option value="Commonwealth of Australia">Commonwealth of Australia</option>
-                            
-                            <option value="New South Wales">New South Wales</option>
-                            
-                            <option value="New Zealand">New Zealand</option>
-                            
-                            <option value="Norfolk Island">Norfolk Island</option>
-                            
-                            <option value="Northern Territory">Northern Territory</option>
-                            
-                            <option value="Queensland">Queensland</option>
-                            
-                            <option value="South Australia">South Australia</option>
-                            
-                            <option value="Tasmania">Tasmania</option>
-                            
-                            <option value="Victoria">Victoria</option>
-                            
-                            <option value="Western Australia">Western Australia</option>
-                            
-
-                        </select>
+                        <input type="text" id="">
                     </div>
                 </div>
+                
+            </div> <!-- .lv-more-options -->
 
-                <!-- Dates -->
+            <!-- Advanced and more -->
 
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Judgement Date</label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <div class="row">
-                            <div class="medium-4 columns">
-                                <input class="ui-datepicker" type="text" placeholder="Start Date" id="">
-                            </div>
-                            <div class="medium-4 columns">
-                                <input class="ui-datepicker" type="text" placeholder="End Date" id="">
-                            </div>
-                            <div class="medium-4 columns">
-                                <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <!-- <a class="button tiny knockout radius" href="#">Basic Search Options</a> -->
+                    <!-- <a class="button tiny knockout radius" href="#">More Search Options</a> -->
 
-                    </div>
+                    <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
                 </div>
+            </div>
 
-                <!-- MORE OPTIONS (hidden) -->
-                <div class="lv-more-options hide">
-                    
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Cases Cited (Title)</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Cases Cited (Citation)</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Legislation Cited (Title)</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Legislation Cited (Provision)</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Words & Phrases</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Reported / Unreported</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">Cases Updated</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    
-                    </div> <!-- .lv-more-options -->
+            <!-- Radio -->
 
-                <!-- Advanced and more -->
-
-                <div class="row">
-                    <div class="medium-offset-3 medium-9 columns">
-                        <!-- <a class="button tiny knockout radius" href="#">Basic Search Options</a> -->
-                        <!-- <a class="button tiny knockout radius" href="#">More Search Options</a> -->
-
-                        <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
-                    </div>
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Preferred results format:</label>
                 </div>
-
-                <!-- Radio -->
-
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Preferred results format:</label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="radio" name="tree" value="tree" id=""><label for="pokemonRed">Tree of Contents</label>
-    <input type="radio" name="doc" value="doc" id=""><label for="">Document List</label>
-                    </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="tree" value="tree" id=""><label for="pokemonRed">Tree of Contents</label>
+<input type="radio" name="doc" value="doc" id=""><label for="">Document List</label>
                 </div>
+            </div>
 
+
+</div><!-- .restrictor -->
             <!-- Submit -->
 
             <div class="row">
