@@ -1,0 +1,443 @@
+/*
+    LEGACY.CSS
+
+    - Last updated: 12.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Document Styling Taken from Checkpoint
+//-----------------------------------------------------------------
+
+// ul.tree, #columns .widget .widget-content ul.tree {margin:5px 0 0px 0px;padding:0 0 0 0px}
+// ul.tree li {margin-left:0px;padding-left:12px; background:url(../images/ico_cascade.png) no-repeat 0 0px;}
+// ul.tree li.active { background:url(../images/ico_endcascade.gif) no-repeat 0 0px;}
+// body #documentContainer #docContent .highlight {background-color: #ffe8b2;padding:2px}
+// body #documenttitlebar .highlight {background-color: #ffe8b2;padding:2px}
+// body #documentContainer #docContent .highlight.showing {margin:5px;border:1px solid #ff9100;box-shadow: 0 0 10px rgba(255,0,0, 0.5);-webkit-box-shadow: 0 0 10px rgba(255,0,0, 0.5) !important;	-o-box-shadow: 0 0 10px rgba(255,0,0, 0.5);	-ie-box-shadow: 0 0 10px rgba(255,0,0, 0.5);-moz-box-shadow: 0 0 10px rgba(255,0,0, 0.5);border-color:rgba(255,0,0,0.75) !important}
+// body #documenttitlebar .highlight.showing {margin:5px;border:1px solid #ff9100;box-shadow: 0 0 10px rgba(255,0,0, 0.5);-webkit-box-shadow: 0 0 10px rgba(255,0,0, 0.5) !important;	-o-box-shadow: 0 0 10px rgba(255,0,0, 0.5);	-ie-box-shadow: 0 0 10px rgba(255,0,0, 0.5);-moz-box-shadow: 0 0 10px rgba(255,0,0, 0.5);border-color:rgba(255,0,0,0.75) !important}
+
+// .document #searchnavBar .navlabel {margin-bottom:5px}
+// #searchOptions {margin:10px 0}
+// .navgroup {float:left;margin-right:5px;}
+// .prevTocDoc, .nextTocDoc, .tocDocNavigationText {float:left}
+// .prevDoc, .nextDoc, .navigationText {float:left;padding:0 3px}
+
+// These are the ones that cause problems on mobile
+
+// body #documentContainer #docContent .collapsibleHeadingBody {padding:0 0.5em 0.5em;}
+// body #documentContainer #docContent .rightCol {padding-left:45px;}
+// body #documentContainer #docContent .rightCol-6 {padding-left:15px;}
+
+
+#currencyContainerPopup2 { overflow-y: auto; }
+
+body #documentContainer #docContent {}
+
+body #documentContainer #docContent .wrapper:before,
+body #documentContainer #docContent .wrapper:after,
+body #documentContainer #docContent .row:before,
+body #documentContainer #docContent .row:after {content:"\0020";display:block;height:0;overflow:hidden;}
+body #documentContainer #docContent .wrapper:after,
+body #documentContainer #docContent .row:after {clear:both;}
+body #documentContainer #docContent .wrapper,
+body #documentContainer #docContent .row {zoom:1;}
+
+body #documentContainer #docContent table {border-collapse:collapse;border-spacing:0;margin:15px 0 10px;width:100%;}
+body #documentContainer #docContent table td,
+body #documentContainer #docContent table th {padding:5px;}
+body #documentContainer #docContent .paragraphTitle {display:none;font-size:2.0em;font-weight:bold;line-height:1.3;padding-bottom:0.75em;}
+body #documentContainer #docContent h1,
+body #documentContainer #docContent .heading1 {font-size:1.6em;font-weight:bold;}
+body #documentContainer #docContent h2,
+body #documentContainer #docContent .heading2 {font-size:1.5em;font-weight:bold;}
+body #documentContainer #docContent h3,
+body #documentContainer #docContent .heading3 {font-size:1.4em;font-weight:bold;}
+body #documentContainer #docContent h4,
+body #documentContainer #docContent .heading4 {font-size:1.3em;font-weight:bold;font-style:italic;}
+body #documentContainer #docContent h5,
+body #documentContainer #docContent .heading5 {font-size:1.2em;font-weight:bold;}
+body #documentContainer #docContent h6,
+body #documentContainer #docContent .heading6 {font-size:1.1em;font-weight:bold;font-style:italic;}
+body #documentContainer #docContent .h7,
+body #documentContainer #docContent .heading7 {font-size:1.0em;font-weight:bold;}
+body #documentContainer #docContent .microscopicFont {font-size:0.8em}
+body #documentContainer #docContent .microscopicFont .spacing {padding-bottom:0.2em;padding-top:0.2em;}
+body #documentContainer #docContent .microscopicFont-2 {font-size:0.85em}
+
+body #documentContainer #docContent em,
+body #documentContainer #docContent i,
+body #documentContainer #docContent .emphasis {font-style:italic;}
+body #documentContainer #docContent strong,
+body #documentContainer #docContent b,
+body #documentContainer #docContent .strong {font-weight:bold;}
+body #documentContainer #docContent .largeFont {font-size:1.1em;}
+body #documentContainer #docContent ul,
+body #documentContainer #docContent ol {list-style:none;margin-left:35px;}
+body #documentContainer #docContent .strikethrough,
+body #documentContainer #docContent .strikethrough div {text-decoration:line-through;}
+body #documentContainer #docContent .normal {font-weight:normal;}
+
+body #documentContainer #docContent #sharedInfo {margin:10px 0;padding:5px;}
+
+body #documentContainer #docContent .bgBlue {background-color:#EFF5FB;padding-top:0.5em;}
+body #documentContainer #docContent .bgWhite {background-color:white;padding-top:0.5em;}
+body #documentContainer #docContent .bgYellow {background-color:#FBFBEF;padding-top:0.5em;}
+body #documentContainer #docContent .bgPink {background-color:#FBEFFB;padding-top:0.5em;}
+body #documentContainer #docContent .bgGrey {background-color:#eee;padding-top:0.5em;}
+body #documentContainer #docContent .bgLightGrey {background-color:#EAE8E7;padding-top:0.5em;}
+body #documentContainer #docContent .superseded,
+body #documentContainer #docContent .bgOrange {background-color:#FFD067;padding-top:0.5em;}
+body #documentContainer #docContent .bgLightOrange {background-color:#FAE9DC;padding-top:0.5em;}
+body #documentContainer #docContent .bgBlack {background-color:#000;padding-top:0.5em;}
+body #documentContainer #docContent .whiteText {color:#FFF;}
+
+body #documentContainer #docContent .autosizehztal {overflow:auto;overflow-y:hidden;}
+body #documentContainer #docContent .inline {display:inline;}
+body #documentContainer #docContent .inlineBlock {display:inline-block;*display:inline;}
+body #documentContainer #docContent .leftMetadata {float:left;width:15%;padding-right:4%;}
+body #documentContainer #docContent .rightMetadata {float:left;width:80%}
+body #documentContainer #docContent .spacing {margin-bottom:1.5em;}
+body #documentContainer #docContent .normalSpacing {line-height:1.4em;padding-bottom:0.75em;}
+body #documentContainer #docContent .footnteSpacing {padding-top:0.75em;}
+body #documentContainer #docContent .bibliomiscrolesource {padding:0.6em 0}
+body #documentContainer #docContent .collapsibleHeading {background-color:#eee;border:1px solid #d2d2d2;margin:1.5em 0 10px;padding:0.5em;}
+body #documentContainer #docContent .textCollapsibleHeading {text-transform:uppercase;font-weight:bold;}
+// body #documentContainer #docContent .collapsibleHeadingBody {padding:0 0.5em 0.5em;}
+body #documentContainer #docContent .doubleunderline {border-bottom:1px solid #000000;padding-bottom:2px;text-decoration:underline;}
+body #documentContainer #docContent .underline {text-decoration:underline;}
+body #documentContainer #docContent .top-bottom-border {border-top:1px solid #000000; border-bottom:1px solid #000000;}
+body #documentContainer #docContent ul {list-style-type:disc;}
+body #documentContainer #docContent ul.noBullets {list-style-type:none;}
+body #documentContainer #docContent ul.noIndent {margin-left:0px;}
+body #documentContainer #docContent .endashLabel {float:left;width:auto;padding-right:10px;padding-left:15px;}
+body #documentContainer #docContent .leftCol {float:left;width:auto;}
+// body #documentContainer #docContent .rightCol {padding-left:45px;}
+body #documentContainer #docContent .leftCol-1 {float:left;width:19%;}
+body #documentContainer #docContent .rightCol-1 {float:left;width:80%;}
+body #documentContainer #docContent .leftCol-2 {float:left;width:auto;}
+body #documentContainer #docContent .rightCol-2 {padding-left:35px;}
+body #documentContainer #docContent .rightCol-2LongLabel {padding-left:70px;}
+body #documentContainer #docContent .legnoteLabel {float:left;width:auto;}
+body #documentContainer #docContent .legnoteBody {padding-left:45px;}
+body #documentContainer #docContent .legnoteBodyLongLabel {padding-left:55px;}
+body #documentContainer #docContent .leftCol-3 {float:left;width:20%;margin-bottom:5px;}
+body #documentContainer #docContent .rightCol-3 {float:left;width:79%;margin-bottom:5px;}
+body #documentContainer #docContent .leftCol-4 {float:left;width:50%;}
+body #documentContainer #docContent .rightCol-4 {float:left;width:50%;text-align:right;}
+body #documentContainer #docContent .leftCol-6 {float:left;width:auto;}
+// body #documentContainer #docContent .rightCol-6 {padding-left:15px;}
+body #documentContainer #docContent .marginLeftProv {padding-left: 55px;}
+body #documentContainer #docContent .glossterm {float:left;width:25%;}
+body #documentContainer #docContent .glossdef {float:left;width:70%;padding-left:3%;}
+body #documentContainer #docContent .dots {background:url("/cpau/images/documents/dot.gif") repeat-x scroll center bottom transparent;overflow-x: hidden;}
+body #documentContainer #docContent .beforeleader {background:white;padding-right:0.5em;}
+body #documentContainer #docContent .afterleader {float:right;background:white;padding-left:0.5em;}
+body #documentContainer #docContent .shade {background-color:#EEEEEE;}
+body #documentContainer #docContent .noDotsfield {background-color:#EEEEEE;}
+body #documentContainer #docContent .def-para-line-height,
+body #documentContainer #docContent .line-height-amendment-detail-listitem,
+body #documentContainer #docContent .line-height-listitem-legpara{line-height:1.4;}
+body #documentContainer #docContent .def-para-line-height{margin-bottom:0.75em;}
+body #documentContainer #docContent .variableInfo{color:blue;}
+body #documentContainer #docContent .editorialNote{color:green;}
+body #documentContainer #docContent .updBgrnd{background-color:#dbe8f6}
+body #documentContainer #docContent .caps { text-transform: capitalize; }
+body #documentContainer #docContent .allcaps,
+body #documentContainer #docContent .upperCase { text-transform: uppercase; }
+
+body #documentContainer #docContent .textIndent-1 {text-indent:35px;}
+body #documentContainer #docContent .textIndent-2 {text-indent:70px;}
+body #documentContainer #docContent .textIndent-3 {text-indent:105px;}
+body #documentContainer #docContent .textIndent-4 {text-indent:140px;}
+body #documentContainer #docContent .textIndent-5 {text-indent:175px;}
+
+body #documentContainer #docContent div .labelPara0:first {padding-top:0.5em;}
+body #documentContainer #docContent div .labelPara0 {margin:0px;}
+body #documentContainer #docContent div .labelPara1 {margin:0px 0px 0px 35px;}
+body #documentContainer #docContent div .labelPara2 {margin:0px 0px 0px 45px;}
+body #documentContainer #docContent div .labelPara3 {margin:0px 0px 0px 55px;}
+body #documentContainer #docContent div .labelPara4 {margin:0px 0px 0px 65px;}
+
+body #documentContainer #docContent .indent {margin-left:35px;}
+body #documentContainer #docContent .label-heading {display:inline;}
+
+body #documentContainer #docContent .marginLeft-1 {margin-left:35px;}
+body #documentContainer #docContent .marginLeft-2 {margin-left:70px;}
+body #documentContainer #docContent .marginLeft-3 {margin-left:105px;}
+body #documentContainer #docContent .marginLeft-4 {margin-left:140px;}
+
+body #documentContainer #docContent .paddingLeft-1 {padding-left:35px;}
+body #documentContainer #docContent .paddingLeft-2 {padding-left:70px;}
+body #documentContainer #docContent .paddingLeft-3 {padding-left:105px;}
+body #documentContainer #docContent .paddingLeft-4 {padding-left:140px;}
+
+body #documentContainer #docContent .primaryie {padding-left:35px;}
+body #documentContainer #docContent .secondaryie{padding-left:35px;}
+body #documentContainer #docContent .tertiaryie {padding-left:35px;}
+body #documentContainer #docContent .quaternaryie {padding-left:35px;}
+body #documentContainer #docContent .quinaryie {padding-left:35px;}
+body #documentContainer #docContent .senaryie {padding-left:35px;}
+
+body #documentContainer #docContent .legislationChapter {font-size: 1.2em;line-height:1.5;text-transform:uppercase;text-align:center;font-weight:bold;}
+body #documentContainer #docContent .legislationHeader {font-size: 1.2em;text-transform:uppercase;text-align:center;font-style:italic;}
+body #documentContainer #docContent .legislationDiv {text-align:center;}
+body #documentContainer #docContent .legislationSubDiv {text-align:center;font-style:italic;}
+body #documentContainer #docContent .legislationSchedule {text-transform:uppercase;text-align:center;}
+body #documentContainer #docContent .legislationOrder {text-transform:uppercase;text-align:center;}
+
+body #documentContainer #docContent .altRow{background-color:#DCDCDC;border:1px solid #DCDCDC;}
+
+body #documentContainer #docContent td.calsRowBorder,
+body #documentContainer #docContent th.calsRowBorder {border-bottom: 1px solid #777777;}
+body #documentContainer #docContent td.calsColBorder,
+body #documentContainer #docContent th.calsColBorder {border-right:1px solid #777777;}
+
+body #documentContainer #docContent div .quoteStyle0 {margin:0px 0px 0px 0px;}
+body #documentContainer #docContent div .quoteStyle1 {margin:0px 0px 0px 35px;}
+body #documentContainer #docContent div .quoteStyle2 {position:relative;margin:0px 0px 0px 45px;display:inline;}
+body #documentContainer #docContent div .quoteStyle3 {position:relative;margin:0px 0px 0px 55px;display:inline;}
+body #documentContainer #docContent div .quoteStyle4 {position:relative;margin:0px 0px 0px 65px;display:inline;}
+
+body #documentContainer #docContent dd ol,
+body #documentContainer #docContent dd ul {margin-left:15px;}
+
+#fontchooser {margin:10px 0}
+#fontchooser label {margin-right:30px;}
+
+a#fullpage {background:url(/cpau/images/ico_fullscreen.png) no-repeat 0 0;padding-left:25px;}
+
+body #documentContainer #docContent .leftIndexTable {float:left;width:70%;}
+body #documentContainer #docContent .leftIndexTable-1 {float:left;width:67%;padding-left:3%;}
+body #documentContainer #docContent .leftIndexTable-2 {float:left;width:64%;padding-left:6%;}
+body #documentContainer #docContent .leftIndexTable-3 {float:left;width:61%;padding-left:9%;}
+body #documentContainer #docContent .leftIndexTable-4 {float:left;width:58%;padding-left:12%;}
+body #documentContainer #docContent .leftIndexTable-5 {float:left;width:55%;padding-left:15%;}
+body #documentContainer #docContent .RightIndexTable {float:left;width:20%;}
+
+body #documentContainer #docContent .centered,
+body #documentContainer #docContent .centered span,
+body #documentContainer #docContent .centered div,
+body #documentContainer #docContent .centered p {text-align:center;}
+body #documentContainer #docContent .leftAlign,
+body #documentContainer #docContent .leftAlign span,
+body #documentContainer #docContent .leftAlign div,
+body #documentContainer #docContent .leftAlign p {text-align:left;}
+body #documentContainer #docContent .rightAlign,
+body #documentContainer #docContent .rightAlign span,
+body #documentContainer #docContent .rightAlign div,
+body #documentContainer #docContent .rightAlign p {text-align:right;}
+body #documentContainer #docContent .justifyAlign {text-align:justify;}
+body #documentContainer #docContent blockquote {margin-left:2.692em;margin-right:2.692em;margin-top:1em;margin-bottom:1em}
+body #documentContainer #docContent blockquote * > .g:first-child {display: inline-block;margin-left: -0.425em;}
+
+body #documentContainer #docContent .abstract {display:block;border-bottom:2px solid #000;margin-bottom:5px;padding:0px 5px;}
+body #documentContainer #docContent .bridgehead-renderas_sect5 {float:left; width:auto;font-style:italic;padding-top:0.75em;}
+body #documentContainer #docContent .note {background-color:#FFF0DC;border:1px solid #FFDEB2;margin:10px 0;padding:5px;}
+body #documentContainer #docContent .note p.noteTitle {font-weight:bold;}
+body #documentContainer #docContent .sidebar {background-color:#F9F7F6;border:1px solid #d2d2d2;margin:10px 0;padding:5px;}
+body #documentContainer #docContent .warning {background-color:#FFDEB2;border:1px solid #FF5900;margin:10px 0;padding:5px;}
+body #documentContainer #docContent .warning .warningTitle {color:#FF5900;}
+body #documentContainer #docContent .tip {font-style:normal;background-color:#CCE6F2;border:1px solid #0083BF;margin:10px 0;padding:5px; color: black;}
+body #documentContainer #docContent .tip .tipTitle {color:#0083BF;}
+body #documentContainer #docContent .procedure {border:1px solid;padding:5px;}
+
+/*NZ Legislation Commentary specific */
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC {list-style-type:none;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC .part,
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC .schedule {font-size:1.3em;font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC .subpart {font-size:1em;font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC .provGroup {font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .inlineTOC .prov {padding-left:35px;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeading,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingPit {overflow:hidden;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .clickable {cursor:pointer;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .textCollapsibleHeading {float:left;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .arrowCollapsibleHeading {background: url("/cpau/images/documents/bl_up_arrow.png") no-repeat scroll center center transparent;float:right;padding:0 10px;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .down {background: url("/cpau/images/documents/bl_down_arrow.png") no-repeat scroll center center transparent;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic div,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic p,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic span,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h1,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h2,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h3,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h4,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h5,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historic h6,
+body #documentContainer #docContent #wrapperContentNZLegcomm .historicText {background-color:#FCD1D3;color:#AA0000;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeading:before,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingPit:before,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeading:after,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingPit:after {content:"\0020";display:block;height:0;overflow:hidden;}
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeading:after,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingPit:after {clear:both;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #currencyStatusContainer {margin-left:0;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #commentaryNoteContainer .collapsibleHeading,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteContainer .collapsibleHeading,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteSectionContainer .collapsibleHeading,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #editorialNoteContainer .collapsibleHeading,
+body #documentContainer #docContent #wrapperContentNZLegcomm #currencyStatusContainer .collapsibleHeadingPit {margin:10px 0;padding:0.5em;margin-bottom:0;margin-top:0;}
+body #documentContainer #docContent #wrapperContentNZLegcomm #currencyStatusContainer .collapsibleHeadingPit {background-color:#CCE6F2;border:1px solid #0083BF;color:#0083BF;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #commentaryContainer .collapsibleHeadingBody,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #commentaryNoteContainer .collapsibleHeadingBody,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteContainer .collapsibleHeadingBody,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteSectionContainer .collapsibleHeadingBody {border:1px dotted #d2d2d2;border-top:none;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteContainer #currencyStatusContainer .collapsibleHeadingBody,
+body #documentContainer #docContent #wrapperContentNZLegcomm .collapsibleHeadingBody #historyNoteSectionContainer #currencyStatusContainer .collapsibleHeadingBody{border:1px dotted #0083BF;border-top:none;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm h5.leftCol.inlineBlock,
+body #documentContainer #docContent #wrapperContentNZLegcomm h5.rightCol.inlineBlock {padding-top:0; padding-bottom:0;}
+
+body #documentContainer #docContent #wrapperContentNZLegcomm table.updater th,
+body #documentContainer #docContent #wrapperContentNZLegcomm table.updater td {padding: 10px;}
+/*End NZ Legislation Commentary specific */
+
+/* NZ Journals specific */
+body #documentContainer #docContent #wrapperContentNZJournals h1 {font-size:1.05em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZJournals h2 {font-size:1.05em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZJournals h3 {font-size:1.0em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;margin-left:35px;}
+body #documentContainer #docContent #wrapperContentNZJournals h4 {font-size:1.0em;font-weight:bold;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZJournals h5 {font-size:1.0em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZJournals h6 {font-size:1.0em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentNZJournals .abstract {display:block;border-bottom:2px solid #000;margin-bottom:5px;padding:0px 5px;margin-top:15px;}
+/* End NZ Journals specific */
+
+/* Cases specific */
+body #documentContainer #docContent #wrapperContentANZCases .none-italic-bold {font-style:normal;font-weight:normal;}
+body #documentContainer #docContent #wrapperContentANZCases .none-italic {font-style:normal;}
+body #documentContainer #docContent #wrapperContentANZCases .catchphrase-group {text-align: justify; }
+body #documentContainer #docContent #wrapperContentANZCases .line-spacing-before {padding-top: 1.5em; }
+body #documentContainer #docContent #wrapperContentANZCases .line-spacing-after {padding-bottom: 1.5em; }
+body #documentContainer #docContent #wrapperContentANZCases .group3 {text-decoration:underline; }
+/* body #documentContainer #docContent #wrapperContentANZCases h1 {font-size:1.05em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCases h2 {font-size:1.05em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCases h3 {font-size:1.0em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;margin-left:35px;}
+body #documentContainer #docContent #wrapperContentANZCases h4 {font-size:1.0em;font-weight:bold;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCases h5 {font-size:1.0em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCases h6 {font-size:1.0em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;} */
+/* End Cases specific */
+
+/* Current awareness specific */
+body #documentContainer #docContent #wrapperContentANZCurraware .leftCol-article {float: left; width: auto;}
+body #documentContainer #docContent #wrapperContentANZCurraware .rightCol-article {padding-left: 200px;}
+body #documentContainer #docContent #wrapperContentANZCurraware ul {list-style-type:disc;margin-left:35px;padding-left:1em;}
+body #documentContainer #docContent #wrapperContentANZCurraware .paragraph {padding-bottom:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware h1 {font-size:1.6em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware h2 {font-size:1.15em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware h3 {font-size:1.1em;font-weight:bold;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware h4 {font-size:1.0em;font-weight:bold;font-style:normal;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware h5 {font-size:1.0em;font-weight:normal;font-style:italic;padding-bottom:0.75em;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentANZCurraware .sourceCitationArticleItem {font-style:italic;}
+/* End Current awareness specific */
+
+/* AU LegComm specific */
+body #documentContainer #docContent #wrapperContentAULegcomm h1 {font-size:1.6em;font-weight:bold;margin-top:1em;margin-bottom:1em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAULegcomm h2 {font-size:1.6em;margin-top:1em;margin-bottom:1em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAULegcomm h3 {font-size:1.6em;font-style:italic;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAULegcomm h4 {font-size:1.4em;font-weight:bold;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAULegcomm h5 {font-size:1.4em;font-style:italic;margin-top:0.5em;margin-bottom:0.5em;color:#6B6B6B;}
+body #documentContainer #docContent #wrapperContentAULegcomm h6 {font-size:1.2em;font-style:normal;font-weight:bold;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAULegcomm .h7 {font-size:1em;font-weight:bold;margin-top:0.2em;margin-bottom:0.2em;}
+body #documentContainer #docContent #wrapperContentAULegcomm .h8 {font-size:1em;font-weight:bold;font-style:italic;color:#6B6B6B;margin-top:0.2em;margin-bottom:0.2em;}
+body #documentContainer #docContent #wrapperContentAULegcomm .h9 {font-size:1em;font-style:italic;color:#FF8800;margin-top:0.2em;margin-bottom:0.2em;}
+body #documentContainer #docContent #wrapperContentAULegcomm table {border:none;}
+/* End AU LegComm specific */
+
+/* AU Govnreg specific */
+body #documentContainer #docContent #wrapperContentAUGovregs .std {font-weight:bold;}
+body #documentContainer #docContent #wrapperContentAUGovregs .comm {font-weight:normal;}
+body #documentContainer #docContent #wrapperContentAUGovregs table {border:none;}
+body #documentContainer #docContent #wrapperContentAUGovregs h1 {font-size:1.6em;font-weight:bold;margin-top:1em;margin-bottom:1em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAUGovregs h2 {font-size:1.6em;margin-top:1em;margin-bottom:1em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAUGovregs h3 {font-size:1.6em;font-style:italic;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAUGovregs h4 {font-size:1.4em;font-weight:bold;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAUGovregs h5 {font-size:1.4em;font-style:italic;margin-top:0.5em;margin-bottom:0.5em;color:#6B6B6B;}
+body #documentContainer #docContent #wrapperContentAUGovregs h6 {font-size:1.2em;font-style:normal;font-weight:bold;margin-top:0.5em;margin-bottom:0.5em;}
+body #documentContainer #docContent #wrapperContentAUGovregs .h7 {font-size:1em;font-weight:bold;margin-top:0.2em;margin-bottom:0.2em;}
+body #documentContainer #docContent #wrapperContentAUGovregs .h8 {font-size:1em;font-weight:bold;font-style:italic;color:#6B6B6B;margin-top:0.2em;margin-bottom:0.2em;}
+body #documentContainer #docContent #wrapperContentAUGovregs .h9 {font-size:1em;font-style:italic;color:#FF8800;margin-top:0.2em;margin-bottom:0.2em;}
+/* End AU Govnreg specific */
+
+/* AU Journals specific */
+body #documentContainer #docContent #wrapperContentAUJournals table {border:none;}
+/* End AU Journals specific */
+
+/* AU Accounting specific */
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC {list-style-type:none;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .part,
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .schedule {font-size:1.3em;font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .subpart {font-size:1em;font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .provGroup {font-weight:bold;padding-top:0.75em;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .prov {padding-left:35px;}
+
+
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .textIndent-3 {text-indent:0px;padding-top:0.3em;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .textIndent-4 {text-indent:35px;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .textIndent-5 {text-indent:70px;}
+
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .textIndent-4 .toc-node-label {padding-left:35px; width: 70px;float: left;}
+body #documentContainer #docContent #wrapperContentAUAccounting .inlineTOC .textIndent-4 .toc-node-heading {padding-left:35px; margin-left: 70px;}
+
+body #documentContainer #docContent #wrapperContentAUAccounting h1,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading1 {font-size:1.6em;font-weight:bold;margin-bottom:2em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAUAccounting h2,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading2 {font-size:1.6em;margin-bottom:2em;color:#FF8800;}
+body #documentContainer #docContent #wrapperContentAUAccounting h3,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading3 {font-size:1.6em;font-style:italic;margin-bottom:1em;}
+body #documentContainer #docContent #wrapperContentAUAccounting h4,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading4 {font-size:1.4em;font-weight:bold;font-style:italic;margin-bottom:1em;color:#6B6B6B}
+body #documentContainer #docContent #wrapperContentAUAccounting h5,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading5 {font-size:1.2em;font-weight:bold;margin-bottom:1em;color:#000000;}
+body #documentContainer #docContent #wrapperContentAUAccounting h6,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading6 {font-size:1em;font-style:normal;font-weight:bold;margin-bottom:1em;}
+body #documentContainer #docContent #wrapperContentAUAccounting .h7,
+body #documentContainer #docContent #wrapperContentAUAccounting .heading7 {font-size:1em;font-weight:bold;margin-bottom:0.4em;color:#6B6B6B;}
+body #documentContainer #docContent #wrapperContentAUAccounting .heading8 {font-size:1em;font-style:italic;color:#FF8800;margin-bottom:0.4em;}
+body #documentContainer #docContent #wrapperContentAUAccounting table {border:none;}
+/* End AU Accounting specific */
+
+/* ANZ Current Awareness */
+body #documentContainer #docContent #wrapperContentANZCurraware table td {border:1px solid #000; padding:5px;}
+body #documentContainer #docContent #wrapperContentANZCurraware ul {list-style-type:disc;}
+body #documentContainer #docContent #wrapperContentANZCurraware ol {list-style-type:decimal;}
+body #documentContainer #docContent #wrapperContentANZCurraware li.withroman {list-style-type:lower-roman;}
+body #documentContainer #docContent #wrapperContentANZCurraware li.withalpha {list-style-type:lower-alpha;}
+
+/* End ANZ Current Awareness */
+
+/*Document Footnote */
+body #documentContainer #docContent span.footnoteGo {display: inline-block;margin: 0px -4px 0px -5px;}
+body #documentContainer #docContent .footnoteSup {font-size: 0.8em;position: relative;top: -0.5ex;*top:-2.2ex;margin-left: 0.2em;margin-right: 0.6em;padding: 0.2em;vertical-align: super;line-height: 0;*line-height: 0.3em;text-decoration: none;}
+body #documentContainer #docContent .footnote {font-size: 0.8em;font-weight: bold;padding: 0.2em;line-height: 0.8;text-decoration: none;}
+body #documentContainer #docContent .footNoteToolTip {background:url("/cpau/images/bg-sidebar-li.gif") repeat-x scroll 0 0 #FFAC4B;color:black;position:absolute;min-width:300px;max-width:500px;display:none;}
+body #documentContainer #docContent .footNoteToolTip div.head {padding:5px;color:white;font-weight:bold;}
+body #documentContainer #docContent .footNoteToolTip div.body {background-color:white;margin:2px;padding:8px;font-size:0.8em;}
+body #documentContainer #docContent a.footnoteSup:link {text-decoration:none;}
+body #documentContainer #docContent a.footnote:link {text-decoration:none;}
+/*End Document Footnote */
+
+/* product info*/
+body #documentContainer #docContent #productInfoContainer {}
+body #documentContainer #docContent #productInfoTabContainer li {list-style-type:disc;margin-left:35px;}
+body #documentContainer #docContent #productInfoTabContainer ol {list-style-type:decimal;margin-left:35px;}
+body #documentContainer #docContent #productInfoTabContainer {margin:0.5em;}
+body #documentContainer #docContent #productInfoTabContainer .productInfoTabLink {display:inline-block;padding:0.25em 0;font-weight:bold;}
+body #documentContainer #docContent #productInfoTabContainer .prodInfoTitle {margin-bottom:0.75em;}
+body #documentContainer #docContent #productInfoTabContainer .bold {color:#ff8800}
+body #documentContainer #docContent #productInfoTabContainer #tab-links {margin-bottom:2em;}
+body #documentContainer #docContent #productInfoTabContainer h4 {font-family:KnowledgeMedium, Arial, Helvetica, Sans-serif;font-size:1.4em;font-weight:normal;}
+body #documentContainer #docContent #productInfoTabContainer p {line-height:1.6;margin:0.75em 0}
+/* End product info*/
+
+/* End of document styling */

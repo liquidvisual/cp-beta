@@ -15,16 +15,6 @@
                 $('ul', $this.parent()).first().hide();
             }
         });
-
-        // Doc Options only appear when something is selected (checked)
-
-        $("input[type='checkbox']").on("click", function() {
-            if ($('input:checked').length) {
-                $('.lv-doc-options').removeClass('disabled');
-            } else {
-                $('.lv-doc-options').addClass('disabled');
-            }
-        });
     });
 </script>
 

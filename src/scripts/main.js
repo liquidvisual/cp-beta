@@ -43,6 +43,18 @@ $(window).load(function() {
 });
 
 //-----------------------------------------------------------------
+// Simulated Doc Options show on checkbox select
+//-----------------------------------------------------------------
+
+$("input[type='checkbox']").on("click", function() {
+    if ($('input:checked').length) {
+        $('.lv-doc-options').removeClass('disabled');
+    } else {
+        $('.lv-doc-options').addClass('disabled');
+    }
+});
+
+//-----------------------------------------------------------------
 // Search Filter (mini-toc)
 // http://stackoverflow.com/questions/3442394/jquery-using-text-to-retrieve-only-text-not-nested-in-child-tags
 //-----------------------------------------------------------------

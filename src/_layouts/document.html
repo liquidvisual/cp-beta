@@ -3,4 +3,14 @@ layout: master
 context_menu: "context_menu/document_options.html"
 ---
 
+<div class="row">
+    <div class="columns">
+        <h1>{{ page.title }}</h1>
+        <p><a href="/research/search-results/"><i class="fi-arrow-left"></i>&nbsp; Back</a></p>
+        <hr>
+    </div>
+</div>
+
+{% include document_options/document.html %}
+
 {{ content }}

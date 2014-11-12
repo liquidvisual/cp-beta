@@ -3,7 +3,6 @@ layout: master
 context_menu: "context_menu/search_summary.html"
 ---
 
-{% comment %}
 <div class="row">
     <div class="columns">
         <h3>Refine your Search</h3>
@@ -12,7 +11,7 @@ context_menu: "context_menu/search_summary.html"
 </div>
 
 <div class="row">
-    <div class="small-12 large-10 large-centered columns">
+    <div class="medium-10 medium-centered columns">
         <form data-abide novalidate id="contact" action="/" method="post">
             <div class="row collapse postfix-radius">
                 <div class="small-12 medium-9 columns">
@@ -26,15 +25,38 @@ context_menu: "context_menu/search_summary.html"
     </div>
 </div>
 
+<!-- Hint - mobile only -->
 <div class="row">
     <div class="columns">
-        <h3>Search Results <span class="label round secondary">35</span></h3>
+        <h3 class="left">Search Results</h3>
+        <p class="right"><a href="/hints/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
         <hr>
     </div>
 </div>
-{% endcomment %}
+
+<!-- Pagination and tree views -->
+<div class="row">
+    <div class="medium-6 columns">
+        <p><a href="#">Tree of Contents</a> | <span>Document List</span></p>
+    </div>
+    <div class="medium-6 columns text-right">
+        {% include snippets/pagination.html %}
+    </div>
+</div>
 
 {% include document_options/results.html %}
 
 {{ content }}
 
+<!-- Pagination -->
+<div class="text-center medium-text-right">
+    {% include snippets/pagination.html %}
+</div>
+
+<!-- Code Output from Checkpoint -->
+<!-- <div class="navigationLinks text-right">
+    <span class="currentPage">1</span>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavPages2" class="navPages">2</a>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavNext" class="navNext">Next&nbsp;&gt;</a>
+    <a href="/maf/app/search/navigate?snippets=true&amp;ao=o.AUNZ_TOC%7C%7CIec7746151d273285a1ec7b666b3f21ca&amp;savedSearch=false&amp;originates-from-link=false&amp;searchFrom=&amp;sttype=&amp;frt=&amp;page=1" id="lnkNavLast" class="navLast">Last&nbsp;&gt;&gt;</a>
+</div> -->

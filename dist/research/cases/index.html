@@ -57,17 +57,12 @@
 		<li>
 			<!-- Logo -->
 			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
-				<img src="/assets/img/content/logo.png" alt="Thomson Reuters Checkpoint">
+				<img width="152" src="/assets/img/content/logo.png" alt="Thomson Reuters Checkpoint">
 			</a>
 		</li>
 		<li>
 			<!-- Country Toggle -->
-			<div class="country-toggle">
-				<select>
-					<option value="au">Australia</option>
-					<option value="nz">New Zealand</option>
-				</select>
-			</div>
+			
 		</li>
 	</ul>
 </section>
@@ -434,7 +429,7 @@
 <div class="row">
     <div class="columns">
         <hr>
-        <div class="lv-doc-options disabledX">
+        <div class="lv-doc-options disabled">
     <ul class="lv-inline-list small-gaps text-center medium-text-left">
         <li><a title="Print Documents" class="ajax-modal" href="/hints/print-search.html"><i class="fi-print"></i></a></li>
         <li><a title="Download Documents" class="ajax-modal" href="/hints/export-document.html"><i class="fi-page-export-doc"></i></a></li>
@@ -466,16 +461,6 @@
 
                 $this.removeClass('expanded').addClass('collapsed');
                 $('ul', $this.parent()).first().hide();
-            }
-        });
-
-        // Doc Options only appear when something is selected (checked)
-
-        $("input[type='checkbox']").on("click", function() {
-            if ($('input:checked').length) {
-                $('.lv-doc-options').removeClass('disabled');
-            } else {
-                $('.lv-doc-options').addClass('disabled');
             }
         });
     });

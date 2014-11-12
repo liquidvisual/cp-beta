@@ -13,14 +13,14 @@
 // Variables
 //-----------------------------------------------------------------
 
-$hide-page-for-incompatible: true !default;
-$alert-color: #DB2D39 !default;
-$info-color: #A0D2E7 !default;
-$success-color: #43AE6E !default;
-$warning-color: #F08B2E !default;
-$alert-font-color: white !default;
-$alert-font-size: 15px !default;
-$alert-opacity: .95 !default;
+$hide-page-for-incompatible: false;
+$alert-color: #DB2D39;
+$info-color: #A0D2E7;
+$success-color: #43AE6E;
+$warning-color: #F08B2E;
+$alert-font-color: white;
+$alert-font-size: 15px;
+$alert-opacity: .95;
 
 //-----------------------------------------------------------------
 // Hide page completely for IE6, 7, 8
