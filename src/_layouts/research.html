@@ -13,16 +13,90 @@ cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title
     </div>
 </div>
 
-<form class="lv-form-restrictor" novalidate action="/research/results" method="post">
+<form class="" novalidate action="/research/results" method="post">
 
+    <div class="row">
+
+        <div class="medium-10 columns">
+
+        <!-- First 3 -->
+
+        {% assign words = page.cases | split: '_' %}
+        {% for i in words | limit: 3 %}
         <div class="row">
-            <div class="medium-10 columns">
-            {% assign words = page.cases | split: '_' %}
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">{{ i }}</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        {% endfor %}
+
+
+        <!-- After -->
+        <div class="lv-form-restrictor">
+        {% for i in words | offset: 3 %}
+        <div class="row">
+            <div class="medium-3 columns">
+                <label for="" class="text-left medium-text-right">
+                    <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">{{ i }}</span>
+                </label>
+            </div>
+            <div class="medium-9 columns">
+                <input type="text" id="">
+            </div>
+        </div>
+        {% endfor %}
+
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Jurisdiction</label>
+                </div>
+                <div class="medium-9 columns">
+                    <select>
+                        <option selected disabled>All Jurisdictions</option>
+                        {% for item in site.data.jurisdictions %}
+                        <option value="{{ item.title }}">{{ item.title }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dates -->
+
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Judgement Date</label>
+                </div>
+                <div class="medium-9 columns">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" placeholder="Start Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" placeholder="End Date" id="">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MORE OPTIONS (hidden) -->
+            <div class="lv-more-options hide">
+                {% assign words = page.cases_more | split: '_' %}
                 {% for i in words %}
                 <div class="row">
                     <div class="medium-3 columns">
                         <label for="" class="text-left medium-text-right">
-                            <span class="text lv-tooltip" title="Enter one or more party name or names into this field to search for a case eg to locate Federal Commissioner of Taxation v Consolidated Media Holdings Ltd enter Media Holdings and click Search.">{{ i }}</span>
+                            <span class="text lv-tooltip" title="Tooltip here">{{ i }}</span>
                         </label>
                     </div>
                     <div class="medium-9 columns">
@@ -30,84 +104,33 @@ cases_more: "Cases Cited (Title)_Cases Cited (Citation)_Legislation Cited (Title
                     </div>
                 </div>
                 {% endfor %}
+            </div> <!-- .lv-more-options -->
 
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Jurisdiction</label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <select>
-                            <option selected disabled>All Jurisdictions</option>
-                            {% for item in site.data.jurisdictions %}
-                            <option value="{{ item.title }}">{{ item.title }}</option>
-                            {% endfor %}
+            <!-- Advanced and more -->
 
-                        </select>
-                    </div>
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <!-- <a class="button tiny knockout radius" href="#">Basic Search Options</a> -->
+                    <!-- <a class="button tiny knockout radius" href="#">More Search Options</a> -->
+
+                    <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
                 </div>
+            </div>
 
-                <!-- Dates -->
+            <!-- Radio -->
 
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Judgement Date</label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <div class="row">
-                            <div class="medium-4 columns">
-                                <input class="ui-datepicker" type="text" placeholder="Start Date" id="">
-                            </div>
-                            <div class="medium-4 columns">
-                                <input class="ui-datepicker" type="text" placeholder="End Date" id="">
-                            </div>
-                            <div class="medium-4 columns">
-                                <input id="checkbox1" type="checkbox"><label for="checkbox1">Exact Date</label>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="" class="text-left medium-text-right">Preferred results format:</label>
                 </div>
-
-                <!-- MORE OPTIONS (hidden) -->
-                <div class="lv-more-options hide">
-                    {% assign words = page.cases_more | split: '_' %}
-                    {% for i in words %}
-                    <div class="row">
-                        <div class="medium-3 columns">
-                            <label for="" class="text-left medium-text-right">
-                                <span class="text lv-tooltip" title="Tooltip here">{{ i }}</span>
-                            </label>
-                        </div>
-                        <div class="medium-9 columns">
-                            <input type="text" id="">
-                        </div>
-                    </div>
-                    {% endfor %}
-                    </div> <!-- .lv-more-options -->
-
-                <!-- Advanced and more -->
-
-                <div class="row">
-                    <div class="medium-offset-3 medium-9 columns">
-                        <!-- <a class="button tiny knockout radius" href="#">Basic Search Options</a> -->
-                        <!-- <a class="button tiny knockout radius" href="#">More Search Options</a> -->
-
-                        <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
-                    </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="tree" value="tree" id=""><label for="pokemonRed">Tree of Contents</label>
+<input type="radio" name="doc" value="doc" id=""><label for="">Document List</label>
                 </div>
+            </div>
 
-                <!-- Radio -->
 
-                <div class="row">
-                    <div class="medium-3 columns">
-                        <label for="" class="text-left medium-text-right">Preferred results format:</label>
-                    </div>
-                    <div class="medium-9 columns">
-                        <input type="radio" name="tree" value="tree" id=""><label for="pokemonRed">Tree of Contents</label>
-    <input type="radio" name="doc" value="doc" id=""><label for="">Document List</label>
-                    </div>
-                </div>
-
+</div><!-- .restrictor -->
             <!-- Submit -->
 
             <div class="row">

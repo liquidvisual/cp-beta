@@ -491,12 +491,13 @@ input[type="submit"] {
 //-----------------------------------------------------------------
 
 .lv-form-restrictor {
-	max-height: 210px;
+	max-height: 0;
 	overflow: hidden;
 	margin-bottom: 20px;
 
 	@media #{$medium-up} {
 	    max-height: none;
+	    margin: 0;
 	}
 }
 
@@ -584,38 +585,6 @@ input[type="submit"] {
 }
 
 //-----------------------------------------------------------------
-// Jquery UI Datepicker
-//-----------------------------------------------------------------
-
-.lv-super .homepage .ui-widget-content {
-	width: 100%;
-}
-
-.lv-super .ui-datepicker {
-	border-color: #CCCCCC;
-	border-radius: 0;
-
-	 // box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.08);
-
-	 thead {
-	 	border: 0;
-	 	color: grey;
-	 }
-}
-
-.lv-super .ui-state-default,
-.lv-super .ui-widget-content .ui-state-default,
-.lv-super .ui-widget-header .ui-state-default {
-	background: none;
-	border-color: #DEDEDE;
-}
-
-.lv-super .ui-datepicker-header {
-	background: url(../img/template/nav-gradient.png) repeat-x;
-	border: 0;
-}
-
-//-----------------------------------------------------------------
 // Misc
 //-----------------------------------------------------------------
 
@@ -668,6 +637,7 @@ input[type="submit"] {
 
 @import "partials/dashboard";
 @import "partials/context_menu";
+@import "partials/datepicker";
 @import "partials/topbar";
 @import "partials/sidebar";
 @import "partials/legacy";
