@@ -1,0 +1,52 @@
+// Animations
+// $mm_transitionDuration: 0.4s;
+// $mm_transitionFunction: ease;
+
+// Sizes
+// $mm_width		: 0.8;
+// $mm_minWidth	: 140px;
+// $mm_maxWidth	: 440px;
+
+// $mm_height		: 0.8;
+// $mm_minHeight	: 140px;
+// $mm_maxHeight	: 880px;
+
+// $mm_btnSize		: 43px;
+// $mm_padding		: 10px;
+// $mm_fontSize	: 16px; //14px;
+
+// $mm_subpanelOffset	: 30%;
+// $mm_subopenWidth	: $mm_btnSize;
+
+// Addon sizes
+// $mm_buttonbarHeight		: $mm_btnSize - ( $mm_padding * 2 );
+
+// $mm_counterWidth		: $mm_btnSize;
+
+// $mm_toggleHeight		: $mm_btnSize - $mm_padding;
+// $mm_toggleWidth			: ( $mm_toggleHeight * 2 ) - $mm_padding;
+
+// $mm_checkHeight			: $mm_btnSize - $mm_padding;
+// $mm_checkWidth			: $mm_btnSize - $mm_padding;
+
+// $mm_footerHeight		: $mm_btnSize;
+
+// $mm_headerHeight		: $mm_btnSize * 1.5;
+// $mm_headerPaddingTop	: $mm_headerHeight / 2;
+
+// $mm_labelHeight			: ( $mm_btnSize / 2 ) + ( $mm_padding / 2 );
+
+// $mm_searchHeight		: $mm_btnSize + $mm_padding;
+// $mm_searchfieldHeight	: $mm_searchHeight - ( $mm_padding * 2 );
+
+// Colors
+// $mm_pageShadow					: 0 0 20px rgba( 0, 0, 0, 0.5 );
+// $mm_borderColor					: #272E2F; //rgba( 0, 0, 0, 0.15 );
+// $mm_backgroundColor				: #161E1F;
+// $mm_emphasizedBackgroundColor	: rgba( 0, 0, 0, 0.1 );
+// $mm_highlightedBackgroundColor	: rgba( 255, 255, 255, 0.05 );
+// $mm_textColor					: darken(#FFF, 15%); //rgba( 255, 255, 255, 0.6 );
+// $mm_dimmedTextColor				: rgba( 255, 255, 255, 0.3 );
+
+// Addon colors
+// $mm_toggleCheckedColor	: #4bd963;
