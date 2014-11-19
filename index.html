@@ -21,9 +21,8 @@
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
-    <link rel="stylesheet" href="/assets/css/optimized.e98e.css">
+    <link rel="stylesheet" href="/assets/css/optimized.6f21.css">
 
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
 
@@ -37,45 +36,33 @@
 </head>
 <body>
     <div class="lv-super developerX">
-        <div class="lv-page  exclude-menu   homepage ">
+        <div class="lv-page">
 
-            <!-- HEADER -->
-            <header class="lv-header">
-                <section class="text-center large-text-left">
+            <div class="homepage">
 
-	<!-- Mobile Buttons -->
+    <!-- HEADER -->
+    <header class="lv-header">
+        
+
+<section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
 	<div class="left">
-		<a class="mobile-nav-btn left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a id="context-menu-btn" class="mobile-nav-btn left remove" href="#"><i class="fi-widget"></i></a>
+		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a class="lv-hamburger left  remove " href="#"><i class="fi-results"></i></a>
 	</div>
 
-	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<!-- User Menu Hamburger -->
+	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	<ul class="lv-inline-list logo-switcher-wrapper">
-		<li>
-			<!-- Logo -->
-			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
-				<img width="152" src="/assets/img/content/logo.56cd.png" alt="Thomson Reuters Checkpoint">
-			</a>
-		</li>
-		<li>
-			<!-- Country Toggle -->
+	
 
-			<div class="country-toggle">
-				<select>
-					<option value="au">Australia</option>
-					<option value="nz">New Zealand</option>
-				</select>
-			</div>
-
-		</li>
-	</ul>
 </section>
 
 <!-- User Profile -->
-<section class="user-profile right text-right show-for-large-up">
+<section class="user-profile text-right show-for-large-up">
 	<div class="left">
-		<strong class="user-profile-title">Jason Chen</strong>
+		<strong class="user-profile-title">John Smith</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
 	<div class="right user-profile-pic" href="#">
@@ -83,51 +70,58 @@
 		<i class="fa fa-caret-down"></i>
 		<div class="user-profile-dropdown">
 			<ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
-    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
 		</div>
 	</div>
 </section>
-            </header>
+    </header>
 
-            <!-- NAVIGATION -->
-            <nav class="lv-topbar show-for-large-up">
-                <section class="primary-nav">
-    <ul>
-        <li class=" active "><a href="/"> Home</a></li>
-        <li class=""><a href="/research/"> Research</a></li>
+    <!-- NAVIGATION -->
+    <nav class="lv-navigation show-for-large-up">
+        <div class="lv-topbar">
+            <ul>
+    <li class=" active "><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class="
 
-        <!-- <li class=""><a href="/workflow/"> Workflow</a></li>
-        <li class=""><a href="/tools/"> Tools</a></li>
-        <li class=""><a href="/learning/"> Learning</a></li> -->
-    </ul>
-</section>
-            </nav>
 
-            <!-- STAGE -->
-            <section class="lv-stage">
+"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+    <!-- <li class="
 
-                <!-- CONTEXT MENU -->
-                <nav class="lv-context-menu">
-                    <div class="lv-inner">
-    <section class="secondary-nav">
 
-        
+"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+    <li class="
 
-    </section> <!-- .secondary-nav -->
-</div> <!-- .lv-inner -->
-                </nav>
 
-                <!-- MAIN -->
-                <main class="lv-main">
+"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+    <li class="
+
+
+"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+    <li class="
+
+
+"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+    <li class="
+
+
+"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+</ul>
+        </div>
+    </nav>
+
+    <!-- STAGE -->
+    <section class="lv-stage">
+
+        <!-- MAIN -->
+        <main class="lv-main">
+            <div class="row">
+                <div class="columns">
                     <div class="row">
-                        <div class="columns">
-                            <div class="row">
     <div class="columns">
         <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
             <li>
@@ -172,7 +166,7 @@
     </div>
     <div class="content-block-inner">
         
-                    <p><a href="#">Need help? Hints and tips on advanced searching techniques.</a></p>
+                    <p><a class="ajax-modal" href="/modal_output/terms-and-connectors.html"><i class="fi-lightbulb"></i> Advanced searching hints and tips</a></p>
                     <form data-abide novalidate id="contact" action="/" method="post">
                         <div class="row collapse postfix-radius">
                             <div class="small-12 medium-8 columns">
@@ -198,10 +192,11 @@
     <div class="content-block-inner">
         
                     <ul>
-                        <li><a href="#">Contact Details</a></li>
-                        <li><a href="#">Account Management Details</a></li>
-                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                        <li><a href="#">Cases</a></li>
+                        <li><a href="#">Legislation / Commentary</a></li>
+                        <li><a href="#">Journals</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Government and Regulatory</a></li>
                     </ul>
                 
     </div>
@@ -253,23 +248,30 @@
     <div class="content-block-inner">
         
                     <ul>
-                        <li><a href="#">Contact Details</a></li>
-                        <li><a href="#">Account Management Details</a></li>
-                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
-                        <li><a href="#">Contact Details</a></li>
-                        <li><a href="#">Account Management Details</a></li>
-                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
-                        <li><a href="#">Contact Details</a></li>
-                        <li><a href="#">Account Management Details</a></li>
-                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
-                        <li><a href="#">Contact Details</a></li>
-                        <li><a href="#">Account Management Details</a></li>
-                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
-                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                        <li><a href="/research/">Tax Q and A - Submit a question</a></li>
+                        <li><a href="/research/">A-Z of Trusts</a></li>
+                        <li><a href="/research/">Accountant's Manual</a></li>
+                        <li><a href="/research/">Accounting &amp; ASIC Compliance</a></li>
+                        <li><a href="/research/">Ageing – Post Retirement Strategies</a></li>
+                        <li><a href="/research/">Alert24 - Accounting &amp; Audit</a></li>
+                        <li><a href="/research/">Alert24 - Administrative Law</a></li>
+                        <li><a href="/research/">Alert24 - Banking &amp; Finance</a></li>
+                        <li><a href="/research/">Alert24 - Bankruptcy &amp; Insolvency</a></li>
+                        <li><a href="/research/">Alert24 - Building &amp; Construction</a></li>
+                        <li><a href="/research/">Alert24 - Commercial Law</a></li>
+                        <li><a href="/research/">Alert24 - Competition &amp; Trade Practices</a></li>
+                        <li><a href="/research/">Alert24 - Contract Law</a></li>
+                        <li><a href="/research/">Alert24 - Corporations</a></li>
+                        <li><a href="/research/">Alert24 - Court Practice &amp; Litigation</a></li>
+                        <li><a href="/research/">Alert24 - Criminal Law</a></li>
+                        <li><a href="/research/">Alert24 - Family Law</a></li>
+                        <li><a href="/research/">Alert24 - FBT</a></li>
+                        <li><a href="/research/">Alert24 - Financial Services Regulation</a></li>
+                        <li><a href="/research/">Alert24 - General Practice</a></li>
+                        <li><a href="/research/">Alert24 - GST</a></li>
                     </ul>
+                    <br>
+                    <a href="/alerts/">More Products</a>
                 
     </div>
 </div>
@@ -281,7 +283,7 @@
                 
                 <div class="content-block">
     <div class="content-block-header">
-        <h3>Customer Services</h3>
+        <h3>Customer Service</h3>
         <a title="Minimize" class="minimize-btn" href="#"><span></span></a>
     </div>
     <div class="content-block-inner">
@@ -296,7 +298,7 @@
     </div>
 </div>
 
-                <!-- TAX AND ACCOUNTING COMPLIANCE CALENDAR -->
+                <!-- NEWS HEADLINES -->
 
                 
                 <div class="content-block">
@@ -306,7 +308,19 @@
     </div>
     <div class="content-block-inner">
         
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam natus enim esse, dicta unde suscipit eligendi id atque omnis fugiat quis ex delectus quibusdam alias quos reiciendis beatae architecto odio.</p>
+                    <ul>
+                        <li><a href="">Dependant spouse tax rebate denied</a></li>
+                        <li><a href="">GST: Some ITC claims allowed: partial win for taxpayer</a></li>
+                        <li><a href="">ATO Decision Impact Statements: ATS Pacific; PTTEP Australasia (Ashmore Cartier); Retirement Village Operator</a></li>
+                        <li><a href="">Developing countries to play greater role in BEPS project</a></li>
+                        <li><a href="">GST: development lease arrangements and government agencies</a></li>
+                        <li><a href="">Institutional investors back global tax reform modernisation and transparency</a></li>
+                        <li><a href="">Meaning of interest held by ultimate recipient</a></li>
+                        <li><a href="">Non-resident investing in debt interests</a></li>
+                        <li><a href="">Transfer pricing: relevance of actual commercial or financial relations</a></li>
+                        <li><a href="">ASIC seeks court order to stop property promoter from providing unlicensed financial product advice on SMSFs</a></li>
+                    </ul>
+
                 
     </div>
 </div>
@@ -321,7 +335,20 @@
     </div>
     <div class="content-block-inner">
         
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam natus enim esse, dicta unde suscipit eligendi id atque omnis fugiat quis ex delectus quibusdam alias quos reiciendis beatae architecto odio.</p>
+                    <ul>
+                        <li><a href="/tools/">Accountant's Manual</a></li>
+                        <li><a href="/tools/">ASIC Forms Toolkit</a></li>
+                        <li><a href="/tools/">Asset Impairment Toolkit</a></li>
+                        <li><a href="/tools/">Australian Audit Guide and Toolkit for Self Managed Superannuation Funds</a></li>
+                        <li><a href="/tools/">Australian Audit Manual and Toolkit for SMEs</a></li>
+                        <li><a href="/tools/">Australian Governance Professionals Handbook</a></li>
+                        <li><a href="/tools/">Australian Valuation Handbook</a></li>
+                        <li><a href="/tools/">CGT Guide for SME Practitioners</a></li>
+                        <li><a href="/tools/">Cleardocs (Document Generation)</a></li>
+                        <li><a href="/tools/">Company Tax Return Preparation Checklist</a></li>
+                    </ul>
+                    <br>
+                    <a href="/tools/">More Tools</a>
                 
     </div>
 </div>
@@ -333,92 +360,46 @@
 </div>
 
 <!--- This child document initializes the page in Jekyll. -->
-                        </div>
-                    </div>
-                </main>
+                </div>
+            </div>
+        </main>
 
-                <!-- SIDEBAR -->
-                <aside class="lv-sidebar">
-                    <ul class="tabs text-center" data-tab role="tablist">
-	<li class="tab-title active">
-		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
-	</li>
-	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
-	</li>
-	<li class="tab-title collapse-btn">
-		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
-	</li>
-</ul>
+    </section> <!-- .stage -->
 
-<!-- TABS CONTENT -->
-<div class="tabs-content">
-
-	<!-- DETAILS -->
-	<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
-		
-			<h3>Tips for Searching</h3>
-			<p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
-			<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
-			<p><a class="ajax-modal button small radius knockout" href="/hints/terms-and-connectors.html">See All Connectors</a></p>
-			<hr>
-			<h3>Need Assistance?</h3>
-			<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
-			<p><a href="#" class="button small radius knockout">1800 020 548</a></p>
-		
-	</section>
-
-	<!-- LINKS -->
-	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
-		<br>
-		<ul class="lv-quicklinks content-block">
-			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-		</ul>
-	</section>
-</div>
-                </aside>
-
-            </section> <!-- .stage -->
-
-            <!-- FOOTER -->
-            <footer class="lv-footer">
-                
+    <!-- FOOTER -->
+    <footer class="lv-footer">
+        
 
 <div class="row collapse is-full-width">
+
+    <!-- Footer Links -->
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-            <li><a target="_blank" href="http://training.thomsonreuters.com.au/products/checkpoint/">Help</a></li>
+            <li><a href="http://training.thomsonreuters.com.au/products/checkpoint/" target="_blank">Help</a></li>
             <li class="has-dropdown"><a href="#">Sites</a>
                 <ul class="lv-dropdown">
-                    <li><a href="https://www.checkpointworld.com"><i class="fi-web"></i> Checkpoint World</a></li>
-                    <li><a href="http://thomsonreuters.com/site/proview/"><i class="fi-web"></i> Proview</a></li>
-                    <li><a href="http://www.westlaw.com.au"><i class="fi-web"></i> Westlaw Australia</a></li>
-                    <li><a href="http://www.westlaw.co.nz"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                    <li><a href="https://www.checkpointworld.com" target="_blank"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/" target="_blank"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au" target="_blank"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
                 </ul>
             </li>
-            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx">Privacy Policy</a></li>
-            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx">Terms of Use</a></li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
         </ul>
     </div>
+
+    <!-- Footer Legal -->
     <div class="medium-6 medium-pull-6 columns">
         <div class="text-center medium-text-left">
             <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
         </div>
     </div>
+
 </div> <!-- .row -->
-            </footer>
+    </footer>
+
+</div> <!-- .homepage -->
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
@@ -426,35 +407,42 @@
     <!-- OFF-CANVAS MENU (LEFT) -->
     <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
         <ul>
-    <li class=" active "><a href="/"><i class="fi-home"></i>&nbsp; Home</a></li>
-    <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a></li>
+    <li class=" active "><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class="
+
+
+"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+    <!-- <li class="
+
+
+"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+    <li class="
+
+
+"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+    <li class="
+
+
+"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+    <li class="
+
+
+"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+    <li class="
+
+
+"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
 </ul>
-
-<!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li> -->
-    <!-- <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li> -->
-    <!-- <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li> -->
-    <!-- <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li> -->
-    <!-- <li class=""><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li> -->
-
-<!-- <ul class="no-bullet">
-    <li class="active"><a href="/research/cases/">Basic</a></li>
-    <li><a href="/research/cases/">Cases</a></li>
-    <li><a href="/research/cases/">Legislation / Commentary</a></li>
-    <li><a href="/research/cases/">Journals</a></li>
-    <li><a href="/research/cases/">News</a></li>
-    <li><a href="/research/cases/">Government and Regulatory</a></li>
-</ul> -->
     </nav>
 
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         <ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
-    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
     </nav>
 
@@ -463,24 +451,12 @@
     <!-- CDN -->
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    <script src="/assets/scripts/optimized.1933.js"></script>
+    <script src="/assets/scripts/optimized.317e.js"></script>
 
     <script>
         $(document).foundation();
 
-        $(function() {
-            $("#off-canvas-menu-left").mmenu({
-               "offCanvas": {
-                  "position": "left"
-               }
-            });
 
-            $("#off-canvas-menu-right").mmenu({
-               "offCanvas": {
-                  "position": "right"
-               }
-            });
-         });
 
         $(function() {
             FastClick.attach(document.body);
@@ -491,8 +467,9 @@
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
+        // jQuery UI
         $(function() {
-            $( "#docoptionstabs" ).tabs();
+            $("#docoptionstabs").tabs();
           });
 
     </script>

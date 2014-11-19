@@ -1,0 +1,24 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<div data-header="Help on Constructing Search Terms" id="genericsearchmodal" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; height: 436px;">
+    <h1>Terms &amp; Connectors</h1>
+    <p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' (AND) connector in between each term.</p>
+    <p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
+    <table>
+    <tbody><tr><th>CONNECTOR</th><th>SYMBOL</th><th>RETRIEVES</th></tr>
+    <tr><td>AND</td><td>&amp; (or a space)</td><td>Eg tax avoidance<br>Retrieves documents with both <em>tax</em> and <em>avoidance</em>.</td></tr>
+    <tr><td>OR</td><td>or</td><td>Eg penalties or fines<br>Retrieves documents with either <em>penalties</em> or <em>fines</em> or both terms.</td></tr>
+    <tr><td>NOT</td><td>%</td><td>Eg taxation % avoidance<br>Retrieves documents that contain <em>taxation</em> but not <em>avoidance</em>.</td></tr>
+    <tr><td>PHRASE</td><td>" "</td><td>Eg "tax evasion"<br>Retrieves documents with the exact phrase <em>tax evasion</em>.</td></tr>
+    <tr><td>Numerical Connectors</td><td>/n (n is a number)<br><br><br>+n</td><td>Eg corporate /3 tax<br>Retrieves documents with <em>corporate</em> within 3 words of <em>tax</em>, in any order.<br><br><br>Eg pooled +10 "superannuation trusts"<br>Retrieves documents with <em>pooled</em> within 10 words of the phrase <em>superannuation trusts</em>, in their given order.</td></tr>
+    </tbody></table>
+    <h2>Multiple Character Wildcard</h2>
+    <p>To search for terms with multiple endings use the <strong>!</strong> character. For example: tax! will retrieve tax, taxation, taxes, taxed, etc.</p>
+    <h2>Single Character Wildcard</h2>
+    <p>To search for words with variable characters, use the <strong>*</strong> character. When you place the universal character within a term, it requires that a character appear in that position. For example, withdr*w will return withdraw and withdrew.</p>
+    <h2>Irregular Plurals</h2>
+    <p>Checkpoint® will automatically retrieve irregular plurals. For example, entering child will also retrieve children and goose will also retrieve geese.</p>
+    <h2>Turning Off Plurals</h2>
+    <p></p>You can turn off plurals of a particular term by placing the <strong>#</strong> symbol in front of the term. To retrieve damage but not damages, type #damage.<p></p>
+    <p>Placing the # symbol in front of a term also turns off the automatic retrieval of equivalencies. To retrieve child but not children enter #child.</p>
+</div>

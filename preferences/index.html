@@ -23,9 +23,8 @@
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
-    <link rel="stylesheet" href="/assets/css/optimized.e98e.css">
+    <link rel="stylesheet" href="/assets/css/optimized.6f21.css">
 
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
 
@@ -39,45 +38,33 @@
 </head>
 <body>
     <div class="lv-super developerX">
-        <div class="lv-page  ">
+        <div class="lv-page">
 
-            <!-- HEADER -->
-            <header class="lv-header">
-                <section class="text-center large-text-left">
+            <div class="internal-minimal">
 
-	<!-- Mobile Buttons -->
+    <!-- HEADER -->
+    <header class="lv-header">
+        
+
+<section class="text-center large-text-left">
+
+	<!-- Mobile Hamburgers -->
 	<div class="left">
-		<a class="mobile-nav-btn left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a id="context-menu-btn" class="mobile-nav-btn left " href="#"><i class="fi-widget"></i></a>
+		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a class="lv-hamburger left " href="#"><i class="fi-results"></i></a>
 	</div>
 
-	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<!-- User Menu Hamburger -->
+	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	<ul class="lv-inline-list logo-switcher-wrapper">
-		<li>
-			<!-- Logo -->
-			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
-				<img width="152" src="/assets/img/content/logo.56cd.png" alt="Thomson Reuters Checkpoint">
-			</a>
-		</li>
-		<li>
-			<!-- Country Toggle -->
+	
 
-			<div class="country-toggle">
-				<select>
-					<option value="au">Australia</option>
-					<option value="nz">New Zealand</option>
-				</select>
-			</div>
-
-		</li>
-	</ul>
 </section>
 
 <!-- User Profile -->
-<section class="user-profile right text-right show-for-large-up">
+<section class="user-profile text-right show-for-large-up">
 	<div class="left">
-		<strong class="user-profile-title">Jason Chen</strong>
+		<strong class="user-profile-title">John Smith</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
 	<div class="right user-profile-pic" href="#">
@@ -85,53 +72,82 @@
 		<i class="fa fa-caret-down"></i>
 		<div class="user-profile-dropdown">
 			<ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
-    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
 		</div>
 	</div>
 </section>
-            </header>
+    </header>
 
-            <!-- NAVIGATION -->
-            <nav class="lv-topbar show-for-large-up">
-                <section class="primary-nav">
-    <ul>
-        <li class=""><a href="/"> Home</a></li>
-        <li class=""><a href="/research/"> Research</a></li>
+    <!-- NAVIGATION -->
+    <nav class="lv-navigation show-for-large-up">
+        <div class="lv-topbar">
+            <ul>
+    <li class=""><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class="
 
-        <!-- <li class=""><a href="/workflow/"> Workflow</a></li>
-        <li class=""><a href="/tools/"> Tools</a></li>
-        <li class=""><a href="/learning/"> Learning</a></li> -->
-    </ul>
-</section>
-            </nav>
 
-            <!-- STAGE -->
-            <section class="lv-stage">
 
-                <!-- CONTEXT MENU -->
-                <nav class="lv-context-menu">
-                    <div class="lv-inner">
-    <section class="secondary-nav">
+    
 
-        
-            
-        
+    
+"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+    <!-- <li class="
 
-    </section> <!-- .secondary-nav -->
-</div> <!-- .lv-inner -->
-                </nav>
 
-                <!-- MAIN -->
-                <main class="lv-main">
-                    <div class="row">
-                        <div class="columns">
-                            <section id="maincontent">
+
+    
+
+    
+"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+</ul>
+        </div>
+    </nav>
+
+    <!-- STAGE -->
+    <section class="lv-stage">
+
+        <!-- MAIN -->
+        <main class="lv-main">
+            <div class="row">
+                <div class="columns">
+                    <section id="maincontent">
     <h1 id="pagetitle">My Preferences</h1>
     <form id="prefForm" action="/maf/app/preferences/form" method="get" onsubmit="preUpdate();">
         <fieldset>
@@ -254,85 +270,46 @@
         </fieldset>
     </form>
 </section>
-                        </div>
-                    </div>
-                </main>
+                </div>
+            </div>
+        </main>
 
-                <!-- SIDEBAR -->
-                <aside class="lv-sidebar">
-                    <ul class="tabs text-center" data-tab role="tablist">
-	<li class="tab-title active">
-		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
-	</li>
-	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
-	</li>
-	<li class="tab-title collapse-btn">
-		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
-	</li>
-</ul>
+    </section> <!-- .stage -->
 
-<!-- TABS CONTENT -->
-<div class="tabs-content">
-
-	<!-- DETAILS -->
-	<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
-		
-			<h4>Preferences</h4><p>My Preferences allows you to easily customise your Checkpoint user experience.</p>
-		
-	</section>
-
-	<!-- LINKS -->
-	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
-		<br>
-		<ul class="lv-quicklinks content-block">
-			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-		</ul>
-	</section>
-</div>
-                </aside>
-
-            </section> <!-- .stage -->
-
-            <!-- FOOTER -->
-            <footer class="lv-footer">
-                
+    <!-- FOOTER -->
+    <footer class="lv-footer">
+        
 
 <div class="row collapse is-full-width">
+
+    <!-- Footer Links -->
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-            <li><a target="_blank" href="http://training.thomsonreuters.com.au/products/checkpoint/">Help</a></li>
+            <li><a href="http://training.thomsonreuters.com.au/products/checkpoint/" target="_blank">Help</a></li>
             <li class="has-dropdown"><a href="#">Sites</a>
                 <ul class="lv-dropdown">
-                    <li><a href="https://www.checkpointworld.com"><i class="fi-web"></i> Checkpoint World</a></li>
-                    <li><a href="http://thomsonreuters.com/site/proview/"><i class="fi-web"></i> Proview</a></li>
-                    <li><a href="http://www.westlaw.com.au"><i class="fi-web"></i> Westlaw Australia</a></li>
-                    <li><a href="http://www.westlaw.co.nz"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                    <li><a href="https://www.checkpointworld.com" target="_blank"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/" target="_blank"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au" target="_blank"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
                 </ul>
             </li>
-            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx">Privacy Policy</a></li>
-            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx">Terms of Use</a></li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
+            <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
         </ul>
     </div>
+
+    <!-- Footer Legal -->
     <div class="medium-6 medium-pull-6 columns">
         <div class="text-center medium-text-left">
             <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
         </div>
     </div>
+
 </div> <!-- .row -->
-            </footer>
+    </footer>
+
+</div> <!-- .internal -->
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
@@ -340,35 +317,66 @@
     <!-- OFF-CANVAS MENU (LEFT) -->
     <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
         <ul>
-    <li class=""><a href="/"><i class="fi-home"></i>&nbsp; Home</a></li>
-    <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a></li>
+    <li class=""><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+    <!-- <li class="
+
+
+
+    
+
+    
+"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+    <li class="
+
+
+
+    
+
+    
+"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
 </ul>
-
-<!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li> -->
-    <!-- <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li> -->
-    <!-- <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li> -->
-    <!-- <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li> -->
-    <!-- <li class=""><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li> -->
-
-<!-- <ul class="no-bullet">
-    <li class="active"><a href="/research/cases/">Basic</a></li>
-    <li><a href="/research/cases/">Cases</a></li>
-    <li><a href="/research/cases/">Legislation / Commentary</a></li>
-    <li><a href="/research/cases/">Journals</a></li>
-    <li><a href="/research/cases/">News</a></li>
-    <li><a href="/research/cases/">Government and Regulatory</a></li>
-</ul> -->
     </nav>
 
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         <ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
-    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
     </nav>
 
@@ -377,24 +385,12 @@
     <!-- CDN -->
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    <script src="/assets/scripts/optimized.1933.js"></script>
+    <script src="/assets/scripts/optimized.317e.js"></script>
 
     <script>
         $(document).foundation();
 
-        $(function() {
-            $("#off-canvas-menu-left").mmenu({
-               "offCanvas": {
-                  "position": "left"
-               }
-            });
 
-            $("#off-canvas-menu-right").mmenu({
-               "offCanvas": {
-                  "position": "right"
-               }
-            });
-         });
 
         $(function() {
             FastClick.attach(document.body);
@@ -405,8 +401,9 @@
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
+        // jQuery UI
         $(function() {
-            $( "#docoptionstabs" ).tabs();
+            $("#docoptionstabs").tabs();
           });
 
     </script>
