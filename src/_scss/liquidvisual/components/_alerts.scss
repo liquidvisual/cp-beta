@@ -1,0 +1,117 @@
+/*
+	LIQUIDVISUAL ALERTS :: A Personal Framework
+
+	- updated: 15.10.14
+	- liquidvisual.com
+
+	- Notes -
+
+	- Requires Modernizr
+	- Since this is primarily an IE notifier, pxs and hacks are used
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$hide-page-for-incompatible: false;
+$alert-color: #DB2D39;
+$info-color: #A0D2E7;
+$success-color: #43AE6E;
+$warning-color: #F08B2E;
+$alert-font-color: white;
+$alert-font-size: 15px;
+$alert-opacity: .95;
+
+//-----------------------------------------------------------------
+// Hide page completely for IE6, 7, 8
+//-----------------------------------------------------------------
+
+@if $hide-page-for-incompatible == true {
+	.lt-ie9 .lv-page {
+		display: none;
+	}
+}
+
+//-----------------------------------------------------------------
+// Alerts Bar
+//-----------------------------------------------------------------
+
+.lv-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	background: $alert-color;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	color: $alert-font-color;
+	text-align: center;
+	line-height: 46px;
+	opacity: $alert-opacity;
+	z-index: 2147483647;
+
+	&.success { background: $success-color; }
+	&.info    { background: $info-color; }
+	&.warning { background: $warning-color; }
+
+	p {
+		padding: 15px 70px;
+		margin-bottom: 0;
+		font-weight: 500;
+		font-size: $alert-font-size;
+
+		@media (max-width: 30em) {
+			padding: 15px 70px 15px 20px;
+			text-align: left;
+		}
+	}
+
+	a {
+		color: #F7DDA0;
+		text-decoration: none;
+	}
+}
+
+// Account for <IE8
+.lt-ie8 .lv-alert {
+	top: -2px;
+	left: -2px;
+}
+
+//=========================================
+// Close Button
+//=========================================
+
+.lv-alert-close {
+	//@include .transition;
+	transition: all .2s linear;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 20px;
+	padding: 4px 20px 0 20px \9; /* ie9 */
+	height: 100%;
+	font-weight: bold;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+.no-touch .lv-alert-close:hover,
+.lv-alert-close:active {
+	background: darken($alert-color, 10%);
+	// box-shadow: inset 0 4px 5px -3px rgba(0,0,0,0.5);
+}
+
+.no-touch .success .lv-alert-close:hover {
+	background: darken($success-color, 10%);
+}
+
+.lt-ie9 .lv-alert-close {
+	padding: 3px 20px 0 20px;
+}
+
+.lt-ie8 .lv-alert-close {
+	padding: 4px 20px 0 20px;
+}

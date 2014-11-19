@@ -1,0 +1,9 @@
+<ul>
+    <li class="{% if page.url == "/" %} active {% endif %}"><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class="{% include snippets/is_active.html current_path="research" %}"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
+    <!-- <li class="{% include snippets/is_active.html current_path="workflow" %}"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+    <li class="{% include snippets/is_active.html current_path="tools" %}"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+    <li class="{% include snippets/is_active.html current_path="learning" %}"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+    <li class="{% include snippets/is_active.html current_path="alerts" %}"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+    <li class="{% include snippets/is_active.html current_path="folders" %}"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+</ul>

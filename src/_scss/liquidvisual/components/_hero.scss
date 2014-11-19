@@ -1,0 +1,179 @@
+/*
+	LIQUIDVISUAL HERO :: A Personal Framework
+
+	- updated: 17.10.14
+	- liquidvisual.com
+
+	- Notes -
+	- liquidvisual recommends bxSlider.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+$hero-height: rem-calc(300) !default;
+$hero-background-attachment: inherit !default;
+$hero-caption-bg: none !default;
+$hero-caption-font-size-small: 0.8em !default;
+$hero-caption-font-size-medium: 1em !default;
+$hero-caption-paragraph-font-size: 1.5em !default;
+$hero-caption-color: white !default;
+$hero-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !default;
+$hero-carousel-bullet-size: 12px !default;
+$hero-caption-bullet-bg-active: white !default;
+$hero-caption-button-bg: $tertiary-color !default;
+
+//-----------------------------------------------------------------
+// Hero Wrapper
+//
+// Hint: mobile is always auto - decision
+//-----------------------------------------------------------------
+
+.lv-hero-wrapper {
+	position: relative;
+	overflow: hidden;
+	height: auto;
+
+	&.has-auto-height {
+		height: auto;
+	}
+
+	&.is-loaded .lv-hero {
+		visibility: visible;
+	}
+
+	&.is-alternate .lv-hero {
+		background-position-y: 0; /* small touch */
+	}
+
+	@media #{$medium-up} {
+		height: $hero-height;
+	}
+}
+
+//-----------------------------------------------------------------
+// Hero - Multiple triggers carousel
+//-----------------------------------------------------------------
+
+.lv-hero {
+	// visibility: hidden; /* preload it with js */
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: $hero-background-attachment;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+// Fixed attachment BGs won't work with Carousels.
+// Force sensible defaults.
+
+#lv-hero-carousel .lv-hero {
+	background-attachment: scroll;
+}
+
+//-----------------------------------------------------------------
+// Hero - Caption
+//-----------------------------------------------------------------
+
+.lv-hero-caption {
+	display: inline-block; /* more flexibility */
+	width: 100%; /* mobile */
+	text-align: center;
+	text-shadow: $hero-text-shadow;
+	font-size: $hero-caption-font-size-small; /* mobile */
+	padding: rem-calc(10 10 10 15);
+	margin: rem-calc(20 0);
+	background: $hero-caption-bg;
+
+	p {
+		font-size: $hero-caption-paragraph-font-size;
+		margin-bottom: 0;
+	}
+
+	.button {
+		background: $hero-caption-button-bg;
+	}
+
+	@media #{$medium-up} {
+		text-align: left;
+		font-size: $hero-caption-font-size-medium;
+		width: auto;
+	}
+}
+
+.lv-hero-caption * {
+	color: $hero-caption-color;
+	margin-top: 0 !important; /* failsafe */
+}
+
+.is-alternate .lv-hero-caption * {
+	margin-bottom: 0 !important; /* failsafe */
+}
+
+//-----------------------------------------------------------------
+// Hero - Center Vertical (ROW)
+//
+// Place on containing row to center caption
+// Note: '.has-auto-height' will override centering since the
+// hero contents will set height from the inside.
+//-----------------------------------------------------------------
+
+.lv-hero-wrapper:not(.has-auto-height) .row.center-vertical {
+	@media #{$medium-up} {
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+
+// IE8 Compatibility
+
+@media #{$medium-up} {
+	.lt-ie9 .lv-hero .row.center-vertical {
+		top: 2.500em; /* 40px recommended */
+	}
+
+	.lt-ie9 .has-auto-height .lv-hero .row.center-vertical {
+		top: 0; /* ie8 fix */
+	}
+}
+
+//-----------------------------------------------------------------
+// Hero - Carousel Controls
+//-----------------------------------------------------------------
+
+.lv-hero-carousel-bullets {
+	position: absolute;
+	top: auto;
+	right: 10px;
+	bottom: 10px;
+	left: auto;
+	// z-index: 100;
+}
+
+.bx-pager-item {
+	display: inline-block;
+	margin: 0 3px;
+
+	a {
+		display: inline-block;
+		width: $hero-carousel-bullet-size;
+		height: $hero-carousel-bullet-size;
+		background: #676767;
+		background: white; //rgba(214,214,214,0.9);
+		border-radius: 100%;
+		// border: 1px solid #BFBFBF;
+		overflow: hidden;
+		text-indent: -9999px;
+
+		&.active {
+			background: $hero-caption-bullet-bg-active;
+			// border: 1px solid #676767;
+		}
+	}
+}

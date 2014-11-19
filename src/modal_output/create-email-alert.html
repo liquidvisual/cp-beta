@@ -1,0 +1,33 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<form data-header="Create Email Alert" id="quickLinkForm" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 0px; height: auto;">
+    <div id="quickLinkPanel">
+        <div class="hide" id="saveInput" style="display: block;">
+            <div class="clearfix">
+                <label for="frt">Name*:</label>
+                <div class="inputField">
+                    <input type="text" name="frt" class="inputClass" maxlength="100">            </div>
+                </div>
+                <div class="clear"></div>
+                <input type="hidden" id="oexguid" name="oexguid">
+                <input type="hidden" id="ao" value="">
+                <input type="hidden" id="docguid" value="">
+                <input type="hidden" id="parentguid" value="">
+                <input type="hidden" id="bcguid" value="">
+                <input type="hidden" id="tocDs" value="">
+                <input type="hidden" id="tocGuid" value="">
+                <input type="hidden" id="jurisdiction" value="AU">
+                <input type="hidden" id="stid" value="">
+                <div id="succesRepeat" class="hide">
+                    The name entered already exists.
+                </div>
+                <div id="emptyName" class="hide">
+                    You must enter a name.
+                </div>
+                <div class="formButtons modalctas">
+                    <input id="saveButton" type="button" class="saveButton primary" value="Save">
+                    <input id="cancelButton" type="button" class="button80" value="Cancel">
+                </div>
+            </div>
+        </div>
+    </form>

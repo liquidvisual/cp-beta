@@ -1,0 +1,72 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<form data-header="Email Results" id="optionsForm" action="/maf/app/delivery/search" method="POST">
+    <fieldset>
+        <input type="hidden" name="deliveryOptions" value="true">        <input type="hidden" name="snippets" value="true">     <input type="hidden" name="context" value="13">     <input type="hidden" name="deliveryTarget" value="Email">       <input type="hidden" name="redirect" value="http://www.checkpointau.com.au/maf/app/searchfromlink/run">     <input type="hidden" name="predefinedRelationshipsType" value="fullDocRetrieval">       <input type="hidden" name="idp" value="true">       <input type="hidden" name="links" value="true">     <input type="hidden" name="highlight" id="highlightvalue" value="true">     <input type="hidden" name="baseUrlPath" value="/cpau">
+        <div id="emailOptions">
+            <div class="clearfix"><label>&nbsp;</label>
+            <p class="tip">Tip: Separate multiple addresses with semicolons.</p>
+        </div>
+        <div class="clearfix row">
+            <label for="to" id="toLabel">To</label><input type="text" id="to" name="to" maxlength="255" size="60" value="ben.norman@thomsonreuters.com">
+        </div>
+        <div class="clearfix row">
+            <label for="subject" id="subjectLabel">Subject</label><input type="text" id="subject" name="subject" maxlength="255" size="60" value="Results from Thomson Reuters Checkpoint AU">      </div>
+            <div class="clearfix row">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea><br>
+            </div>
+            <div class="clearfix row">
+                <label>&nbsp;</label>
+                <span class="tip">Your document will be attached to this E-mail.</span>
+            </div>
+        </div>
+
+        <input type="hidden" name="td" value="36">  <input type="hidden" name="hash" value="1978462958">    <input type="hidden" name="srguid" value="i0ad82d080000014983ae076d4a273d81">   <input type="hidden" name="multiDoc" value="true">
+        <div id="typeOfDelivery">
+
+            <h2>Document Options</h2>
+            <div class="clearfix">
+                <div class="deliverytypeleft">
+                    <input type="radio" id="resultselections" name="fulltext" value="false" checked="checked"><label for="resultselections" id="resultselectionsLabel">List of Search Results </label>          </div>
+                    <div class="deliverytyperight">
+                        <input type="text" name="resultrange" id="resultrange" maxlength="255" value="1"><br>
+                        <span class="tip">e.g., 1,3,5-7</span>
+                    </div>
+                </div>
+                <br>
+                <div class="clearfix">
+                    <div class="deliverytypeleft">
+                        <input type="radio" id="selections" name="fulltext" value="true"><label for="selections" id="selectionsLabel">Full-text Documents </label>          </div>
+                        <div class="deliverytyperight">
+                            <input type="text" name="fulltextrange" id="range" maxlength="255" disabled=""><br>
+                            <span class="tip">You can not deliver more than 50 complete documents.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="attachFormat">
+                    <h2>File Format</h2>
+                    <p><input type="radio" id="formatPDF" name="deliveryFormat" value="PDF"><label for="formatPDF" id="formatPDFLabel">PDF</label></p>
+                    <p><input type="radio" id="formatRTF" name="deliveryFormat" value="RTF"><label for="formatRTF" id="formatRTFLabel">Word / WordPerfect (RTF)</label></p>
+                    <p><input type="radio" id="formatHTML" name="deliveryFormat" value="HTML" checked="checked"><label for="formatHTML" id="formatHTMLLabel">HTML</label></p>
+                </div>
+
+
+
+                <div id="outputOptions">
+                    <h2>Output Options</h2>
+                    <p><input type="checkbox" id="status" name="include-status-flags" checked="checked"><label for="status" id="statusLabel">Display status indicator</label></p>
+                    <p><input type="checkbox" id="highlight" name="include-highlighted-terms" checked="checked"><label for="highlight" id="highlightLabel">Highlight Search Terms</label></p>
+                    <p><input type="checkbox" id="liveLinks" name="include-live-links" checked="checked"><label for="liveLinks" id="liveLinksLabel">Include Live Links</label></p>
+                    <p><input type="checkbox" id="summary" name="include-summary-page" checked="checked"><label for="summary" id="summaryLabel">Include Summary Page</label></p>
+                    <p><input type="checkbox" id="history" name="history-notes" checked="checked"><label for="history" id="historyLabel">Include History Notes</label></p>
+                    <p><input type="checkbox" id="notes" name="include-footnotes" checked="checked"><label for="notes" id="notesLabel">Include Footnotes</label></p>
+                </div>
+
+                <div id="confirmButtons" class="modalctas">
+                    <input type="button" value="OK" onclick="deliverySubmit()" class="primary" id="submitDeliveryform">
+                    <input type="button" value="Cancel" id="closeDeliveryPopup">
+                </div>
+            </fieldset>
+        </form>

@@ -1,0 +1,104 @@
+<div class="lv-doc-options disabled">
+    <div class="row">
+        <div class="large-5 columns">
+            <ul class="lv-inline-list small-gaps text-center medium-text-left">
+                <li><a title="Save to My Folders" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-save"></i></a></li>
+                <li><a title="Print" class="ajax-modal" href="/modal_output/print-results.html"><i class="fi-print"></i></a></li>
+                <li><a title="Export" class="ajax-modal" href="/modal_output/export-results.html"><i class="fi-page-export-doc"></i></a></li>
+                <li><a title="Email" class="ajax-modal" href="/modal_output/email-results.html"><i class="fi-mail"></i></a></li>
+                <li><a title="Add to My Quicklinks" class="ajax-modal" href="/modal_output/add-to-my-quicklinks.html"><i class="fi-star"></i></a></li>
+                <li><a title="Create Email Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-alert"></i></a></li>
+                <li><a title="Create Organisational Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-calendar"></i></a></li>
+                <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-rss"></i></a></li>
+            </ul>
+        </div> <!-- .columns -->
+        <div class="large-7 columns">
+            <form class="" method="post" action="/maf/app/search/sort">
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <div class="row">
+                            <div class="large-5 columns text-center large-text-right">
+                                <label class="inline">Details:</label>
+                            </div>
+                            <div class="large-7 columns">
+                                <select id="details" name="details">
+                                    <option value="most" selected="">Most</option>
+                                    <option value="least">Least</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> <!-- .medium-6 -->
+                    <div class="medium-6 columns">
+                        <div class="row">
+                            <div class="large-5 columns text-center large-text-right">
+                                <label class="inline">Sort By:</label>
+                            </div>
+                            <div class="large-7 columns">
+                                <select name="sortid" id="sortBy">
+                                    <option value="Weight">Weighted</option>
+                                    <option value="Relevancy" selected="">Relevance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div> <!-- .medium-6 -->
+                </div> <!-- .row -->
+            </form>
+        </div> <!-- .columns -->
+    </div> <!-- .row -->
+</div> <!-- .lv-doc-options -->
+
+
+
+{% comment %}
+<!-- OUTPUT FROM CHECKPOINT -->
+
+<div id="navbardoclist">
+    <div id="documentoptionicons">
+        <span class="save2icon" id="save2Container">
+            <a href="#" id="add2FavNew" class="save2Link"><img src="/cpau/images/ico_save16.png" alt="" title="Save to my folders"></a>
+        </span>
+        <span class="deliveryicon" id="printContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_print.png" alt="" title="Print"></a>
+        </span>
+        <span class="saveicon" id="saveContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_export16.png" alt="" title="Export"></a>
+        </span>
+        <span class="deliveryicon" id="emailContainer">
+            <a href="#" class="deliveryLink"><img src="/cpau/images/ico_email.png" alt="" title="E-mail"></a>
+        </span>
+        <span class="deliveryicon">
+            <b class="qlimg noSaved">
+                <img src="/cpau/images/ico_staradd.png" alt="" title="Add to My Quick Links" class="imgNoSaved" id="btnAUFavOn_">
+                <img src="/cpau/images/ico_staradd_ghost.png" alt="" title="This is already stored in your shortcuts" class="imgSaved" id="btnAUFavOff_">
+            </b>
+        </span>
+
+        <span class="temporalAlertIcon" id="temporalAlertContainer">
+            <a href="../alerts/individual/form"><img src="/cpau/images/ico-alert.png" alt="" title="Create an Individual alert"></a>
+        </span>
+
+        <span class="temporalOrgAlertIcon" id="save2Container">
+            <a href="../../api/alertctr/alerts/organizational/settings" id="temporalOrgAlertContainer" class="save2Link"><img src="/cpau/images/ico_orgalert.png" alt="" title="Click to create an organisational alert" onclick="$(id=orgAlertContainer ).submit()"></a>
+        </span>
+
+        <a id="rsslink" href="/maf/wlanz/api/alerts/individual/form?alerttype=RSS&amp;crumb-action=append&amp;notifymethod=ftp&amp;crumb-label=Save RSS Feed&amp;manage=true"><img src="/cpau/images/icons/ico-rss.png" alt="Create RSS Feed" title="Create RSS Feed" id="rssContainer"></a>
+    </div>
+    <div id="documentoptionsnotes"></div>
+    <div id="deliveryButtonsContainer">
+        <form method="get" action="/maf/app/delivery/search" id="deliveryForm" class="hidden">
+            <fieldset>
+                <input type="hidden" name="srguid" value="ia744c0970000014994c635baeffdd754">
+                <input type="hidden" name="docRange" id="docRange">
+                <input type="hidden" name="fulltext" value="true">
+                <input type="hidden" name="td" value="37">
+                <input type="hidden" name="preselected" id="preselected" value="">
+                <input type="hidden" name="deliveryTarget" id="deliveryTarget">
+                <input type="hidden" name="docguid" id="docguid" value="">
+                <input type="hidden" name="deliveryOptions" id="deliveryOptions">
+                <input type="hidden" name="tocguid" value="[Ljava.lang.String;@d8b458">
+                <input type="hidden" name="ao" value="[Ljava.lang.String;@12826df">
+            </fieldset>
+        </form>
+    </div>
+</div>
+{% endcomment %}

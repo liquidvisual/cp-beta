@@ -1,0 +1,36 @@
+# GLOBAL SITE SETTINGS
+
+# General
+seo_title: ""
+title: ""
+company: "Thomson Reuters"
+logo: "/img/content/logo.png"
+description: ""
+
+# Contact Info
+email: test@example.com
+phone: 1800 020 548
+fax: (05) 555 555
+address: "ABC Street, Earth"
+
+# Social Networks
+facebook: ""
+
+# Links
+
+thomson_reuters_au: "http://www.thomsonreuters.com.au"
+help: "http://training.thomsonreuters.com.au/products/checkpoint/"
+privacy_policy: "http://www.thomsonreuters.com.au/terms/privacy-policy.aspx"
+terms_of_use: "http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx"
+
+# Site Links
+checkpoint_world: "https://www.checkpointworld.com"
+proview: "http://thomsonreuters.com/site/proview/"
+westlaw_au: "http://www.westlaw.com.au"
+westlaw_nz: "http://www.westlaw.co.nz"
+
+# Google Map
+google_map: ""
+
+# Google Analytics
+google_analytics: "UA-XXXXXXXX-X"

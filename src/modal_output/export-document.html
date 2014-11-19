@@ -1,0 +1,32 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<form data-header="Export Document" id="optionsForm" action="/maf/app/delivery/document" method="POST">
+    <fieldset>
+        <input type="hidden" name="deliveryOptions" value="true">        <input type="hidden" name="snippets" value="true">     <input type="hidden" name="context" value="222">        <input type="hidden" name="deliveryTarget" value="Save">        <input type="hidden" name="redirect" value="http://www.checkpointau.com.au/maf/app/fulldocument?endChunk=1&amp;bcguid=AUNZ_TOC||I8b0a65d4e6f43a24995634a1869deac5&amp;startChunk=1&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;pcs=AUNZ_CA_ENVAUGUIDE&amp;tocDs=AUNZ_AU_ACCTING_TOC&amp;epos=1&amp;predefinedRelationshipsType=fullDocRetrieval&amp;srguid=i0ad69f8e000001499d3642d782ac9d7f&amp;isTocNav=true&amp;tocGuid=AUNZ_AU_ACCTING_TOC||Ifc3194c54bdd11e38fa3f057ed117a82">      <input type="hidden" name="predefinedRelationshipsType" value="fullDocRetrieval">       <input type="hidden" name="idp" value="true">       <input type="hidden" name="links" value="true">     <input type="hidden" name="highlight" id="highlightvalue" value="true">     <input type="hidden" name="baseUrlPath" value="/cpau">
+
+
+        <div id="attachFormat">
+            <h2>File Format</h2>
+            <p><input type="radio" id="formatPDF" name="deliveryFormat" value="PDF" checked="checked"><label for="formatPDF" id="formatPDFLabel">PDF</label></p>
+            <p><input type="radio" id="formatRTF" name="deliveryFormat" value="RTF"><label for="formatRTF" id="formatRTFLabel">Word / WordPerfect (RTF)</label></p>
+            <p><input type="radio" id="formatHTML" name="deliveryFormat" value="HTML"><label for="formatHTML" id="formatHTMLLabel">HTML</label></p>
+        </div>
+
+        <input type="hidden" name="docguid" value="Ifc3193e04bdd11e38fa3f057ed117a82">          <input type="hidden" name="srguid" value="i0ad69f8e000001499d3642d782ac9d7f">
+
+        <div id="outputOptions">
+            <h2>Output Options</h2>
+            <p><input type="checkbox" id="status" name="include-status-flags" checked="checked"><label for="status" id="statusLabel">Display status indicator</label></p>
+            <p><input type="checkbox" id="highlight" name="include-highlighted-terms" checked="checked"><label for="highlight" id="highlightLabel">Highlight Search Terms</label></p>
+            <p><input type="checkbox" id="liveLinks" name="include-live-links" checked="checked"><label for="liveLinks" id="liveLinksLabel">Include Live Links</label></p>
+            <p><input type="checkbox" id="summary" name="include-summary-page" checked="checked"><label for="summary" id="summaryLabel">Include Summary Page</label></p>
+            <p><input type="checkbox" id="history" name="history-notes" checked="checked"><label for="history" id="historyLabel">Include History Notes</label></p>
+            <p><input type="checkbox" id="notes" name="include-footnotes" checked="checked"><label for="notes" id="notesLabel">Include Footnotes</label></p>
+        </div>
+
+        <div id="confirmButtons" class="modalctas">
+            <input type="button" value="OK" onclick="deliverySubmit()" class="primary" id="submitDeliveryform">
+            <input type="button" value="Cancel" id="closeDeliveryPopup">
+        </div>
+    </fieldset>
+</form>

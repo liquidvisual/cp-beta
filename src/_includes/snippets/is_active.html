@@ -1,0 +1,16 @@
+{% comment %}
+This snippet loops through the page.url segments (separated by slash) and
+tries to match with the passed in variable 'current_path'.
+If successful, will output an 'active' string to be used on nav elements.
+
+- Usage -
+
+Apply to the LI class like so: (keep lowercase)
+class="{% include is_active.html current_path="about" %}"
+
+{% endcomment %}
+
+{% assign url_paths = page.url | split: '/' %}
+{% for path in url_paths %}
+    {% if path == include.current_path %}active{% endif %}
+{% endfor %}

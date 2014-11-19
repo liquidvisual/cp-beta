@@ -1,0 +1,24 @@
+<!-- This simulates the output from an AJAX call - to be placed into a modal -->
+
+<div data-header="Change Your Client ID" id="clientIdPopup" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 94px; height: auto;">
+    <form id="frmClientId" action="/maf/app/authentication/clientid/change" method="get">
+        <fieldset>
+            <input type="hidden" name="form" value="true">      <p>A client ID helps you distinguish documents between projects and clients.  You don't have to use one, but it will help in filing your 'My Folders' view of documents.</p>
+
+            <div class="clientidrow clearfix">
+                <div class="clientidlabel"><span>Current Client ID:</span></div>
+                <div class="clientidinput">             <strong>Unassigned</strong>
+                </div>
+            </div>
+            <div class="clientidrow clearfix">
+                <div class="clientidlabel"><label for="cid">New Client ID:</label></div>
+                <div class="clientidinput"><input id="cid" name="cid" type="text" maxlength="25" value=""></div>
+            </div>
+            <div class="clientidrow clearfix">
+                <div class="clientidlabel">&nbsp;</div>
+                <div class="clientidinput">     <input type="button" id="" class="primary" value="Save" onclick="javascript:anzcp.saveClientID();">
+                <input type="button" id="" class="" value="Cancel" onclick="javascript:anzcp.closeClientID();">
+            </div>
+        </div>
+    </fieldset>
+</form></div>

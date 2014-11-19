@@ -1,0 +1,43 @@
+<div class="lv-doc-options disabled">
+    <ul class="lv-inline-list small-gaps text-center medium-text-left">
+        <li><a title="Print Documents" class="ajax-modal" href="/modal_output/print-search.html"><i class="fi-print"></i></a></li>
+        <li><a title="Download Documents" class="ajax-modal" href="/modal_output/export-document.html"><i class="fi-page-export-doc"></i></a></li>
+        <li><a title="Email Documents" class="ajax-modal" href="/modal_output/email-search.html"><i class="fi-mail"></i></a></li>
+        <li><a title="Create Email Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-alert"></i></a></li>
+        <li><a title="Create Organisational Alert" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-calendar"></i></a></li>
+        <li><a title="Create RSS Feed" class="ajax-modal" href="/modal_output/coming-soon.html"><i class="fi-rss"></i></a></li>
+    </ul>
+</div>
+
+{% comment %}
+<!-- OUTPUT FROM CHECKPOINT -->
+
+<div id="documentoptions" class="clearfix">
+    <form method="POST" class="tocDelivery" target="delivFrame" action="/maf/app/delivery/document" id="deliveryFormToc">
+        <div id="documentoptionicons">
+            <span class="deliveryicon" title="Print documents"><img src="/cpau/images/ico_print.png" alt="Print documents" id="printBrowseToc"></span>
+            <span class="deliveryicon" title="Download documents"><img src="/cpau/images/ico_export16.png" alt="Download documents" id="saveBrowseToc"></span>
+            <span class="deliveryicon" title="Email documents"><img src="/cpau/images/ico_email.png" alt="Email documents" id="emailBrowseToc"></span>
+
+            <span class="deliveryicon" title="Create Individual alert">
+                <a id="indAlertCTA"><img src="/cpau/images/ico-alert.png" alt="" title="Create my email alert" id="indAlertContainer" my="" email="" alertisindalert="true" data-newalert-url="/maf/api/alerts/individual/form" data-editalert-url="/maf/api/alerts/individual/alerts" data-alert-subsid="" data-success-redirect="/maf/app/individual/view"></a>
+                <div title="Edit Alert" style="display:none" id="indAlertDialog" data-alertname-url="/maf/api/alerts/individual/.json"></div>
+            </span>
+
+            <span class="deliveryicon" title="Create Organisational alert">
+                <img src="/cpau/images/ico_orgalert.png" alt="" click="" to="" create="" an="" organisational="" alert"="" "="" id="orgAlertContainer" title="Click to create an Organisational Alert" isorgalert="true" data-newalert-url="/maf/api/alertctr/alerts/organizational/settings" data-editalert-url="/maf/api/alertctr/alerts//organizational" data-alert-guid="" data-success-redirect="/maf/api/alertctr/alerts/organizational/view" data-alert-subsid="">
+                <div title="Edit Alert" style="display:none" id="orgAlertDialog" data-alertname-url="/maf/api/alertctr/alerts//organizational/name"></div>
+            </span>
+
+            <a id="rsslink">
+                <img src="/cpau/images/icons/ico-rss.png" alt="Create RSS Feed" title="Create RSS Feed" id="rssContainer">
+            </a>
+        </div>
+
+        <fieldset>
+            <input type="hidden" name="deliveryTarget" id="deliveryTargetToc">
+            <input type="hidden" name="isMultiDoc" value="true">
+        </fieldset>
+    </form>
+</div>
+{% endcomment %}

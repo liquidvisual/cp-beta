@@ -1,0 +1,171 @@
+---
+layout: homepage
+---
+
+<div class="row">
+    <div class="columns">
+        <ul class="dashboard-grid medium-block-grid-1 large-block-grid-3">
+            <li>
+                <!-- CALENDAR -->
+
+                {% capture body_text %}
+                    <p><a href="#"></a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <select name="budget" class="radius">
+                            <option selected disabled>All Events</option>
+                            <option value="Tax">Tax</option>
+                            <option value="PAYG">PAYG</option>
+                            <option value="BAS">BAS</option>
+                            <option value="Superannuation">Superannuation</option>
+                            <option value="SGC">SGC</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="ASIC and Accounting">ASIC and Accounting</option>
+                            <option value="Public Holiday">Public Holiday</option>
+                            <option value="FBT">FBT</option>
+                        </select>
+                    </form>
+                    <div id="datepicker"></div>
+
+                {% endcapture %}
+                {% include components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
+
+                <!-- BASIC SEARCH -->
+
+                {% capture body_text %}
+                    <p><a class="ajax-modal" href="/modal_output/terms-and-connectors.html"><i class="fi-lightbulb"></i> Advanced searching hints and tips</a></p>
+                    <form data-abide novalidate id="contact" action="/" method="post">
+                        <div class="row collapse postfix-radius">
+                            <div class="small-12 medium-8 columns">
+                                <input name="q" class="text-center" type="text" placeholder="Type Keywords">
+                            </div>
+                            <div class="hide-for-small medium-4 columns">
+                                <button type="submit" class="button flat radius postfix">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                {% endcapture %}
+                {% include components/dash_block.html header="Basic Search" body=body_text %}
+
+                <!-- ADVANCED SEARCH -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">Cases</a></li>
+                        <li><a href="#">Legislation / Commentary</a></li>
+                        <li><a href="#">Journals</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Government and Regulatory</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include components/dash_block.html header="Advanced Search" body=body_text %}
+
+            </li>
+            <li>
+                <!-- MY PINS (Quicklinks) -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">abc</a></li>
+                        <li><a href="#">Some other stuff</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include components/dash_block.html header="My Quicklinks" body=body_text %}
+
+                <!-- MY CLEARDOCS -->
+
+                {% capture body_text %}
+                    <h5 class="subheader"><i>There have been no assembled documents saved.</i></h5>
+                {% endcapture %}
+                {% include components/dash_block.html header="My Cleardocs" body=body_text %}
+
+                <!-- MY PRODUCTS -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="/research/">Tax Q and A - Submit a question</a></li>
+                        <li><a href="/research/">A-Z of Trusts</a></li>
+                        <li><a href="/research/">Accountant's Manual</a></li>
+                        <li><a href="/research/">Accounting &amp; ASIC Compliance</a></li>
+                        <li><a href="/research/">Ageing – Post Retirement Strategies</a></li>
+                        <li><a href="/research/">Alert24 - Accounting &amp; Audit</a></li>
+                        <li><a href="/research/">Alert24 - Administrative Law</a></li>
+                        <li><a href="/research/">Alert24 - Banking &amp; Finance</a></li>
+                        <li><a href="/research/">Alert24 - Bankruptcy &amp; Insolvency</a></li>
+                        <li><a href="/research/">Alert24 - Building &amp; Construction</a></li>
+                        <li><a href="/research/">Alert24 - Commercial Law</a></li>
+                        <li><a href="/research/">Alert24 - Competition &amp; Trade Practices</a></li>
+                        <li><a href="/research/">Alert24 - Contract Law</a></li>
+                        <li><a href="/research/">Alert24 - Corporations</a></li>
+                        <li><a href="/research/">Alert24 - Court Practice &amp; Litigation</a></li>
+                        <li><a href="/research/">Alert24 - Criminal Law</a></li>
+                        <li><a href="/research/">Alert24 - Family Law</a></li>
+                        <li><a href="/research/">Alert24 - FBT</a></li>
+                        <li><a href="/research/">Alert24 - Financial Services Regulation</a></li>
+                        <li><a href="/research/">Alert24 - General Practice</a></li>
+                        <li><a href="/research/">Alert24 - GST</a></li>
+                    </ul>
+                    <br>
+                    <a href="/alerts/">More Products</a>
+                {% endcapture %}
+                {% include components/dash_block.html header="My Products" body=body_text %}
+
+            </li>
+            <li>
+                <!-- CUSTOMER SERVICES -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="#">Contact Details</a></li>
+                        <li><a href="#">Account Management Details</a></li>
+                        <li><a href="#">Thomson Reuters Website (AU)</a></li>
+                        <li><a href="#">Thomson Reuters Website (NZ)</a></li>
+                    </ul>
+                {% endcapture %}
+                {% include components/dash_block.html header="Customer Service" body=body_text %}
+
+                <!-- NEWS HEADLINES -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="">Dependant spouse tax rebate denied</a></li>
+                        <li><a href="">GST: Some ITC claims allowed: partial win for taxpayer</a></li>
+                        <li><a href="">ATO Decision Impact Statements: ATS Pacific; PTTEP Australasia (Ashmore Cartier); Retirement Village Operator</a></li>
+                        <li><a href="">Developing countries to play greater role in BEPS project</a></li>
+                        <li><a href="">GST: development lease arrangements and government agencies</a></li>
+                        <li><a href="">Institutional investors back global tax reform modernisation and transparency</a></li>
+                        <li><a href="">Meaning of interest held by ultimate recipient</a></li>
+                        <li><a href="">Non-resident investing in debt interests</a></li>
+                        <li><a href="">Transfer pricing: relevance of actual commercial or financial relations</a></li>
+                        <li><a href="">ASIC seeks court order to stop property promoter from providing unlicensed financial product advice on SMSFs</a></li>
+                    </ul>
+
+                {% endcapture %}
+                {% include components/dash_block.html header="Tax and Accounting Compliance Calendar" body=body_text %}
+
+                <!-- MY TOOLS -->
+
+                {% capture body_text %}
+                    <ul>
+                        <li><a href="/tools/">Accountant's Manual</a></li>
+                        <li><a href="/tools/">ASIC Forms Toolkit</a></li>
+                        <li><a href="/tools/">Asset Impairment Toolkit</a></li>
+                        <li><a href="/tools/">Australian Audit Guide and Toolkit for Self Managed Superannuation Funds</a></li>
+                        <li><a href="/tools/">Australian Audit Manual and Toolkit for SMEs</a></li>
+                        <li><a href="/tools/">Australian Governance Professionals Handbook</a></li>
+                        <li><a href="/tools/">Australian Valuation Handbook</a></li>
+                        <li><a href="/tools/">CGT Guide for SME Practitioners</a></li>
+                        <li><a href="/tools/">Cleardocs (Document Generation)</a></li>
+                        <li><a href="/tools/">Company Tax Return Preparation Checklist</a></li>
+                    </ul>
+                    <br>
+                    <a href="/tools/">More Tools</a>
+                {% endcapture %}
+                {% include components/dash_block.html header="My Tools" body=body_text %}
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+{{ content }}

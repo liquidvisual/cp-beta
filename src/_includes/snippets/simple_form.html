@@ -1,0 +1,65 @@
+<form data-abide novalidate method="post" action="http://liquidvisual.net/files/contact-form/">
+
+	<!-- Name -->
+	<div class="row">
+		<div class="columns">
+			<label><!-- Your name <small>required</small> -->
+				<input name="name" class="radius" type="text" placeholder="Your name*">
+			</label>
+			<small class="error">Your name is required.</small>
+		</div>
+	</div>
+
+	<!-- Email -->
+	<div class="row">
+		<div class="columns">
+			<label><!-- Email <small>required</small> -->
+				<input name="email" class="radius" type="email" placeholder="Email*" required>
+			</label>
+			<small class="error">A valid email address is required.</small>
+		</div>
+	</div>
+
+	<!-- Phone (Optional) -->
+	<div class="row">
+		<div class="columns">
+			<label><!-- Phone -->
+				<input name="phone" class="radius" type="text" placeholder="Phone (optional)">
+			</label>
+			<small class="error">Please try again.</small>
+		</div>
+	</div>
+
+	<!-- Budget -->
+	<div class="row">
+		<div class="columns">
+			<label><!-- Budget <small>required</small> -->
+				<select name="budget" class="radius">
+					<option selected disabled>Budget</option>
+					<option value="1000-2500">$1000 - $2500</option>
+					<option value="2500-5000">$2500 - $5000</option>
+					<option value="5000-10000">$5000 - $10000</option>
+					<option value="10000-20000">$10000 - $20000</option>
+					<option value="20000+">$20000 or more</option>
+				</select>
+			</label>
+		</div>
+	</div>
+
+	<!-- Message -->
+	<div class="row">
+		<div class="columns">
+			<label><!-- Your message <small>required</small> --></label>
+			<textarea rows="10" class="radius" name="message" placeholder="Your message*" required></textarea>
+			<small class="error">Please enter a message.</small>
+		</div>
+	</div>
+
+	<!-- Submit -->
+	<div class="row">
+		<div class="columns text-center">
+			<button type="submit" class="button">Send Message</button>
+		</div>
+	</div>
+
+</form>
