@@ -23,8 +23,9 @@
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
-    <link rel="stylesheet" href="/assets/css/optimized.6f21.css">
+    <link rel="stylesheet" href="/assets/css/optimized.e98e.css">
 
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
 
@@ -38,33 +39,45 @@
 </head>
 <body>
     <div class="lv-super developerX">
-        <div class="lv-page">
+        <div class="lv-page  ">
 
-            <div class="internal">
+            <!-- HEADER -->
+            <header class="lv-header">
+                <section class="text-center large-text-left">
 
-    <!-- HEADER -->
-    <header class="lv-header">
-        
-
-<section class="text-center large-text-left">
-
-	<!-- Mobile Hamburgers -->
+	<!-- Mobile Buttons -->
 	<div class="left">
-		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a class="lv-hamburger left " href="#"><i class="fi-results"></i></a>
+		<a class="mobile-nav-btn left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a id="context-menu-btn" class="mobile-nav-btn left " href="#"><i class="fi-widget"></i></a>
 	</div>
 
-	<!-- User Menu Hamburger -->
-	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	
+	<ul class="lv-inline-list logo-switcher-wrapper">
+		<li>
+			<!-- Logo -->
+			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
+				<img width="152" src="/assets/img/content/logo.56cd.png" alt="Thomson Reuters Checkpoint">
+			</a>
+		</li>
+		<li>
+			<!-- Country Toggle -->
 
+			<div class="country-toggle">
+				<select>
+					<option value="au">Australia</option>
+					<option value="nz">New Zealand</option>
+				</select>
+			</div>
+
+		</li>
+	</ul>
 </section>
 
 <!-- User Profile -->
-<section class="user-profile text-right show-for-large-up">
+<section class="user-profile right text-right show-for-large-up">
 	<div class="left">
-		<strong class="user-profile-title">John Smith</strong>
+		<strong class="user-profile-title">Jason Chen</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
 	<div class="right user-profile-pic" href="#">
@@ -72,304 +85,413 @@
 		<i class="fa fa-caret-down"></i>
 		<div class="user-profile-dropdown">
 			<ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
 		</div>
 	</div>
 </section>
-    </header>
+            </header>
 
-    <!-- NAVIGATION -->
-    <nav class="lv-navigation show-for-large-up">
-        <div class="lv-topbar">
-            <ul>
-    <li class=""><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
-    <li class="
+            <!-- NAVIGATION -->
+            <nav class="lv-topbar show-for-large-up">
+                <section class="primary-nav">
+    <ul>
+        <li class=""><a href="/"> Home</a></li>
+        <li class=""><a href="/research/"> Research</a></li>
 
+        <!-- <li class=""><a href="/workflow/"> Workflow</a></li>
+        <li class=""><a href="/tools/"> Tools</a></li>
+        <li class=""><a href="/learning/"> Learning</a></li> -->
+    </ul>
+</section>
+            </nav>
 
+            <!-- STAGE -->
+            <section class="lv-stage">
 
-    
-
-    
-"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
-    <!-- <li class="
-
-
-
-    
-
-    
-"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
-</ul>
-        </div>
-    </nav>
-
-    <!-- STAGE -->
-    <section class="lv-stage">
-
-        <!-- CONTEXT MENU -->
-        <nav class="lv-context-menu">
-            <div class="lv-inner">
+                <!-- CONTEXT MENU -->
+                <nav class="lv-context-menu">
+                    <div class="lv-inner">
     <section class="secondary-nav">
 
         
-            <!-- START CHECKPOINT OUTPUT -->
+            <!-- UNTOUCHED OUTPUT FROM CHECKPOINT -->
 
-<section id="sidebar" style="height: 440px;"> <h1>Sessions</h1> <div id="sessioncontainer" style="height: 397px;"> <ul class="toplevel doclist"> <li class="session active current"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> <strong>Current Session</strong> </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014997e36240f91a635e&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 10/11/14 15:08:21 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad8123400000149976b7d4cf91a5cf3&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 10/11/14 12:57:24 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014996d0b3f6f91a4887&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 10/11/14 10:08:20 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session "> <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014994c216f5f91a3f4c&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 10/11/14 00:33:08 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001498f851f13f9751021&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 09/11/14 00:08:26 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session "> <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014985a3b26cf919f360&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 07/11/14 02:05:38 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014983adaf2af974c8bc&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 06/11/14 16:57:18 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001497daae7f3f9748e9d&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 05/11/14 12:56:32 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad81234000001497d23c63ef919a71a&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 05/11/14 10:28:56 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session "> <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014979c539a9f974731f&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 04/11/14 18:46:48 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d2900000149786c444af9746753&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 04/11/14 12:30:01 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014961c719e8f973dda9&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 31/10/14 02:57:58 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001495f5a96ecf973ce18&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 30/10/14 15:40:12 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001495ed2bb40f973c5ea&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 30/10/14 13:11:49 </span><br>Client ID: <span class="na">n/a</span> </a> </li><li class="session"> <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001494ff95e715549ccf6&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper"> 27/10/14 15:59:43 </span><br>Client ID: <span class="na">n/a</span> </a> </li></ul> </div><div id="asyncspinner" style="display: none;">&nbsp;</div></section>
+<section id="sidebar" style="height: 440px;">
+    <h1>Sessions</h1>
+    <div id="sessioncontainer" style="height: 397px;">
+        <ul class="toplevel doclist">
+            <li class="session active current">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    <strong>Current Session</strong>
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014997e36240f91a635e&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    10/11/14 15:08:21
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad8123400000149976b7d4cf91a5cf3&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    10/11/14 12:57:24
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014996d0b3f6f91a4887&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    10/11/14 10:08:20
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session
 
-<!-- END CHECKPOINT OUTPUT -->
+                ">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014994c216f5f91a3f4c&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    10/11/14 00:33:08
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001498f851f13f9751021&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    09/11/14 00:08:26
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session
+
+                ">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad812340000014985a3b26cf919f360&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    07/11/14 02:05:38
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014983adaf2af974c8bc&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    06/11/14 16:57:18
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001497daae7f3f9748e9d&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    05/11/14 12:56:32
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad81234000001497d23c63ef919a71a&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    05/11/14 10:28:56
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session
+
+                ">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014979c539a9f974731f&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    04/11/14 18:46:48
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d2900000149786c444af9746753&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    04/11/14 12:30:01
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d290000014961c719e8f973dda9&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    31/10/14 02:57:58
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001495f5a96ecf973ce18&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    30/10/14 15:40:12
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001495ed2bb40f973c5ea&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    30/10/14 13:11:49
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+            <li class="session">
+                <a href="trails?action=retrieve&amp;trailguid=i0ad61d29000001494ff95e715549ccf6&amp;context=119&amp;sortby=&amp;sortmode="><span class="docwrapper">
+                    27/10/14 15:59:43
+                    </span><br>
+                    Client ID: <span class="na">n/a</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="asyncspinner" style="display: none;">&nbsp;</div>
+</section>
         
 
     </section> <!-- .secondary-nav -->
 </div> <!-- .lv-inner -->
-        </nav>
+                </nav>
 
-        <!-- MAIN -->
-        <main class="lv-main">
-            <div class="row">
-                <div class="columns">
-                    <section id="maincontent">
-    <h1 id="pagetitle">Session History</h1>
+                <!-- MAIN -->
+                <main class="lv-main">
+                    <div class="row">
+                        <div class="columns">
+                            <section id="maincontent">
+            <h1 id="pagetitle">Session History</h1>
     <div id="searchOptions">
-        <span id="backResult" title="Back">
-        <a href="/maf/api/trail/trails?action=list&amp;sortby=&amp;sortmode=">View all session histories</a>
-        </span>
-    </div>
-    <div id="historycontainer">
-        <div class="clearfix">
-            <div id="trailname">
-                <h2>Session:
-                Current Session
-                , Client ID:
-                <span class="na">n/a</span>
-                </h2>
-            </div>
-            <div id="renametrail">
-                <a href="#" id="renameTrail">Rename this session</a>
-                <input type="hidden" name="paramsRename" value="trailguid=i0ad61d29000001499c039960f9755884&amp;name=11/11/14 10:22:01">        </div>
-            </div>
-            <div id="historyinnercontainer">
-                <div id="trailList">
-                    <table>
-                        <thead>
-                            <tr><th width="3%" id="trailIcon">&nbsp;</th>
-                            <th width="10%" id="trailEvent">Type</th>
-                            <th width="72%" id="trailResearch">Description</th>
-                            <th width="15%" id="trailDate">Date and Time</th>
-                            <!--<th width="12%" id="trailAction">Actions</th>-->
-                        </tr></thead>
-                        <tbody>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
-                                <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193d34bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Management of environmental risks and emergencies: Compliance audit program</a>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:42</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
-                                <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Introduction</a>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:41</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
-                                <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
-                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=85&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:10</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
-                                <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Introduction</a>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:40</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
-                                <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
-                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=5&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:40</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
-                                <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
-                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=0&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:22</td>
-                            </tr>
-                            <tr>
-                                <td headers="trailIcon"><img src="/cpau/images/ico_start.png"></td>
-                                <td headers="trailEvent" class="trailEvent OPEN">Start</td>
-                                <td class="trailResearch trailResearchColumn" headers="trailResearch">
-                                    &nbsp;
-                                </td>
-                                <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:22</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<span id="backResult" title="Back">
+<a href="/maf/api/trail/trails?action=list&amp;sortby=&amp;sortmode=">View all session histories</a>
+</span>
+</div>
+<div id="historycontainer">
+    <div class="clearfix">
+        <div id="trailname">
+            <h2>Session:
+                                    Current Session
+                                , Client ID:
+                                    <span class="na">n/a</span>
+                            </h2>
         </div>
+        <div id="renametrail">
+            <a href="#" id="renameTrail">Rename this session</a>
+            <input type="hidden" name="paramsRename" value="trailguid=i0ad61d29000001499c039960f9755884&amp;name=11/11/14 10:22:01">        </div>
+    </div>
+
+<div id="historyinnercontainer">
+    <div id="trailList">
+    <table>
+        <thead>
+            <tr><th width="3%" id="trailIcon">&nbsp;</th>
+            <th width="10%" id="trailEvent">Type</th>
+            <th width="72%" id="trailResearch">Description</th>
+            <th width="15%" id="trailDate">Date and Time</th>
+            <!--<th width="12%" id="trailAction">Actions</th>-->
+        </tr></thead>
+        <tbody>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
+                        <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+                                                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193d34bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Management of environmental risks and emergencies: Compliance audit program</a>
+                                                        </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:42</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
+                        <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+                                                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Introduction</a>
+                                                        </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:41</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
+                        <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+
+                                            <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
+                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=85&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
+                                                    </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 12:10</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_file2.png"></td>
+                        <td headers="trailEvent" class="trailEvent DOCUMENT">Document</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+                                                                    <a href="/maf/app/trail/document?=&amp;docguid=Ifc3193e04bdd11e38fa3f057ed117a82&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;src=trl">Introduction</a>
+                                                        </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:40</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
+                        <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+
+                                            <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
+                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=5&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
+                                                    </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:40</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_search.png"></td>
+                        <td headers="trailEvent" class="trailEvent SEARCH">Search</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+
+                                            <a href="/maf/app/trail/searchfromlink/run" class="trailSearchLink">Free Text (orlando)</a>
+                                    <span class="urlParams" style="display:none">ds=AUNZ_SEARCHALL&amp;ostid=std-anz-default&amp;frt_copy=orlando&amp;originates-from-link=true&amp;type=nb&amp;smryfs=n-tocview&amp;stid=std-anz-default&amp;predefinedRelationshipsType=resultList&amp;qw=false&amp;dl=10000&amp;tocguid=AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;ds=AUNZ_SEARCHALL&amp;datasource=AUNZ_CA_CADISCRIM;AUNZ_CA_CGTSMEPRC;AUNZ_CA_NLWTB;AUNZ_CA_ASICDIGARC;AUNZ_CA_CONTTOOL;AUNZ_CA_CAINOHS;AUNZ_CA_24PRESSGAL;AUNZ_CA_LGBILLEMS;AUNZ_CA_BANKRPTLW;AUNZ_CA_ACCTMANUL;AUNZ_CA_24STDUTY;AUNZ_CA_24INTELPRP;AUNZ_CA_CMPRECADM;AUNZ_CA_CAWORKFRC;AUNZ_CA_ICRACTEST;AUNZ_CA_JLINSOLV9;AUNZ_CA_EMPFACTBK;AUNZ_CA_NLSUPERNA;AUNZ_CA_NLSTATETAX;AUNZ_CA_NLGSTNA;AUNZ_CA_ITAA1997CM;AUNZ_CA_LTGSTJUDG;AUNZ_CA_ICRACTRAIN;AUNZ_CA_ASICWGSEC;AUNZ_CA_24GST;AUNZ_CA_SMSFWFSOL;AUNZ_CA_SALFBT2;AUNZ_CA_ASICFINSRV;AUNZ_CA_NLSUPERFS;AUNZ_CA_COMPARTNR;AUNZ_CA_COMPLIQLAW;AUNZ_CA_NTLWRKREL;AUNZ_CA_24WRKPCEMP;AUNZ_CA_PRPAYADM;AUNZ_CA_ESTATEPLN;AUNZ_CA_NLCGTB;AUNZ_CA_RDTOCOMM;AUNZ_CA_SUPERFACT;AUNZ_CA_JLBUSLWV29;AUNZ_CA_VALHNDBK;AUNZ_CA_24GENPRAC;AUNZ_CA_QLDLOCGOV;AUNZ_CA_AAGTSMSF;AUNZ_CA_WRKHLTHSAF;AUNZ_CA_24FINPLAN;AUNZ_CA_GSTLEGPLS;AUNZ_CA_AMAPBP;AUNZ_CA_FINPLAN;AUNZ_CA_24PROPENV;AUNZ_CA_AAMTSMSE;AUNZ_CA_ASICDIG;AUNZ_CA_ATDSTWRK;AUNZ_CA_ROBANCRPLG;AUNZ_CA_LTATRHDN;AUNZ_CA_24SMSF;AUNZ_CA_ATOMIN;AUNZ_CA_LATEBILEMS;AUNZ_CA_GSTBILLS;AUNZ_CA_JLTAXREV;AUNZ_CA_CACARBON;AUNZ_CA_PRABUSPART;AUNZ_CA_GSTCONSEM;AUNZ_CA_JLBUSLAW;AUNZ_CA_CARISKREP;AUNZ_CA_RULEGUIDE;AUNZ_CA_JLCOMPYV19;AUNZ_CA_CORPLG;AUNZ_CA_ACCTAUDIT;AUNZ_CA_CAENVIRON;AUNZ_CA_FAMBUSSUCP;AUNZ_CA_TRUSTLAW;AUNZ_CA_AZTRUST;AUNZ_CA_CATRANSLOG;AUNZ_CA_CAMANUF;AUNZ_CA_JLINSOLV;AUNZ_CA_SUPERANCM;AUNZ_CA_24BANKRUPT;AUNZ_CA_CACOVER;AUNZ_CA_GSTINCTXMN;AUNZ_CA_LTTAXJUDG;AUNZ_CA_XYZFINCL;AUNZ_CA_ASICINVEST;AUNZ_CA_LOANCALC;AUNZ_CA_CARBONPRI;AUNZ_CA_AGEPRS;AUNZ_CN_FINPRACMAN;AUNZ_CA_TAXLISTCEN;AUNZ_CA_EMPRELMAN;AUNZ_CA_24ADMIN;AUNZ_CA_XYZAUDIT;AUNZ_CA_24BANKFIN;AUNZ_CA_24COMPETIT;AUNZ_CA_TAXHANDBK;AUNZ_CA_GSTCASES;AUNZ_CA_LGSPHNDBK;AUNZ_CA_GSTCOMM;AUNZ_CA_XYZDSCLSR;AUNZ_CA_CALEGSERV;AUNZ_CA_QLDDUTY;AUNZ_CA_XYZUPDATE;AUNZ_CA_PROCMANUAL;AUNZ_CA_CAWORKCMP;AUNZ_CA_NLLTN;AUNZ_CA_TRSTTXHDBK;AUNZ_CA_CALOCGOV;AUNZ_CA_ATOFED;AUNZ_CA_CAPUBSEC;AUNZ_CA_ACCTARCHVE;AUNZ_CA_24INCTAX;AUNZ_CA_ITAA1936LG;AUNZ_CA_LGITAA1997;AUNZ_CA_24CONTRACT;AUNZ_CA_ITAA1936CM;AUNZ_CA_24COMMER;AUNZ_CA_TAXQA;AUNZ_CA_NSWDUTY;AUNZ_CA_ESSNTLGUDE;AUNZ_CA_NLINTAX;AUNZ_CA_24BUILD;AUNZ_CA_CACOVERAS;AUNZ_CA_CAWKFCNSW;AUNZ_CA_CAMINING;AUNZ_CA_COOPCAPGN;AUNZ_CA_24CRIMINAL;AUNZ_CA_JLTAXRVV30;AUNZ_CA_PRACTHR;AUNZ_CA_INTLAGREE;AUNZ_CA_CAENERGY;AUNZ_CA_CASHPRAC;AUNZ_CA_SUPERANLG;AUNZ_CA_CAPGAINTAX;AUNZ_CA_NFPMAN;AUNZ_CA_PRAWRKTERM;AUNZ_CA_SALFBT;AUNZ_CA_LTGSTRUL;AUNZ_CA_WADUTY;AUNZ_CA_24CRTLITIG;AUNZ_CA_FINRSKMNG;AUNZ_CA_24FAMILY;AUNZ_CA_APRACOMP;AUNZ_CA_TXLAWTRST;AUNZ_CA_CAHR;AUNZ_CA_NLINTTAX;AUNZ_CA_ACCTASIC;AUNZ_CA_REUTRTAX;AUNZ_CA_TAXRP;AUNZ_CA_BANKRPTGB;AUNZ_CA_CAOCCUPNWS;AUNZ_CA_24FINSRV;AUNZ_CA_NTLCREDREG;AUNZ_CA_IPAHNDBK;AUNZ_CA_ASICWGDIRC;AUNZ_CA_COMPDIRMAN;AUNZ_CA_GSTRULE;AUNZ_CA_GSTHANDBK;AUNZ_CA_24MEDIACMM;AUNZ_CA_FRNGBENTAX;AUNZ_CA_DSKTPGDE;AUNZ_CA_NLFBTB;AUNZ_CA_SASTMPDUT;AUNZ_CA_NLBAXT;AUNZ_CA_JNLAGST;AUNZ_CA_24FBT;AUNZ_CA_TXFRMWKBK;AUNZ_CA_SMSFSOL;AUNZ_CA_TAXINSOLV;AUNZ_CA_CRTCVOLADM;AUNZ_CA_ENVAUGUIDE;AUNZ_CA_TAXQASRV;AUNZ_CA_ASICWGACCT;AUNZ_CA_LOANCALCWF;AUNZ_CA_24ACCNTG;AUNZ_CA_XYZWRKBK;AUNZ_CA_JLCOMPANY;AUNZ_CA_FPTAXADV;AUNZ_CA_24CORP;AUNZ_CA_CAFINSERV;AUNZ_CA_LTAUTXOFRL;AUNZ_CA_TAXRATETBL&amp;fields=content.type&amp;fields=product.type&amp;fields=content.subtype&amp;fields=date.current&amp;fields=product&amp;fields=subject.area&amp;fields=judge.author&amp;fields=juris.l1&amp;fields=juris.l2&amp;fields=court&amp;fields=tk1&amp;fields=title.desc&amp;qry-display=Free Text %28orlando%29&amp;ntocview=&amp;sp=false&amp;qry=%28orlando%29 %26 %28%3Dn-document %25 %3Dmd.search.excl%29&amp;dedup=false&amp;metadocDomain=AUNZ_METADOC_DOM_DES&amp;qtext=%3Dn-view%28AUNZ_CA_CGTSMEPRC or AUNZ_CA_XYZDSCLSR or AUNZ_CA_XYZUPDATE or AUNZ_CA_QLDDUTY or AUNZ_CA_PROCMANUAL or AUNZ_CA_CONTTOOL or AUNZ_CA_ACCTMANUL or AUNZ_CA_BANKRPTLW or AUNZ_CA_TRSTTXHDBK or AUNZ_CA_CMPRECADM or AUNZ_CA_ICRACTEST or AUNZ_CA_EMPFACTBK or AUNZ_CA_ITAA1936CM or AUNZ_CA_TAXQA or AUNZ_CA_ITAA1997CM or AUNZ_CA_NSWDUTY or AUNZ_CA_ICRACTRAIN or AUNZ_CA_ESSNTLGUDE or AUNZ_CA_SALFBT2 or AUNZ_CA_COOPCAPGN or AUNZ_CA_COMPARTNR or AUNZ_CA_COMPLIQLAW or AUNZ_CA_NTLWRKREL or AUNZ_CA_PRACTHR or AUNZ_CA_INTLAGREE or AUNZ_CA_PRPAYADM or AUNZ_CA_CASHPRAC or AUNZ_CA_ESTATEPLN or AUNZ_CA_CAPGAINTAX or AUNZ_CA_RDTOCOMM or AUNZ_CA_PRAWRKTERM or AUNZ_CA_NFPMAN or AUNZ_CA_SUPERFACT or AUNZ_CA_SALFBT or AUNZ_CA_VALHNDBK or AUNZ_CA_QLDLOCGOV or AUNZ_CA_WADUTY or AUNZ_CA_AAGTSMSF or AUNZ_CA_FINRSKMNG or AUNZ_CA_WRKHLTHSAF or AUNZ_CA_APRACOMP or AUNZ_CA_TXLAWTRST or AUNZ_CA_FINPLAN or AUNZ_CA_AMAPBP or AUNZ_CA_AAMTSMSE or AUNZ_CA_REUTRTAX or AUNZ_CA_ATDSTWRK or AUNZ_CA_ATOMIN or AUNZ_CA_BANKRPTGB or AUNZ_CA_NTLCREDREG or AUNZ_CA_IPAHNDBK or AUNZ_CA_COMPDIRMAN or AUNZ_CA_PRABUSPART or AUNZ_CA_GSTHANDBK or AUNZ_CA_FRNGBENTAX or AUNZ_CA_DSKTPGDE or AUNZ_CA_SASTMPDUT or AUNZ_CA_FAMBUSSUCP or AUNZ_CA_TRUSTLAW or AUNZ_CA_AZTRUST or AUNZ_CA_TXFRMWKBK or AUNZ_CA_SMSFSOL or AUNZ_CA_TAXINSOLV or AUNZ_CA_CRTCVOLADM or AUNZ_CA_SUPERANCM or AUNZ_CA_ENVAUGUIDE or AUNZ_CA_TAXQASRV or AUNZ_CA_GSTINCTXMN or AUNZ_CA_XYZFINCL or AUNZ_CA_XYZWRKBK or AUNZ_CA_FPTAXADV or AUNZ_CA_LOANCALC or AUNZ_CA_CARBONPRI or AUNZ_CA_AGEPRS or AUNZ_CN_FINPRACMAN or AUNZ_CA_TAXLISTCEN or AUNZ_CA_EMPRELMAN or AUNZ_CA_XYZAUDIT or AUNZ_CA_TAXHANDBK or AUNZ_CA_LGSPHNDBK or AUNZ_CA_GSTCOMM or AUNZ_CA_TAXRATETBL or AUNZ_CA_ROBANCRPLG or AUNZ_CA_ITAA1936LG or AUNZ_CA_LGITAA1997 or AUNZ_CA_LATEBILEMS or AUNZ_CA_LOANCALCWF or AUNZ_CA_CORPLG or AUNZ_CA_LGBILLEMS or AUNZ_CA_GSTLEGPLS or AUNZ_CA_GSTBILLS or AUNZ_CA_SUPERANLG or AUNZ_CA_SMSFWFSOL or AUNZ_CA_GSTCONSEM or AUNZ_CA_NLSUPERFS or AUNZ_CA_NLWTB or AUNZ_CA_NLSTATETAX or AUNZ_CA_NLLTN or AUNZ_CA_NLSUPERNA or AUNZ_CA_NLFBTB or AUNZ_CA_NLGSTNA or AUNZ_CA_ACCTASIC or AUNZ_CA_NLCGTB or AUNZ_CA_NLINTTAX or AUNZ_CA_CADISCRIM or AUNZ_CA_CALEGSERV or AUNZ_CA_24SMSF or AUNZ_CA_CAWORKCMP or AUNZ_CA_24FINSRV or AUNZ_CA_CAOCCUPNWS or AUNZ_CA_CAINOHS or AUNZ_CA_24PRESSGAL or AUNZ_CA_24STDUTY or AUNZ_CA_CACARBON or AUNZ_CA_CALOCGOV or AUNZ_CA_CAPUBSEC or AUNZ_CA_24INTELPRP or AUNZ_CA_24MEDIACMM or AUNZ_CA_CARISKREP or AUNZ_CA_CAWORKFRC or AUNZ_CA_24INCTAX or AUNZ_CA_24CONTRACT or AUNZ_CA_CAENVIRON or AUNZ_CA_24COMMER or AUNZ_CA_24FBT or AUNZ_CA_24BUILD or AUNZ_CA_24GST or AUNZ_CA_CAMANUF or AUNZ_CA_CAWKFCNSW or AUNZ_CA_CATRANSLOG or AUNZ_CA_CACOVERAS or AUNZ_CA_CAMINING or AUNZ_CA_24CRIMINAL or AUNZ_CA_24WRKPCEMP or AUNZ_CA_24ACCNTG or AUNZ_CA_CACOVER or AUNZ_CA_24BANKRUPT or AUNZ_CA_CAENERGY or AUNZ_CA_24GENPRAC or AUNZ_CA_24CRTLITIG or AUNZ_CA_24FAMILY or AUNZ_CA_24FINPLAN or AUNZ_CA_24ADMIN or AUNZ_CA_24CORP or AUNZ_CA_24COMPETIT or AUNZ_CA_24BANKFIN or AUNZ_CA_CAFINSERV or AUNZ_CA_24PROPENV or AUNZ_CA_CAHR or AUNZ_CA_LTGSTRUL or AUNZ_CA_RULEGUIDE or AUNZ_CA_LTAUTXOFRL or AUNZ_CA_GSTRULE or AUNZ_CA_ATOFED or AUNZ_CA_ASICFINSRV or AUNZ_CA_ASICDIG or AUNZ_CA_ASICINVEST or AUNZ_CA_ASICDIGARC or AUNZ_CA_ASICWGACCT or AUNZ_CA_ASICWGDIRC or AUNZ_CA_ASICWGSEC or AUNZ_CA_ACCTARCHVE or AUNZ_CA_ACCTAUDIT or AUNZ_CA_LTATRHDN or AUNZ_CA_TAXRP or AUNZ_CA_LTTAXJUDG or AUNZ_CA_LTGSTJUDG or AUNZ_CA_GSTCASES or AUNZ_CA_JLBUSLAW or AUNZ_CA_JLBUSLWV29 or AUNZ_CA_JLINSOLV or AUNZ_CA_JLTAXRVV30 or AUNZ_CA_JLINSOLV9 or AUNZ_CA_JLCOMPYV19 or AUNZ_CA_JNLAGST or AUNZ_CA_NLBAXT or AUNZ_CA_JLTAXREV or AUNZ_CA_NLINTAX or AUNZ_CA_JLCOMPANY%29&amp;isw=true&amp;ds-display=Checkpoint ANZ&amp;ndd=2&amp;ao=o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca&amp;sortid=Relevancy&amp;context=0&amp;SearchTemplateId=std-anz-default&amp;frt=orlando&amp;gve=AUNZ_CA_CGTSMEPRC AUNZ_CA_XYZDSCLSR AUNZ_CA_XYZUPDATE AUNZ_CA_QLDDUTY AUNZ_CA_PROCMANUAL AUNZ_CA_CONTTOOL AUNZ_CA_ACCTMANUL AUNZ_CA_BANKRPTLW AUNZ_CA_TRSTTXHDBK AUNZ_CA_CMPRECADM AUNZ_CA_ICRACTEST AUNZ_CA_EMPFACTBK AUNZ_CA_ITAA1936CM AUNZ_CA_TAXQA AUNZ_CA_ITAA1997CM AUNZ_CA_NSWDUTY AUNZ_CA_ICRACTRAIN AUNZ_CA_ESSNTLGUDE AUNZ_CA_SALFBT2 AUNZ_CA_COOPCAPGN AUNZ_CA_COMPARTNR AUNZ_CA_COMPLIQLAW AUNZ_CA_NTLWRKREL AUNZ_CA_PRACTHR AUNZ_CA_INTLAGREE AUNZ_CA_PRPAYADM AUNZ_CA_CASHPRAC AUNZ_CA_ESTATEPLN AUNZ_CA_CAPGAINTAX AUNZ_CA_RDTOCOMM AUNZ_CA_PRAWRKTERM AUNZ_CA_NFPMAN AUNZ_CA_SUPERFACT AUNZ_CA_SALFBT AUNZ_CA_VALHNDBK AUNZ_CA_QLDLOCGOV AUNZ_CA_WADUTY AUNZ_CA_AAGTSMSF AUNZ_CA_FINRSKMNG AUNZ_CA_WRKHLTHSAF AUNZ_CA_APRACOMP AUNZ_CA_TXLAWTRST AUNZ_CA_FINPLAN AUNZ_CA_AMAPBP AUNZ_CA_AAMTSMSE AUNZ_CA_REUTRTAX AUNZ_CA_ATDSTWRK AUNZ_CA_ATOMIN AUNZ_CA_BANKRPTGB AUNZ_CA_NTLCREDREG AUNZ_CA_IPAHNDBK AUNZ_CA_COMPDIRMAN AUNZ_CA_PRABUSPART AUNZ_CA_GSTHANDBK AUNZ_CA_FRNGBENTAX AUNZ_CA_DSKTPGDE AUNZ_CA_SASTMPDUT AUNZ_CA_FAMBUSSUCP AUNZ_CA_TRUSTLAW AUNZ_CA_AZTRUST AUNZ_CA_TXFRMWKBK AUNZ_CA_SMSFSOL AUNZ_CA_TAXINSOLV AUNZ_CA_CRTCVOLADM AUNZ_CA_SUPERANCM AUNZ_CA_ENVAUGUIDE AUNZ_CA_TAXQASRV AUNZ_CA_GSTINCTXMN AUNZ_CA_XYZFINCL AUNZ_CA_XYZWRKBK AUNZ_CA_FPTAXADV AUNZ_CA_LOANCALC AUNZ_CA_CARBONPRI AUNZ_CA_AGEPRS AUNZ_CN_FINPRACMAN AUNZ_CA_TAXLISTCEN AUNZ_CA_EMPRELMAN AUNZ_CA_XYZAUDIT AUNZ_CA_TAXHANDBK AUNZ_CA_LGSPHNDBK AUNZ_CA_GSTCOMM AUNZ_CA_TAXRATETBL AUNZ_CA_ROBANCRPLG AUNZ_CA_ITAA1936LG AUNZ_CA_LGITAA1997 AUNZ_CA_LATEBILEMS AUNZ_CA_LOANCALCWF AUNZ_CA_CORPLG AUNZ_CA_LGBILLEMS AUNZ_CA_GSTLEGPLS AUNZ_CA_GSTBILLS AUNZ_CA_SUPERANLG AUNZ_CA_SMSFWFSOL AUNZ_CA_GSTCONSEM AUNZ_CA_NLSUPERFS AUNZ_CA_NLWTB AUNZ_CA_NLSTATETAX AUNZ_CA_NLLTN AUNZ_CA_NLSUPERNA AUNZ_CA_NLFBTB AUNZ_CA_NLGSTNA AUNZ_CA_ACCTASIC AUNZ_CA_NLCGTB AUNZ_CA_NLINTTAX AUNZ_CA_CADISCRIM AUNZ_CA_CALEGSERV AUNZ_CA_24SMSF AUNZ_CA_CAWORKCMP AUNZ_CA_24FINSRV AUNZ_CA_CAOCCUPNWS AUNZ_CA_CAINOHS AUNZ_CA_24PRESSGAL AUNZ_CA_24STDUTY AUNZ_CA_CACARBON AUNZ_CA_CALOCGOV AUNZ_CA_CAPUBSEC AUNZ_CA_24INTELPRP AUNZ_CA_24MEDIACMM AUNZ_CA_CARISKREP AUNZ_CA_CAWORKFRC AUNZ_CA_24INCTAX AUNZ_CA_24CONTRACT AUNZ_CA_CAENVIRON AUNZ_CA_24COMMER AUNZ_CA_24FBT AUNZ_CA_24BUILD AUNZ_CA_24GST AUNZ_CA_CAMANUF AUNZ_CA_CAWKFCNSW AUNZ_CA_CATRANSLOG AUNZ_CA_CACOVERAS AUNZ_CA_CAMINING AUNZ_CA_24CRIMINAL AUNZ_CA_24WRKPCEMP AUNZ_CA_24ACCNTG AUNZ_CA_CACOVER AUNZ_CA_24BANKRUPT AUNZ_CA_CAENERGY AUNZ_CA_24GENPRAC AUNZ_CA_24CRTLITIG AUNZ_CA_24FAMILY AUNZ_CA_24FINPLAN AUNZ_CA_24ADMIN AUNZ_CA_24CORP AUNZ_CA_24COMPETIT AUNZ_CA_24BANKFIN AUNZ_CA_CAFINSERV AUNZ_CA_24PROPENV AUNZ_CA_CAHR AUNZ_CA_LTGSTRUL AUNZ_CA_RULEGUIDE AUNZ_CA_LTAUTXOFRL AUNZ_CA_GSTRULE AUNZ_CA_ATOFED AUNZ_CA_ASICFINSRV AUNZ_CA_ASICDIG AUNZ_CA_ASICINVEST AUNZ_CA_ASICDIGARC AUNZ_CA_ASICWGACCT AUNZ_CA_ASICWGDIRC AUNZ_CA_ASICWGSEC AUNZ_CA_ACCTARCHVE AUNZ_CA_ACCTAUDIT AUNZ_CA_LTATRHDN AUNZ_CA_TAXRP AUNZ_CA_LTTAXJUDG AUNZ_CA_LTGSTJUDG AUNZ_CA_GSTCASES AUNZ_CA_JLBUSLAW AUNZ_CA_JLBUSLWV29 AUNZ_CA_JLINSOLV AUNZ_CA_JLTAXRVV30 AUNZ_CA_JLINSOLV9 AUNZ_CA_JLCOMPYV19 AUNZ_CA_JNLAGST AUNZ_CA_NLBAXT AUNZ_CA_JLTAXREV AUNZ_CA_NLINTAX AUNZ_CA_JLCOMPANY&amp;snippets=true&amp;trailguid=i0ad61d29000001499c039960f9755884&amp;sttype=stdtemplate</span>
+                                                    </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:22</td>
+                    </tr>
+
+
+
+
+
+
+                                    <tr>
+                        <td headers="trailIcon"><img src="/cpau/images/ico_start.png"></td>
+                        <td headers="trailEvent" class="trailEvent OPEN">Start</td>
+                        <td class="trailResearch trailResearchColumn" headers="trailResearch">
+                                                            &nbsp;
+                                                    </td>
+                       <td class="trailDateColumn" headers="trailDate">11/11/2014 - 10:22</td>
+                    </tr>
+                                    </tbody>
+    </table>
+</div>
+
+
+
+
+</div>
+</div>
+
+
     </section>
-                </div>
-            </div>
-        </main>
+                        </div>
+                    </div>
+                </main>
 
-        <!-- SIDEBAR -->
-        <aside class="lv-sidebar is-collapsed">
-            <div class="lv-sidebar-inner">
-	<ul class="tabs text-center" data-tab role="tablist">
-		<li class="tab-title active">
-			<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i><span class="text">Details</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i><span class="text">Links</span></a>
-		</li>
-		<li class="tab-title">
-			<a title="Links" href="#lv-community" role="tab"><i class="fi-torsos"></i><span class="text">Community</span></a>
-		</li>
-		<li class="tab-title collapse-btn">
-			<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i><span class="text">Collapse</span></a>
-		</li>
-	</ul>
+                <!-- SIDEBAR -->
+                <aside class="lv-sidebar">
+                    <ul class="tabs text-center" data-tab role="tablist">
+	<li class="tab-title active">
+		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
+	</li>
+	<li class="tab-title">
+		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
+	</li>
+	<li class="tab-title collapse-btn">
+		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
+	</li>
+</ul>
 
-	<!-- TABS CONTENT -->
-	<div class="tabs-content">
+<!-- TABS CONTENT -->
+<div class="tabs-content">
 
-		<!-- DETAILS -->
-		<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
-			
-				<h3>Tips for Searching</h3>
+	<!-- DETAILS -->
+	<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
+		
+			<h3>Tips for Searching</h3>
+			<p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
+			<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
+			<p><a class="ajax-modal button small radius knockout" href="/hints/terms-and-connectors.html">See All Connectors</a></p>
+			<hr>
+			<h3>Need Assistance?</h3>
+			<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
+			<p><a href="#" class="button small radius knockout">1800 020 548</a></p>
+		
+	</section>
 
-<p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
+	<!-- LINKS -->
+	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
+		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
+		<br>
+		<ul class="lv-quicklinks content-block">
+			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+			<li class="li"><a href="#">This is an example of a quicklink</a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+			<li class="li"><a href="#">This is an example of a quicklink</a></li>
+			<li class="li"><a href="#">Shorter link</a></li>
+			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+			<li class="li"><a href="#">Another link</a></li>
+		</ul>
+	</section>
+</div>
+                </aside>
 
-<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
-<p><a class="ajax-modal button small radius knockout" href="/modal_output/terms-and-connectors.html">See All Connectors</a></p>
+            </section> <!-- .stage -->
 
-<hr>
-
-<h3>Need Assistance?</h3>
-
-<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
-<p><a href="tel:1800020548" class="button small radius knockout">1800 020 548</a></p>
-			
-		</section>
-
-		<!-- LINKS -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-			<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
-			<br>
-			<ul class="lv-quicklinks content-block">
-				<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
-				<li class="li"><a href="#">Shorter link</a></li>
-				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li class="li"><a href="#">Another link</a></li>
-				<li class="li"><a href="#">This is an example of a quicklink</a></li>
-				<li class="li"><a href="#">Shorter link</a></li>
-				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li class="li"><a href="#">Another link</a></li>
-				<li class="li"><a href="#">This is an example of a quicklink</a></li>
-				<li class="li"><a href="#">Shorter link</a></li>
-				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-				<li class="li"><a href="#">Another link</a></li>
-			</ul>
-		</section>
-
-		<!-- COMMUNITY -->
-		<section role="tabpanel" aria-hidden="true" class="content" id="lv-community">
-			<h3>Community</h3>
-			<p>This feature is unavailable. Please check back later.</p>
-		</section>
-
-	</div>
-</div> <!-- .lv-siderbar-inner -->
-        </aside>
-
-    </section> <!-- .stage -->
-
-    <!-- FOOTER -->
-    <footer class="lv-footer">
-        
+            <!-- FOOTER -->
+            <footer class="lv-footer">
+                
 
 <div class="row collapse is-full-width">
-
-    <!-- Footer Links -->
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
-            <li><a href="http://training.thomsonreuters.com.au/products/checkpoint/" target="_blank">Help</a></li>
+            <li><a target="_blank" href="http://training.thomsonreuters.com.au/products/checkpoint/">Help</a></li>
             <li class="has-dropdown"><a href="#">Sites</a>
                 <ul class="lv-dropdown">
-                    <li><a href="https://www.checkpointworld.com" target="_blank"><i class="fi-web"></i> Checkpoint World</a></li>
-                    <li><a href="http://thomsonreuters.com/site/proview/" target="_blank"><i class="fi-web"></i> Proview</a></li>
-                    <li><a href="http://www.westlaw.com.au" target="_blank"><i class="fi-web"></i> Westlaw Australia</a></li>
-                    <li><a href="http://www.westlaw.co.nz" target="_blank"><i class="fi-web"></i> Westlaw New Zealand</a></li>
+                    <li><a href="https://www.checkpointworld.com"><i class="fi-web"></i> Checkpoint World</a></li>
+                    <li><a href="http://thomsonreuters.com/site/proview/"><i class="fi-web"></i> Proview</a></li>
+                    <li><a href="http://www.westlaw.com.au"><i class="fi-web"></i> Westlaw Australia</a></li>
+                    <li><a href="http://www.westlaw.co.nz"><i class="fi-web"></i> Westlaw New Zealand</a></li>
                 </ul>
             </li>
-            <li><a href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx" target="_blank">Privacy Policy</a></li>
-            <li><a href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx" target="_blank">Terms of Use</a></li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/privacy-policy.aspx">Privacy Policy</a></li>
+            <li><a target="_blank" href="http://www.thomsonreuters.com.au/terms/online-terms-of-use.aspx">Terms of Use</a></li>
         </ul>
     </div>
-
-    <!-- Footer Legal -->
     <div class="medium-6 medium-pull-6 columns">
         <div class="text-center medium-text-left">
             <small class="lv-footer-legal">&copy; <b>2014</b> <a href="http://www.thomsonreuters.com.au">Thomson Reuters</a> (Professional) Australia LTD - ABN 64 058 668</small>
         </div>
     </div>
-
 </div> <!-- .row -->
-    </footer>
-
-</div> <!-- .internal -->
+            </footer>
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
@@ -377,66 +499,35 @@
     <!-- OFF-CANVAS MENU (LEFT) -->
     <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
         <ul>
-    <li class=""><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
-    <!-- <li class="
-
-
-
-    
-
-    
-"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
-    <li class="
-
-
-
-    
-
-    
-"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+    <li class=""><a href="/"><i class="fi-home"></i>&nbsp; Home</a></li>
+    <li class=""><a href="/research/cases/"><i class="fi-magnifying-glass"></i>&nbsp; Research</a></li>
 </ul>
+
+<!-- <li class=""><a href="/workflow/"><i class="fi-graph-bar"></i>&nbsp; Workflow</a></li> -->
+    <!-- <li class=""><a href="/tools/"><i class="fi-wrench"></i>&nbsp; Tools</a></li> -->
+    <!-- <li class=""><a href="/learning/"><i class="fi-info"></i>&nbsp; Learning</a></li> -->
+    <!-- <li class=""><a href="/alerts/"><i class="fi-alert"></i>&nbsp; Alerts</a></li> -->
+    <!-- <li class=" active "><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li> -->
+
+<!-- <ul class="no-bullet">
+    <li class="active"><a href="/research/cases/">Basic</a></li>
+    <li><a href="/research/cases/">Cases</a></li>
+    <li><a href="/research/cases/">Legislation / Commentary</a></li>
+    <li><a href="/research/cases/">Journals</a></li>
+    <li><a href="/research/cases/">News</a></li>
+    <li><a href="/research/cases/">Government and Regulatory</a></li>
+</ul> -->
     </nav>
 
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
         <ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
+    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> Jason Chen<br><small>jason.chen@thomsonreuters.com</small></a></li>
     <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+    <li><a href="/hints/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
     <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
     <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
+    <li class="hide-for-large-up"><a href="#"><i class="fi-megaphone"></i>&nbsp; Feedback</a></li>
 </ul>
     </nav>
 
@@ -445,12 +536,24 @@
     <!-- CDN -->
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    <script src="/assets/scripts/optimized.317e.js"></script>
+    <script src="/assets/scripts/optimized.1933.js"></script>
 
     <script>
         $(document).foundation();
 
+        $(function() {
+            $("#off-canvas-menu-left").mmenu({
+               "offCanvas": {
+                  "position": "left"
+               }
+            });
 
+            $("#off-canvas-menu-right").mmenu({
+               "offCanvas": {
+                  "position": "right"
+               }
+            });
+         });
 
         $(function() {
             FastClick.attach(document.body);
@@ -461,9 +564,8 @@
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
-        // jQuery UI
         $(function() {
-            $("#docoptionstabs").tabs();
+            $( "#docoptionstabs" ).tabs();
           });
 
     </script>
