@@ -1,0 +1,48 @@
+---
+layout: master
+---
+
+<div class="internal">
+
+    <!-- HEADER -->
+    <header class="lv-header">
+        {% include header.html %}
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="lv-navigation show-for-large-up">
+        <div class="lv-topbar">
+            {% include topbar.html %}
+        </div>
+    </nav>
+
+    <!-- STAGE -->
+    <section class="lv-stage">
+
+        <!-- CONTEXT MENU -->
+        <nav class="lv-context-menu">
+            {% include menus/context_menu.html %}
+        </nav>
+
+        <!-- MAIN -->
+        <main class="lv-main">
+            <div class="row">
+                <div class="columns">
+                    {{ content }}
+                </div>
+            </div>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="lv-sidebar is-collapsed">
+            {% include sidebar.html %}
+        </aside>
+
+    </section> <!-- .stage -->
+
+    <!-- FOOTER -->
+    <footer class="lv-footer">
+        {% include footer.html %}
+    </footer>
+
+</div> <!-- .internal -->

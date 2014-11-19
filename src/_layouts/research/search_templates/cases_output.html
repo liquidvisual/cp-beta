@@ -1,0 +1,60 @@
+---
+layout: internal
+context_menu: "context_menu_output/search_templates.html"
+---
+
+<script>
+    // Javascript doesn't work to wrap them. The markup is too complicated.
+    // $("#searchForm :input").each(function(){
+    //       var $this = $(this);
+    //       $this.parent().addClass('row');
+
+    //       $this.wrap( '<div class="medium-9"/>');
+    //       $label = $this.siblings("label[for=" + $this.attr( "id" ) + "]");
+    //       $label.wrapInner( '<div class="medium-3"/>');
+    // });
+</script>
+
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Cases</h3>
+        <p class="right"><a href="/modal_output/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<div class="row">
+    <div class="medium-10 columns">
+
+        <!-- Unfortunately this code is unworkable. Naming is too specific, no generic wrapping classes for column targeting. Hidden inputs cause problems. -->
+
+        <!-- START CHECKPOINT OUTPUT -->
+        <form method="post" action="/maf/app/searchfromlink/run" id="searchForm" class="clearfix"> <fieldset id="fieldSet" class="fieldSet"> <input type="hidden" name="ao" value="o.AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca"> <input type="hidden" name="context" value="9"><input type="hidden" name="tocguid" value="AUNZ_TOC||Iec7746151d273285a1ec7b666b3f21ca"> <div id="advancedSearchRequired" class="fldSet"> <div id="frtPara" class="clearfix"><label for="frt" id="frtLabel">Free Text</label><input type="text" id="frt" name="frt" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-casesfrtAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><input type="hidden" name="ds" value="AUNZ_CASES" id="ds"> <input type="hidden" name="gve" value="" id="gve"> <input type="hidden" name="sortid" value="ChronRev" id="sortid"> </div><div id="advancedSearchMore" class="fldSet" style="display: block;"> <div id="titlePara" class="clearfix"><label for="title" id="titleLabel">Case Title/Party Name</label><input type="text" id="title" name="title" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-casestitleAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="citePara" class="clearfix"><label for="cite" id="citeLabel">Citation</label><input type="text" id="cite" name="cite" size="" maxlength="255" exact="true" value=""><div class="helpericon" id="std-anz-casesciteAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><input type="hidden" name="thesaurusDsAU" value="AUNZ_CASES_IW" id="thesaurusDsAU"> <input type="hidden" name="thesaurusDsNZ" value="AUNZ_CASES_IW" id="thesaurusDsNZ"> <input type="hidden" name="thesaurus"><input type="hidden" name="thesaurusCount"> <div id="tema1LabelOver" class="helpText" style="display:none"><div class="leyend"></div></div><div id="catchwordsPara" class="clearfix"><label for="catchwords" id="catchwordsLabel">Catchwords</label><input type="text" id="catchwords" name="catchwords" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-casescatchwordsAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="judgePara" class="clearfix"><label for="judge" id="judgeLabel">Judge(s)</label><input type="text" id="judge" name="judge" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-casesjudgeAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><input type="hidden" name="thesaurus"><input type="hidden" name="thesaurusCount"> <div class="clearfix thesaurus" id="thesaurus2"><span class="thInfo" id="tema2thInfo">&nbsp;</span><label for="tema2" id="tema2Label">Court</label><input type="text" id="tema2" name="court" autocomplete="off" class="labelify ui-droppable" value=""><div class="helpericon" id="std-anz-casesthesaurusDsAU2"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="tema2LabelOver" class="helpText" style="display:none"><div class="leyend"></div></div><div id="jurisdictionPara" class="clearfix"><label id="jurisdictionLabel" for="jurisdiction">Jurisdiction</label> <select name="jurisdiction" id="jurisdiction"><option value="" selected="selected">&nbsp;All Jurisdictions</option><option value="ACT">Australian Capital Territory</option><option value="CI">Christmas Island</option><option value="CCK">Cocos (Keeling) Islands</option><option value="CTH">Commonwealth of Australia</option><option value="NSW">New South Wales</option><option value="NZ">New Zealand</option><option value="NI">Norfolk Island</option><option value="NT">Northern Territory</option><option value="QLD">Queensland</option><option value="SA">South Australia</option><option value="TAS">Tasmania</option><option value="VIC">Victoria</option><option value="WA">Western Australia</option></select> <div class="helpericon" id="std-anz-casesjurisdictionAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div class="date"><div id="row_judgmentDate" class="smallOptionField dateOption"> <label>Judgment Date</label><input class="datepicker glow hasDatepicker" id="judgmentDate" type="text" name="judgmentDate"><div class="helpericon" id="std-anz-casesjudgmentDateAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div></div><div class="date"><div id="row_toJudgmentDate" class="smallOptionField dateOption"> <label>to&nbsp;&nbsp;</label><input class="datepicker glow hasDatepicker" id="toJudgmentDate" type="text" name="toJudgmentDate"></div></div><div id="Info" style="display:none"></div><div id="oneDatePara"><label for="oneDate" id="oneDateLabel">Exact Date</label><input type="checkbox" id="oneDate" name="oneDate" size="" maxlength="255" onclick="anzcp.searchTemplate.toggleChecked(this, toJudgmentDate)" value="false"></div><br clear="all"> </div><div id="advancedOptional" class="fldSet"> <div id="citedtitlePara" class="clearfix"><label for="citedtitle" id="citedtitleLabel">Cases Cited (Title)</label><input type="text" id="citedtitle" name="citedtitle" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-casescitedtitleAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="citedcitationPara" class="clearfix"><label for="citedcitation" id="citedcitationLabel">Cases Cited (Citation)</label><input type="text" id="citedcitation" name="citedcitation" size="" maxlength="255" exact="true" value=""><div class="helpericon" id="std-anz-casescitedcitationAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="legislation-titlePara" class="clearfix"><label for="legislation-title" id="legislation-titleLabel">Legislation Cited (Title)</label><input type="text" id="legislation-title" name="legislation-title" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-caseslegislation-titleAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="legislationprovisionPara" class="clearfix"><label for="legislationprovision" id="legislationprovisionLabel">Legislation Cited (Provision)</label><input type="text" id="legislationprovision" name="legislationprovision" size="" maxlength="255" exact="true" value=""><div class="helpericon" id="std-anz-caseslegislationprovisionAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="wordsphrasesPara" class="clearfix"><label for="wordsphrases" id="wordsphrasesLabel">Words &amp; Phrases</label><input type="text" id="wordsphrases" name="wordsphrases" size="" maxlength="255" value=""><div class="helpericon" id="std-anz-caseswordsphrasesAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="reportedCasesPara" class="clearfix"><label id="reportedCasesLabel" for="reportedCases">Reported/Unreported</label> <select name="reportedCases" id="reportedCases"><option value="ALL_CASES">All cases</option><option value="REPORTED">Reported</option><option value="UNREPORTED">Unreported</option></select> <div class="helpericon" id="std-anz-casesreportedCasesAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div><div id="reportedUpdatesPara" class="clearfix"><label id="reportedUpdatesLabel" for="reportedUpdates">Cases Updated</label> <select name="reportedUpdates" id="reportedUpdates"><option value="ANY_TIME">Any Time</option><option value="last 7 days">last 7 days</option><option value="last 15 days">last 15 days</option><option value="last 30 days">last 30 days</option><option value="last 60 days">last 60 days</option><option value="last 90 days">last 90 days</option></select> <div class="helpericon" id="std-anz-casesreportedUpdatesAU"><img src="/cpau/images/ico_info.png" alt="Click for more information on this field" class="helpicon"></div></div></div><div id="advancedsearch" style="display: block;"><a id="btnAdvsearchShow" href="#" style="display: none;">Advanced search options</a><a id="btnAdvsearchHide" href="#" style="display: inline;">Basic search options</a><a id="btnAdvsearchMore" href="#" style="display: inline;">More search options</a><a id="btnAdvsearchLess" href="#" style="display: none;">Less search options</a></div><div id="searchsubmit" class="clearfix"> <div class="label">&nbsp;</div><div class="helpericon">&nbsp;</div><div class="submitbutton"> <input type="submit" id="searchButton" title="" value="Search" class="primaryblock searchbutton2"></div><div class="spinner" id="searching">&nbsp;</div></div></fieldset> <input type="hidden" name="stid" value="std-anz-cases"><input type="hidden" name="ostid" value="std-anz-cases"><input type="hidden" name="ndd" value="2"><input type="hidden" name="ntocview"><input type="hidden" name="smryfs" value="n-tocview"> <input type="hidden" name="SearchTemplateId" value="std-anz-cases"></form>
+        <!-- END CHECKPOINT OUTPUT -->
+
+    </div> <!-- .columns -->
+</div> <!-- .row -->
+
+<div class="row">
+    <div class="columns">
+        {% include toc_output/toc_01.html %}
+    </div>
+</div>
+
+<script>
+    // Toggle fields INSIDE of form
+    var moreOptions = $('.lv-more-options');
+    $('.lv-more-options-btn').click(function(){
+        var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+        $(this).text(text);
+        moreOptions.toggle();
+    });
+
+    // Toggle form HEIGHT (mobile only - shows first 3 fields)
+    var searchForm = $('.lv-form-restrictor');
+    $('.lv-form-restrictor-btn').click(function(){
+        // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+        $(this).hide();
+        searchForm.toggleClass('lv-form-restrictor');
+    });
+</script>

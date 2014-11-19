@@ -1,0 +1,47 @@
+@import "foundation/components/grid";
+@import "foundation/components/forms";
+
+/*
+    LEGACY SEARCH TEMPLATES.CSS
+
+    - Last updated: 17.11.14
+    - hello@liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// Variables
+//-----------------------------------------------------------------
+
+//-----------------------------------------------------------------
+// Search Summary
+//-----------------------------------------------------------------
+
+// #searchForm {
+// 	@include grid-row();
+
+
+// 	label {
+// 		@media #{$medium-up} {
+// 		   @include grid-column(3);
+// 			padding: rem-calc(8 15); // using "inline" from F5 to vertically align
+// 			margin: 0 0 0.88889rem 0;
+// 			text-align: right;
+// 		}
+// 	}
+
+// 	input, select {
+// 		@media #{$medium-up} {
+// 		    @include grid-column(9);
+// 		}
+// 	}
+
+// 	.judgement-date label,
+// 	.judgement-date input {
+// 		width: 100%;
+// 	}
+
+// 	/* We'll use psuedo elements to style icons */
+// 	.helpericon img,
+// 	.thInfo {
+// 		display: none;
+// 	}
+// }

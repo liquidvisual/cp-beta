@@ -1,5 +1,5 @@
 /*
-    MAIN SCRIPTS - Last updated: 30-10-14
+    MAIN SCRIPTS - Last updated: 19-11-14
 */
 //-----------------------------------------------------------------
 // Variables
@@ -12,11 +12,14 @@ var TOUCH_ENABLED = $(".touch").length;
 //-----------------------------------------------------------------
 
 $(document).ready(function() {
+
     NProgress.start(); // Start preloader bar
-    resizeEvents();
 
     //==================================================
-    // Magnific Popup
+    // Magnific Popup ****
+    //
+    // Docs:
+    // http://dimsemenov.com/plugins/magnific-popup/documentation.html#ajax_type
     //==================================================
 
     $('.ajax-modal').magnificPopup({
@@ -25,7 +28,11 @@ $(document).ready(function() {
         callbacks: {
         // wrap the ajax request with a div that we've styled to look good
         parseAjax: function (mfpResponse) {
-            mfpResponse.data = '<div class="mfp-content-header">Hints <button title="Close (Esc)" type="button" class="mfp-close">×</button></div><div class="mfp-content-scroller">' + mfpResponse.data + '</div>';
+
+            var modalTitle = $(mfpResponse.data).filter("[data-header]").attr('data-header');
+
+            // The name of the modal will be taken from attribute 'data-header' - placed on the inner wrapper
+            mfpResponse.data = '<div class="mfp-content-header">'+modalTitle+'<button title="Close (Esc)" type="button" class="mfp-close">×</button></div><div class="mfp-content-scroller">' + mfpResponse.data + '</div>';
 
             }, ajaxContentAdded: function () {
                 return this.content;
@@ -43,11 +50,25 @@ $(window).load(function() {
 });
 
 //-----------------------------------------------------------------
+// Tooltips
+//-----------------------------------------------------------------
+
+$(".lv-tooltip").click(function () {
+    var $title = $(this).find(".title");
+    if (!$title.length) {
+        $(".title").remove();
+        $(this).append('<span class="title">' + $(this).attr("title") + '</span>');
+    } else {
+        $title.remove();
+    }
+});
+
+//-----------------------------------------------------------------
 // Simulated Doc Options show on checkbox select
 //-----------------------------------------------------------------
 
-$("input[type='checkbox']").on("click", function() {
-    if ($('input:checked').length) {
+$("#tocNodes input[type='checkbox'], #resultsContainerForm input[type='checkbox']").on("click", function() {
+    if ($("#tocNodes input:checked").length || $("#resultsContainerForm input:checked").length) {
         $('.lv-doc-options').removeClass('disabled');
     } else {
         $('.lv-doc-options').addClass('disabled');
@@ -89,68 +110,72 @@ $(function() {
 });
 
 //-----------------------------------------------------------------
-// Resize
+// SIDEBAR TABS
 //-----------------------------------------------------------------
 
-var sidebar = $('.lv-sidebar');
+// Sidebar defaults to the 'is-collapsed' state (class on Master).
+// Local storage will remember if user left it open or hasn't touched it.
+// In either case, media queries will handle the state naturally, or the sidebar
+// will initalize open.
 
-$(window).resize(function(){
-    resizeEvents();
-});
-
-function resizeEvents() {
-    if ($(window).width() <= 1024){
-        if (!sidebar.hasClass('is-collapsed')) {
-            sidebar.addClass('is-collapsed');
-        }
-    }
+var sidebarStateStorage = localStorage.getItem("sidebarState");
+if (sidebarStateStorage == "uncollapsed" || sidebarStateStorage == null) {
+    $('.lv-sidebar').removeClass('is-collapsed');
 }
 
-// sidebar tabs following window thing
-//
-// var $scrollingDiv = $("#fixedScroll");
-//     $(window).scroll(function(){
-//     console.log("hey");
-//     var fucker = ($(this).scrollTop()) + "px";
-//     $scrollingDiv.stop().animate({"top": fucker}, "slow");
-//     });
+//------------ ON CLICK -------------------
 
-//-----------------------------------------------------------------
-// Sidebar Tab Anchors
-//-----------------------------------------------------------------
+$('.lv-sidebar .tabs a').click(function(e){
 
-$('.tabs .tab-title a').click(function(e){
-
-    var tabHash = $(this).attr('href');
-    var sidebar = $('.lv-sidebar');
+    var $this = $(this);
+    var tabHash = $this.attr('href');
+    var sidebar = $this.parent().parent().parent().parent();
     var sidebarCollapsed = sidebar.hasClass('is-collapsed');
-    var smallScreen = $(window).width() < 1024;
+    var sidebarUncollapsed = sidebar.hasClass('is-uncollapsed');
+    var sizeWhereSidebarIsInFlow = $(window).width() >= 1024;
 
     e.preventDefault();
 
     // Strip all tab LIs, apply 'active' to clicked LI
-    $('.tabs .tab-title').removeClass('active');
-    $(this).parent().addClass('active');
+    $('.lv-sidebar .tabs .active').removeClass('active');
+    $this.parent().addClass('active');
 
-    // If 'collapse' is clicked
+    // If 'collapse' is clicked (only possible when open)
     if (tabHash == "#collapse") {
 
-        sidebar.toggleClass('is-collapsed');
+        // user has engaged the sidebar. Remember preferences and override media queries
+        sidebar.removeClass('is-uncollapsed').addClass('is-collapsed');
 
-    // Clicking all other tabs
+        // USER STORAGE - Remember user input
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("sidebarState", "collapsed");
+        }
+
+    // Clicking all other tabs - will ** UNCOLLAPSE ** sidebar
     } else {
-        // Strip all content sections, apply 'active' ID that matches tabHash
-        $('.tabs-content > .content').removeClass('active');
+        // Strip all content sections, apply 'active' to ID that matches tabHash
+        $('.tabs-content .active').removeClass('active');
         $(tabHash).addClass('active');
 
-        if (sidebarCollapsed) {
-            $('.lv-sidebar').removeClass('is-collapsed');
+        // 1. Sidebar is collapsed by user engagement directly OR
+        // 2. If initalized by medium media query - in which case, there
+        // are no explicit collapse/uncollapse classes applied.
 
-            // scroll to top on desktop, sidebar is fixed but content is relative when open
-            if (!smallScreen) $.scrollTo(0, 300);
-            //$(window).scrollTop(0); // because collapsed toolbar is fixed
-            //$("html, body").animate({scrollTop: "0"}, 300);
+        // Uncollapse the sidebar
+
+        if (sidebarCollapsed || (!sidebarCollapsed && !sidebarUncollapsed)) {
+            sidebar.removeClass('is-collapsed').addClass('is-uncollapsed');
+
+            // USER STORAGE - Remember user input
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("sidebarState", "uncollapsed");
+            }
         }
+
+        // scroll to top on desktop, sidebar scrolls WITH page on medium-up
+        if (sizeWhereSidebarIsInFlow) $.scrollTo(0, 300);
+        //$(window).scrollTop(0); // alt method
+        //$("html, body").animate({scrollTop: "0"}, 300); // alt method
     }
 });
 
@@ -185,20 +210,35 @@ $('#context-menu-btn').click(function(e){
 var touchEvent = TOUCH_ENABLED ? "touchstart" : "click";
 
 //Trigger hamburger by touch on mobile - this eliminates glitch with FastClick.js
-$(".hamburger").css({"visibility": "visible"}).bind(touchEvent, function() {
-    $("#off-canvas-menu").trigger("open.mm");
+
+$(".lv-hamburger").bind(touchEvent, function(e) {
+
+    $this = $(this);
+    //e.preventDefault();
+
+    if ($this.attr('href', '#off-canvas-menu-left')) {
+        $("#off-canvas-menu-left").trigger("open.mm");
+    }
+
+    if ($this.attr('href', '#off-canvas-menu-right')) {
+        $("#off-canvas-menu-right").trigger("open.mm");
+    }
 });
 
-if (TOUCH_ENABLED) {
-    // Make Accordion jump to the top of the heading on mobile
-    // http://foundation.zurb.com/forum/posts/1316-accordion-jump-to-top-when-active
-    /*$(document).foundation('accordion', {
-        callback: function (el){
-            var containerPos = $(el).parent().offset().top;
-            $('html, body').animate({ scrollTop: containerPos }, 300);
-        }
-    });*/
-}
+$(function() {
+    $("#off-canvas-menu-left").mmenu({
+       "offCanvas": {
+          "position": "left"
+       }
+    });
+
+    $("#off-canvas-menu-right").mmenu({
+       "offCanvas": {
+          "position": "right"
+       }
+    });
+ });
+
 //-----------------------------------------------------------------
 // <= IE8 Caution Message
 //-----------------------------------------------------------------
@@ -221,16 +261,7 @@ $(document).keypress(function(event) {
     }
     return true;
 });
-//==================================================
-// Submit Search Form by Hitting Enter
-//==================================================
 
-// $("#search-form").keypress(function(event) {
-//     if (event.which == 13) {
-//         event.preventDefault();
-//         $("#search-form").submit();
-//     }
-// });
 //==================================================
 //
 //==================================================

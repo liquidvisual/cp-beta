@@ -3,7 +3,7 @@
 /*
     MAIN.CSS
 
-    - Last updated: 30.10.14
+    - Last updated: 13.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -70,7 +70,6 @@ html, body {
 	width: 100%;
 	background: url(../img/template/nav-gradient.png) repeat-x; /* fallback */
 	height: $header-height;
-	// overflow: hidden;
 	z-index: 110; // bring above nav
 
 	.logo {
@@ -125,6 +124,11 @@ html, body {
 .logo-switcher-wrapper {
 	display: inline-block;
 	margin: 0;
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 //=========================================
@@ -160,25 +164,28 @@ html, body {
 	border-radius: 0 0 $global-radius $global-radius;
 
 	ul {
-		font-size: rem-calc(14);
+		font-size: rem-calc(12);
+		font-weight: 600;
 		list-style: none;
 		margin: 0;
 		text-align: left;
 	}
 
 	i {
-		color: #666;
+		// color: #666;
+		color: #94999C;
 	}
 
 	a {
-		@extend .transition;
+		// @extend .transition;
 		display: block;
 		padding: rem-calc(10 15);
-		border-bottom: 1px solid #D4DCE3;
-		color: #676767;
+		border-bottom: 1px solid #D4DCE3; // better blue? #E1E4E6
+		color: #505659;//#676767;
 
 		&:hover {
-			color: $primary-color;
+			// color: $primary-color;
+			background: #F2F4F5;
 		}
 	}
 }
@@ -187,7 +194,7 @@ html, body {
 // Mobile Nav Btn (user menu)
 //=========================================
 
-.mobile-nav-btn {
+.lv-hamburger {
 	width: 50px;
 	height: $header-height;
 	line-height: $header-height;
@@ -300,6 +307,18 @@ html, body {
 	}
 }
 
+// No context menus or sidebar - Preferences uses it
+.internal-minimal .lv-main {
+
+	.row {
+		max-width: 900px;
+	}
+
+	@media #{$medium-up} {
+	    padding: rem-calc(20 20 50 20);
+	}
+}
+
 //-----------------------------------------------------------------
 // Sections
 //-----------------------------------------------------------------
@@ -386,8 +405,14 @@ html, body {
 //=========================================
 
 .lv-footer-links a {
+	@extend .transition;
 	font-size: rem-calc(12);
 	line-height: $footer-height;
+
+	&:hover {
+		color: grey;
+	}
+
 	/* needs some bigger gaps */
 	@media #{$medium-up} {
 		padding: rem-calc(0 5);
@@ -408,7 +433,7 @@ html, body {
 // Dropdown
 //=========================================
 
-.lv-footer .has-dropdown {
+.lv-footer-links li.has-dropdown {
 	position: relative;
 	display: none;
 
@@ -418,6 +443,10 @@ html, body {
 
 	&:hover {
 		background: lighten($footer-background, 10%);
+
+		a {
+			color: white; // override grey
+		}
 	}
 
 	&:hover .lv-dropdown {
@@ -426,7 +455,7 @@ html, body {
 	}
 }
 
-.lv-footer .lv-dropdown {
+.lv-footer-links .lv-dropdown {
 	@extend .transition;
 	opacity: 0;
 	height: 0;
@@ -435,6 +464,8 @@ html, body {
 	bottom: 100%;
 	left: 0;
 	width: rem-calc(200);
+	font-size: rem-calc(12);
+	font-weight: 600;
 	list-style: none;
 	margin: 0;
 	text-align: left;
@@ -442,13 +473,12 @@ html, body {
 	border-radius: $global-radius $global-radius 0 0;
 
 	a {
-		@extend .transition;
 		display: block;
 		padding: rem-calc(0 15);
 		border-top: 1px solid $footer-background;
 
 		&:hover {
-			color: $primary-color;
+			background: $footer-background;
 		}
 
 		i {
@@ -490,10 +520,21 @@ input[type="submit"] {
 // Forms
 //-----------------------------------------------------------------
 
-.lv-form-restrictor {
-	max-height: 0;
+.lv-partial-view {
+	position: relative;
+	max-height: rem-calc(220);
+	margin-bottom: rem-calc(20);
 	overflow: hidden;
-	margin-bottom: 20px;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		// height: rem-calc(100);
+		background: $primary-color;
+	}
 
 	@media #{$medium-up} {
 	    max-height: none;
@@ -501,16 +542,19 @@ input[type="submit"] {
 	}
 }
 
+//-----------------------------------------------------------------
+
 .lv-doc-options {
 	position: relative;
 	background: white;
 	overflow: hidden;
 	border: 1px solid #DDDDDD;
 	border-radius: $global-radius;
-	padding: rem-calc(10);
+	padding: rem-calc(10 15);
 	margin-bottom: rem-calc(20);
 
 	ul {
+		position: relative;
 		font-size: rem-calc(25);
 		margin-bottom: rem-calc(20);
 
@@ -524,23 +568,23 @@ input[type="submit"] {
 		    margin-bottom: 0;
 		}
 	}
+}
 
-	// Buttons are unclickable when disabled
+// Buttons are unclickable when disabled
 
-	&.disabled {
-		&:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
+.lv-doc-options.disabled ul {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
-		a {
-			color: #DDDDDD;
-			cursor: default;
-		}
+	a {
+		color: #DDDDDD;
+		cursor: default;
 	}
 }
 
@@ -579,9 +623,24 @@ input[type="submit"] {
 //-----------------------------------------------------------------
 
 .lv-tooltip {
+	position: relative;
 	@media #{$medium-up} {
 	    background: url(../img/ui/dots-black.png) repeat-x bottom;
 	}
+}
+
+.lv-tooltip .title {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    text-align: left;
+    font-size: rem-calc(13);
+    width: rem-calc(300);
+    background: white;
+    border: 2px solid $primary-color;
+    padding: rem-calc(15);
+    left: 0;
+    z-index: 1000;
 }
 
 //-----------------------------------------------------------------
@@ -634,6 +693,9 @@ input[type="submit"] {
 //-----------------------------------------------------------------
 // Themes
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// Includes
+//-----------------------------------------------------------------
 
 @import "partials/dashboard";
 @import "partials/context_menu";
@@ -642,6 +704,7 @@ input[type="submit"] {
 @import "partials/sidebar";
 @import "partials/legacy";
 @import "partials/legacy_document";
+@import "partials/legacy_search_templates";
 @import "partials/modal";
 @import "partials/fonts";
 @import "partials/foundation-icons";

@@ -1,7 +1,7 @@
 /*
     MODAL.CSS
 
-    - Last updated: 05.11.14
+    - Last updated: 18.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -17,16 +17,16 @@
 	max-width: 800px;
 	margin: 60px auto 20px auto;
 
+	@media #{$medium-up} {
+	    max-height: 400px;
+	}
+
 	.mfp-content-scroller {
 		max-height: 300px;
 		overflow: auto;
 		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
 		padding: 20px;
-
-		@media #{$medium-up} {
-		    max-height: 400px;
-		}
 	}
 
 	/* added as "wrap" in JS */
@@ -38,15 +38,18 @@
 		height: 40px;
 		background: url(../img/template/nav-gradient.png) repeat-x; //$primary-color;
 		overflow: hidden;
-		padding-right: 40px;
-
-		line-height: 40px;
-		padding: 0 20px;
-		color: white;
 		font-size: 13px;
+		line-height: 40px;
+		padding: 0 40px 0 20px;
+		color: white;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		@media #{$medium-up} {
+		    font-size: 16px;
+		}
 
 		.mfp-close:hover {
-			// color: black;
 			background: darken(desaturate($primary-color, 10%), 10%);
 		}
 	}
@@ -57,9 +60,3 @@
 .lt-ie9 .mfp-bg {
 	background: url(../img/ui/black-transparent.png);
 }
-
-
-
-
-
-

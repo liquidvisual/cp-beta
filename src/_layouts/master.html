@@ -27,7 +27,6 @@
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
 
     <!-- build:css({src,.tmp}) /assets/css/optimized.css -->
     <link rel="stylesheet" href="/_bower_components/animate.css/animate.min.css">
@@ -51,58 +50,21 @@
 </head>
 <body>
     <div class="lv-super developerX">
-        <div class="lv-page {% if page.exclude_menu %} exclude-menu {% endif %} {% if page.url == "/" %} homepage {% endif %}">
+        <div class="lv-page">
 
-            <!-- HEADER -->
-            <header class="lv-header">
-                {% include header.html %}
-            </header>
-
-            <!-- NAVIGATION -->
-            <nav class="lv-topbar show-for-large-up">
-                {% include topbar.html %}
-            </nav>
-
-            <!-- STAGE -->
-            <section class="lv-stage">
-
-                <!-- CONTEXT MENU -->
-                <nav class="lv-context-menu">
-                    {% include context_menu.html %}
-                </nav>
-
-                <!-- MAIN -->
-                <main class="lv-main">
-                    <div class="row">
-                        <div class="columns">
-                            {{ content }}
-                        </div>
-                    </div>
-                </main>
-
-                <!-- SIDEBAR -->
-                <aside class="lv-sidebar">
-                    {% include sidebar.html %}
-                </aside>
-
-            </section> <!-- .stage -->
-
-            <!-- FOOTER -->
-            <footer class="lv-footer">
-                {% include footer.html %}
-            </footer>
+            {{ content }}
 
         </div> <!-- .lv-page -->
     </div> <!-- .lv-super -->
 
     <!-- OFF-CANVAS MENU (LEFT) -->
     <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
-        {% include navigation_off_canvas.html %}
+        {% include topbar.html %}
     </nav>
 
     <!-- OFF-CANVAS MENU (RIGHT) -->
     <nav id="off-canvas-menu-right" class="hide" aria-hidden="true">
-        {% include user_menu.html %}
+        {% include menus/user_menu.html %}
     </nav>
 
     <!-- ***** JAVASCRIPT ***** -->
@@ -126,19 +88,7 @@
     <script>
         $(document).foundation();
 
-        $(function() {
-            $("#off-canvas-menu-left").mmenu({
-               "offCanvas": {
-                  "position": "left"
-               }
-            });
 
-            $("#off-canvas-menu-right").mmenu({
-               "offCanvas": {
-                  "position": "right"
-               }
-            });
-         });
 
         $(function() {
             FastClick.attach(document.body);
@@ -149,8 +99,9 @@
             $("#datepicker").datepicker({ changeMonth: true, changeYear: true });
         });
 
+        // jQuery UI
         $(function() {
-            $( "#docoptionstabs" ).tabs();
+            $("#docoptionstabs").tabs();
           });
 
     </script>

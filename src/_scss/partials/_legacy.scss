@@ -65,7 +65,8 @@
 		content: "\f1ac"; // Save
 	}
 
-	#origresults a:before {
+	#origresults a:before,
+	#backToPreviousStep a:before {
 		content: "\f10a"; // go back
 	}
 
@@ -121,7 +122,7 @@
 }
 
 //-----------------------------------------------------------------
-// Document Options | Search Results, Recently Accessed
+// Document Options (Context Menu) | Search Results, Recently Accessed
 //-----------------------------------------------------------------
 
 // .ui-widget * { outline: none; }​
@@ -468,6 +469,12 @@
 
 #resultsContainerForm {
 	margin-bottom: 50px;
+
+	.resultCheckBox {
+		float: left;
+		margin-right: 15px;
+		padding-top: 8px;
+	}
 }
 
 #navbar {

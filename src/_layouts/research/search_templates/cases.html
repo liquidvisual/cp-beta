@@ -1,0 +1,329 @@
+---
+layout: internal
+context_menu: "context_menu_output/search_templates.html"
+---
+
+{% assign jurisdictions = site.data.jurisdictions %}
+
+<!-- **********************************************************************
+    AD HOC JAVASCRIPT (Simulation Purposes Only)
+*********************************************************************** -->
+
+<script>
+    $(document).ready(function(){
+
+        var moreOptions = $('.lv-more-options');
+
+        // Toggle fields INSIDE of form
+        $('.lv-more-options-btn').click(function(){
+            var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+            $(this).text(text);
+            moreOptions.toggle();
+        });
+
+        // Toggle form HEIGHT (mobile only - shows first 3 fields)
+        var searchForm = $('.lv-form-restrictor');
+        $('.lv-form-restrictor-btn').click(function(){
+            // var text = $(this).text() == "Show More" ? "Show Less" : "Show More";
+            $(this).hide();
+            searchForm.toggleClass('lv-form-restrictor');
+        });
+    });
+</script>
+
+<!-- **********************************************************************
+    END AD HOC JAVASCRIPT (Simulation Purposes Only)
+*********************************************************************** -->
+
+<div class="row">
+    <div class="columns">
+        <h3 class="left">Cases</h3>
+        <!-- Optional hint on mobile -->
+        <p class="right"><a href="/modal_output/terms-and-connectors.html" class="ajax-modal show-for-small-only"><i class="fi-lightbulb"></i> Hints</a></p>
+        <hr>
+    </div>
+</div>
+
+<!-- SEARCH FORM -->
+<form class="lv-search-form lv-partial-view" action="/research/results" method="post" novalidate>
+    <div class="row">
+        <div class="medium-10 columns">
+
+            <!-- Free Text -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-free-text" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[0].title}}">Free Text</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Free Text" id="sf-free-text">
+                </div>
+            </div>
+
+            <!-- Case Title / Party Name -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-case-title-party-name" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[1].title}}">Case Title / Party Name</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Case Title / Party Name" id="sf-case-title-party-name">
+                </div>
+            </div>
+
+            <!-- Citation -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-citation" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[2].title}}">Citation</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Citation" id="sf-citation">
+                </div>
+            </div>
+
+            <!-- Catchwords -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-catchwords" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[3].title}}">Catchwords</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Catchwords" id="sf-catchwords">
+                </div>
+            </div>
+
+            <!-- Judge(s) -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-judges" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[4].title}}">Judges(s)</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Judge(s)" id="sf-judges">
+                </div>
+            </div>
+
+            <!-- Court -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="sf-court" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[5].title}}">Court</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="text" name="Court" id="sf-court">
+                </div>
+            </div>
+
+            <!-- Jurisdiction -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="jurisdiction" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[6].title}}">Jurisdiction</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <select name="Jurisdiction" id="jurisdiction">
+                        <option selected disabled>All Jurisdictions</option>
+                        {% for item in jurisdictions %}
+                        <option value="{{ item.title }}">{{ item.title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <!-- Judgement Dates -->
+            <div class="row">
+                <div class="medium-3 columns">
+                    <label for="judgement-start-date" class="text-left medium-text-right">
+                        <span class="text lv-tooltip" title="{{site.data.cases_tooltips[7].title}}">Judgement Date</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <div class="row">
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" name="Judgement Start Date" placeholder="Start Date" id="judgement-start-date">
+                        </div>
+                        <div class="medium-4 columns">
+                            <input class="ui-datepicker" type="text" name="Judgement End Date" placeholder="End Date" id="judgement-end-date">
+                            <!-- Hidden for accessibility -->
+                            <label for="judgement-end-date" class="hide">Judgement End Date</label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <input type="checkbox" name="Judgement Exact Date" id="judgement-exact-date">
+                            <label for="judgement-exact-date">Exact Date</label>
+                        </div>
+                    </div>
+                </div> <!-- .medium-9 -->
+            </div> <!-- .row -->
+
+            <!-- ************************ MORE OPTIONS ************************ -->
+
+            <div class="lv-more-options hide">
+
+                <!-- Cases Cited (title) -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-cases-cited-title" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[8].title}}">Cases Cited (title)</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <input type="text" name="Cases Cited (title)" id="sf-cases-cited-title">
+                    </div>
+                </div>
+
+                <!-- Cases Cited (citation) -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-cases-cited-citation" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[9].title}}">Cases Cited (citation)</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <input type="text" name="Cases Cited (citation)" id="sf-cases-cited-citation">
+                    </div>
+                </div>
+
+                <!-- Legislation Cited (title) -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-legislation-cited-title" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[10].title}}">Legislation Cited (title)</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <input type="text" name="legislation Cited (title)" id="sf-legislation-cited-title">
+                    </div>
+                </div>
+
+                <!-- Legislation Cited (provision) -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-legislation-cited-title" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[11].title}}">Legislation Cited (title)</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <input type="text" name="legislation Cited (title)" id="sf-legislation-cited-title">
+                    </div>
+                </div>
+
+                <!-- Words & Phrases -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-words-and-phrases" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[12].title}}">Words &amp; Phrases</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <input type="text" name="Words &amp; Phrases" id="sf-words-and-phrases">
+                    </div>
+                </div>
+
+                <!-- Reported / Unreported -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-reported-unreported" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[13].title}}">Reported/Unreported</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <select name="Reported / Unreported" id="sf-reported-unreported">
+                            <option selected disabled>All Cases</option>
+                            <option value="reported">Reported</option>
+                            <option value="unreported">Unreported</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Cases Updated -->
+                <div class="row">
+                    <div class="medium-3 columns">
+                        <label for="sf-cases-updated" class="text-left medium-text-right">
+                            <span class="text lv-tooltip" title="{{site.data.cases_tooltips[14].title}}">Cases Updated</span>
+                        </label>
+                    </div>
+                    <div class="medium-9 columns">
+                        <select name="Cases Updated" id="sf-cases-updated">
+                            <option selected disabled>Anytime</option>
+                            <option value="last-7-days">Last 7 days</option>
+                            <option value="last-15-days">Last 15 days</option>
+                            <option value="last-30-days">Last 30 days</option>
+                            <option value="last-60-days">Last 60 days</option>
+                            <option value="last-90-days">Last 90 days</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div> <!-- .lv-more-options -->
+
+            <!-- ************************ END MORE OPTIONS ************************ -->
+
+            <!-- Toggle More Option Button -->
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <a class="lv-more-options-btn button tiny knockout radius" href="#">Show More</a>
+                </div>
+            </div>
+
+            <!-- Preferred Results Format -->
+            <div class="row show-for-medium-up">
+                <div class="medium-3 columns">
+                    <label class="text-left medium-text-right">
+                        <span class="text">Preferred results format:</span>
+                    </label>
+                </div>
+                <div class="medium-9 columns">
+                    <input type="radio" name="sf-result-type" value="toc" id="sf-tree-of-contents">
+                    <label for="tree-of-contents" id="sf-tree-of-contents">Tree of Contents</label>
+                    <input type="radio" name="sf-result-type" value="list" id="sf-document-list" checked>
+                    <label for="document-list" id="sf-document-list">Document List</label>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="row">
+                <div class="medium-offset-3 medium-9 columns">
+                    <!-- <button value="submit" class="button radius medium">Search</button> -->
+                    <!-- switch anchor for button on production -->
+                    <a href="/research/search-results/" class="button radius medium">Search Cases</a>
+                </div>
+            </div>
+
+        </div> <!-- .columns -->
+    </div>  <!-- .row -->
+</form>
+
+<!-- ************************ END FORM ************************ -->
+
+<!-- Form restricted on mobile (small height) - button to show more -->
+
+<!-- <div class="show-for-small-only">
+    <div class="row">
+        <div class="medium-offset-3 medium-9 columns">
+            <a class="lv-form-restrictor-btn button tiny knockout radius" href="#">Show More</a>
+        </div>
+    </div>
+</div> -->
+
+<!-- DOCUMENT OPTIONS -->
+<div class="row">
+    <div class="columns">
+        <hr>
+        {% include document_options/search.html %}
+    </div>
+</div>
+
+<!-- TOC -->
+<div class="row">
+    <div class="columns">
+        {% include toc_output/toc_01.html %}
+    </div>
+</div>

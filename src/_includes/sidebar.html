@@ -1,51 +1,56 @@
-<ul class="tabs text-center" data-tab role="tablist">
-	<li class="tab-title active">
-		<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i> <span class="text">Details</span></a>
-	</li>
-	<li class="tab-title">
-		<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i> <span class="text">Links</span></a>
-	</li>
-	<li class="tab-title collapse-btn">
-		<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i> <span class="text">Collapse</span></a>
-	</li>
-</ul>
+<div class="lv-sidebar-inner">
+	<ul class="tabs text-center" data-tab role="tablist">
+		<li class="tab-title active">
+			<a title="Details" href="#lv-details" role="tab"><i class="fi-eye"></i><span class="text">Details</span></a>
+		</li>
+		<li class="tab-title">
+			<a title="Links" href="#lv-links" role="tab"><i class="fi-star"></i><span class="text">Links</span></a>
+		</li>
+		<li class="tab-title">
+			<a title="Links" href="#lv-community" role="tab"><i class="fi-torsos"></i><span class="text">Community</span></a>
+		</li>
+		<li class="tab-title collapse-btn">
+			<a title="Collapse" href="#collapse" role="tab"><i class="fi-arrow-right"></i><span class="text">Collapse</span></a>
+		</li>
+	</ul>
 
-<!-- TABS CONTENT -->
-<div class="tabs-content">
+	<!-- TABS CONTENT -->
+	<div class="tabs-content">
 
-	<!-- DETAILS -->
-	<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
-		{% if page.sidebar_content %}
-			{{ page.sidebar_content }}
-		{% else %}
-			<h3>Tips for Searching</h3>
-			<p>Checkpoint® supports the use of a number of different types of connectors. The most commonly used connectors are <strong>AND</strong> and <strong>OR</strong>. By default if you enter multiple terms with no connectors, Checkpoint® will automatically insert the '&amp;' <strong>(AND)</strong> connector in between each term.</p>
-			<p>The connectors you can use on Checkpoint®, their symbols and an example are listed below:</p>
-			<p><a class="ajax-modal button small radius knockout" href="/hints/terms-and-connectors.html">See All Connectors</a></p>
-			<hr>
-			<h3>Need Assistance?</h3>
-			<p>Don't hesitate to call our Customer Help Desk on the number below.</p>
-			<p><a href="#" class="button small radius knockout">1800 020 548</a></p>
-		{% endif %}
-	</section>
+		<!-- DETAILS -->
+		<section role="tabpanel" aria-hidden="false" class="content active" id="lv-details">
+			{% if page.sidebar_details %}
+				{% include {{ page.sidebar_details }} %}
+			{% else %}
+				{% include sidebar_content/default.html %}
+			{% endif %}
+		</section>
 
-	<!-- LINKS -->
-	<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
-		<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
-		<br>
-		<ul class="lv-quicklinks content-block">
-			<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-			<li class="li"><a href="#">This is an example of a quicklink</a></li>
-			<li class="li"><a href="#">Shorter link</a></li>
-			<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
-			<li class="li"><a href="#">Another link</a></li>
-		</ul>
-	</section>
-</div>
+		<!-- LINKS -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="lv-links">
+			<h3>My Quicklinks <a href="#" class="button round tiny pill">Edit</a></h3>
+			<br>
+			<ul class="lv-quicklinks content-block">
+				<li class="li"><a href="#">This is an example of</a> <a href=""></a></li>
+				<li class="li"><a href="#">Shorter link</a></li>
+				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+				<li class="li"><a href="#">Another link</a></li>
+				<li class="li"><a href="#">This is an example of a quicklink</a></li>
+				<li class="li"><a href="#">Shorter link</a></li>
+				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+				<li class="li"><a href="#">Another link</a></li>
+				<li class="li"><a href="#">This is an example of a quicklink</a></li>
+				<li class="li"><a href="#">Shorter link</a></li>
+				<li class="li"><a href="#">This is an even longer example of a quicklink here</a></li>
+				<li class="li"><a href="#">Another link</a></li>
+			</ul>
+		</section>
+
+		<!-- COMMUNITY -->
+		<section role="tabpanel" aria-hidden="true" class="content" id="lv-community">
+			<h3>Community</h3>
+			<p>This feature is unavailable. Please check back later.</p>
+		</section>
+
+	</div>
+</div> <!-- .lv-siderbar-inner -->

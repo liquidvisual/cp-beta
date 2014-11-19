@@ -1,45 +1,48 @@
+{% assign username = "John Smith" %}
+
 <section class="text-center large-text-left">
 
-	<!-- Mobile Buttons -->
+	<!-- Mobile Hamburgers -->
 	<div class="left">
-		<a class="mobile-nav-btn left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a id="context-menu-btn" class="mobile-nav-btn left {% if page.url == "/" %}remove{% endif %}" href="#"><i class="fi-widget"></i></a>
+		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
+		<a class="lv-hamburger left {% if page.url == "/" %} remove {% endif %}" href="#"><i class="fi-results"></i></a>
 	</div>
 
-	<a class="mobile-nav-btn right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
+	<!-- User Menu Hamburger -->
+	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	<ul class="lv-inline-list logo-switcher-wrapper">
-		<li>
-			<!-- Logo -->
-			<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
-				<img width="152" src="/img/content/logo.png" alt="Thomson Reuters Checkpoint">
-			</a>
-		</li>
-		<li>
-			<!-- Country Toggle -->
+	{% comment %}
+	<div class="logo-switcher-wrapper">
 
-			<div class="country-toggle">
-				<select>
-					<option value="au">Australia</option>
-					<option value="nz">New Zealand</option>
-				</select>
-			</div>
+		<!-- Logo -->
+		<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
+			<img width="152" src="/img/content/logo.png" alt="Thomson Reuters Checkpoint">
+		</a>
 
-		</li>
-	</ul>
+		<!-- Country Toggle -->
+		<div class="country-toggle">
+			<select>
+				<option value="au">Australia</option>
+				<option value="nz">New Zealand</option>
+			</select>
+		</div>
+
+	</div>
+	{% endcomment %}
+
 </section>
 
 <!-- User Profile -->
-<section class="user-profile right text-right show-for-large-up">
+<section class="user-profile text-right show-for-large-up">
 	<div class="left">
-		<strong class="user-profile-title">Jason Chen</strong>
+		<strong class="user-profile-title">{{ username }}</strong>
 		<a class="logout-btn" href="#">LOGOUT</a>
 	</div>
 	<div class="right user-profile-pic" href="#">
 		<img width="40" src="/img/ui/no-face.png" alt="Profile Pic">
 		<i class="fa fa-caret-down"></i>
 		<div class="user-profile-dropdown">
-			{% include user_menu.html %}
+			{% include menus/user_menu.html %}
 		</div>
 	</div>
 </section>

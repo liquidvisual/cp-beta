@@ -1,57 +1,77 @@
 /*
-    TOPBAR.CSS
+    TOPBAR.CSS - *GOLD*
 
-    - Last updated: 18.09.14
+    - Last updated: 13.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
 // Variables
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// Topbar (Container)
+// Navigation (Container)
 //-----------------------------------------------------------------
 
-.lv-topbar {
+.lv-navigation {
 	position: fixed;
 	top: $header-height;
 	width: 100%;
-	// overflow: hidden;
 	background: $dark-grey;
 	z-index: 100;
 }
 
 //=========================================
-// Primary Nav (Tools Nav)
+// Topbar (Primary Nav)
 //=========================================
 
-.primary-nav {
+.lv-topbar {
 	width: 100%;
-	background: $dark-grey;
 	height: $primary-nav-height;
+	background: $dark-grey;
 
 	ul {
-		// margin-left: rem-calc(5);
+		display: table; // No need for clearfix
 	}
 
 	li {
 		display: inline-block;
+		float: left; // flush
 
 		&.active a {
-			background: darken($dark-grey, 30%);
-			// color: $primary-color;
+			color: $primary-color; // Decision to leave out BG color change from active
+		}
+
+		.home-text {
+			@media #{$medium-up} {
+			    display: none;
+			}
 		}
 	}
 
 	a {
-		color: lighten($dark-grey, 60%);
+		@extend .transition;
 		display: block;
 		padding: rem-calc(0 15);
 		font-size: rem-calc(14);
+		color: lighten($dark-grey, 60%);
 		line-height: $primary-nav-height;
 
 		&:hover {
-			@extend .transition;
-			color: $secondary-color;
+			background: darken($dark-grey, 30%);
 		}
 	}
+
+	// Icons are overkill on desktop. Have for mobile menu only. Leave home icon for all.
+	i:not(.fi-home) {
+		@media #{$medium-up} {
+		    display: none;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// Offcanvas Menu
+//-----------------------------------------------------------------
+
+#off-canvas-menu-left i {
+	margin-right: rem-calc(5);
 }

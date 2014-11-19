@@ -89,7 +89,7 @@ $small-range: (0em, 40em);             // 0-640px
 $medium-range: (48em, 48em);           // 768px
 $large-range: (64em, 64em);            // 1024px
 $xlarge-range: (71.250em, 71.250em);  // is 1140  // 73.125em, 73.125em // 1170px
-$xxlarge-range: (71.250em, 71.250em);  // 1440px
+$xxlarge-range: (90.000em, 90.000em);  // 1440px
 //------------------------------------------------------------------
 
 $screen: "only screen";
@@ -550,9 +550,9 @@ $input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.
 // $fieldset-border-style: solid;
-// $fieldset-border-width: 1px;
+$fieldset-border-width: 0;//1px;
 // $fieldset-border-color: #ddd;
-// $fieldset-padding: rem-calc(20);
+$fieldset-padding: 0; //rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them

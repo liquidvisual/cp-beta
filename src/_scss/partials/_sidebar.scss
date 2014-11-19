@@ -1,7 +1,7 @@
 /*
     SIDEBAR.CSS
 
-    - Last updated: 03.10.14
+    - Last updated: 19.11.14
     - hello@liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -10,9 +10,11 @@
 
 $sidebar-width: rem-calc(300) !default;
 $sidebar-width-collapsed: rem-calc(50) !default;
+$sidebar-background-color: #EDEFEF !default;
+$sidebar-box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4) !default;
 
 //-----------------------------------------------------------------
-// Sidebar
+// Sidebar (Default mobile)
 //-----------------------------------------------------------------
 
 .lv-sidebar {
@@ -20,53 +22,110 @@ $sidebar-width-collapsed: rem-calc(50) !default;
 	top: 0;
 	right: 0;
 	width: 100%;
-	background: #EDEFEF;
-	box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4);
+	background: $sidebar-background-color;
+	box-shadow: $sidebar-box-shadow;
+	overflow: hidden;
 	z-index: 10;
 
-	@media (max-width: 767px) {
-	    display: none;
-	}
-
-	@media #{$medium-up} {
-		position: fixed;
-		top: $header-height;
-		bottom: $footer-height;
-	    width: $sidebar-width;
-	    overflow-y: auto; /* for desktop scroll bars logic */
-	    -webkit-overflow-scrolling: touch;
-	}
-
-	@media #{$large-up} {
-	    @extend .table-cell;
-	    position: relative; /* needed for shadow */
-	    top: 0;
-	    overflow: hidden; /* no scrollbars */
+	p {
+		font-size: rem-calc(14);
 	}
 }
 
 //=========================================
-// State Change
+// Shadow Overlay (cosmetic)
 //=========================================
 
-.lv-sidebar.is-collapsed {
-	// position: fixed;
+.lv-sidebar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: $sidebar-box-shadow;
+    bottom: 0;
+    width: 10px;
+    z-index: 10;
+}
 
-	// top: $header-height + $primary-nav-height;
+// If explicitly opened by user - add side border on medium (instead of all shadow)
+// Better convey the overlay
+.lv-sidebar.is-uncollapsed:after {
+	@media #{$medium-up} {
+	    background: #DBDFDF;
+	    width: 2px;
+	}
+	@media #{$large-up} {
+	    background: none;
+	    width: 10px;
+	}
+}
+
+// No shadow. Border fallback.
+.lt-ie9 .lv-sidebar {
+    border-left: 1px solid #CACDCD;
+}
+
+//=========================================
+// Quicklinks
+//=========================================
+
+.lv-quicklinks {
+    background: white;
+    list-style: none;
+    margin: 0;
+    padding: rem-calc(15);
+    font-size: rem-calc(13);
+
+    li {
+        margin-bottom: rem-calc(10);
+    }
+}
+
+//-----------------------------------------------------------------
+// STATE MIXINS
+// Remember 'collapsed' comes FIRST (being mobile first), set by the media query.
+// The explicit state classes will override any of the media queries.
+//-----------------------------------------------------------------
+
+@mixin collapsed() {
 	width: $sidebar-width-collapsed;
-	// right: 0;
-	overflow: hidden;
+	overflow: hidden; // problematic? Override Y scroll?
 
-	.tabs li {
-		float: none;
-		width: 100%;
+	// Tabs stick to top on collapsed
+	.tabs {
+		position: fixed;
+		top: $header-height;
+		width: $sidebar-width-collapsed;
+		background: $sidebar-background-color; // need?
+
+		i {
+			font-size: rem-calc(21);
+			line-height: 1;
+			display: block;
+		}
+
+		.text {
+			font-size: 11px;
+		}
+
+		li {
+			float: none;
+			width: 100%;
+
+			a {
+				outline: none;
+				padding: rem-calc(15 0);
+				border-bottom: 1px solid #CACDCD;
+				border-right: 0;
+			}
+		}
+
+		@media #{$large-up} {
+		    top: $header-height + $primary-nav-height;
+		}
 	}
 
-	.tabs li a {
-		padding: rem-calc(15 0);
-		border-right: 0;
-	}
-
+	// Hide all of this - easiest.
 	.tabs .text,
 	.tabs .collapse-btn,
 	.tabs-content {
@@ -75,108 +134,117 @@ $sidebar-width-collapsed: rem-calc(50) !default;
 }
 
 //=========================================
-// Shadow Piece Overlay
+// Overrides media queries and reverses
+// 'collapsed' behavior - but still inherits
+// SOME of the previous collapsed classes.
 //=========================================
 
-.lv-sidebar:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-shadow: inset 2px 0px 5px rgba(#DFE1E1, 0.4);
-	bottom: 0;
-	width: 10px;
-	z-index: 10;
-}
+@mixin uncollapsed() {
+	width: $sidebar-width;
 
-.lt-ie9 .lv-sidebar {
-	border-left: 1px solid #CACDCD;
-}
+	.tabs {
+		position: relative;
+		top: 0;
+		width: 100%;
+		padding-bottom: rem-calc(10);
+		// z-index: 1; // need this?
 
-//=========================================
-// lv-Sidebar Content
-//=========================================
+		li {
+			float: left;
+			// width: 33.3333333%;
+			width: 25%;
 
-.lv-sidebar p {
-    font-size: 14px;
-}
+			a {
+				padding: rem-calc(10 0);
+				border-right: 1px solid #CACDCD;
+			}
+		}
 
-//=========================================
-// Sidebar Tabs
-//=========================================
+		li:last-child a {
+			border-right: 0;
+		}
 
-.lv-sidebar .tabs {
-	position: relative;
-	width: 100%;
-	background: #EDEFEF;
-	padding-bottom: rem-calc(10);
-	z-index: 1;
+		.active a {
+			border-bottom: 0;
+		}
+	}
 
-	i {
+	.tabs-content {
+		padding: rem-calc(15 30 30 30);
+	}
+
+	.tabs .text,
+	.tabs .collapse-btn,
+	.tabs-content {
 		display: block;
-		font-size: rem-calc(21);
-		line-height: 1;
 	}
 
-	li {
-		width: 33.3333333%;
-	}
-
-	li:last-child a {
-		border-right: 0;
-	}
-
-	a {
-		outline: none;
-		padding: rem-calc(10 0);
-		border-bottom: 1px solid #CACDCD;
-		border-right: 1px solid #CACDCD;
-	}
-
-	.active a {
-		border-bottom: 0;
+	// Allow the 'fixed' inner snap back to normal. In flow now.
+	.lv-sidebar-inner {
+		width: auto;
 	}
 }
 
-.lv-sidebar .tabs-content {
-	padding: rem-calc(15 30 30 30);
-}
+//-----------------------------------------------------------------
+// Media Queries - Placement and display. Organic styles.
+//-----------------------------------------------------------------
 
-// State change - tabs stick to top on collapsed
+.lv-sidebar {
 
-.lv-sidebar.is-collapsed .tabs {
-	position: fixed;
-	top: $header-height;
-	width: $sidebar-width-collapsed;
+	// Hide on mobile (below portrait)
+	@media (max-width: 767px) {
+	    display: none;
+	}
 
+	// Becomes Overlay - portrait (768)
+	@media #{$medium-up} {
+		@include collapsed();
+
+		// ADDED: moved fixed positioning into child of sidebar (absolute). It was previously
+		// moving passed the footer. This new design hugs the top and bottom.
+	    .lv-sidebar-inner {
+			position: fixed;
+			top: $header-height;
+			bottom: $footer-height;
+			width: $sidebar-width-collapsed;
+		    overflow-y: auto; /* for desktop scroll bars logic */
+		    -webkit-overflow-scrolling: touch;
+	    }
+	}
+
+	// Enters into the page FLOW - landscape (1024)
 	@media #{$large-up} {
-	    top: $header-height + $primary-nav-height;
+	    @extend .table-cell;
+	    position: relative; /* needed for shadow */
+	    top: 0;
+	    overflow: hidden; /* is scrolled with rest of page */
+
+		// Allow the 'fixed' inner snap back to normal. In flow now.
+        .lv-sidebar-inner {
+    		position: static;
+    		overflow: visible; // ipads need this - who knows
+        }
+	}
+
+	// Opens sidebar on luxurious screens (1440)
+	@media #{$xxlarge-up} {
+		@include uncollapsed();
 	}
 }
 
-//=========================================
-// Quicklinks
-//=========================================
+//-----------------------------------------------------------------
+// State Classes (Overrides media queries)
+//-----------------------------------------------------------------
 
-.lv-quicklinks {
-	background: white;
-	list-style: none;
-	margin: 0;
-	padding: rem-calc(15);
-	font-size: 14px;
-
-	li {
-		margin-bottom: rem-calc(10);
-	}
+.lv-super .lv-sidebar.is-collapsed {
+	@include collapsed();
 }
 
+.lv-super .lv-sidebar.is-uncollapsed {
+	@include uncollapsed();
+}
 
-
-
-
-
-
-
-
-
+//=========================================
+//
+//=========================================
 
