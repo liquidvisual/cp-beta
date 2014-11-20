@@ -1,121 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/research/cases/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <loc>/research/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/research/document/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <loc>/research/cases/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/research/document/2/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/history/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>/research/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>/preferences/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/research/search-results-clean/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <loc>/research/tax-exempt-body/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/research/search-results/</loc>
-    <lastmod>2014-11-12T14:46:46+11:00</lastmod>
+    <loc>/research/tax-exempt-10-deduct/corporate/commentary/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>/hints/add-to-my-quicklinks.html</loc>
-    <lastmod>2014-11-06T17:30:21+11:00</lastmod>
+    <loc>/research/tax-exempt-10-deduct/corporate/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/research/tax-exempt-10-deduct/</loc>
+    <lastmod>2014-11-20T22:07:57+11:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/modal_output/add-to-my-quicklinks.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/change-client-id.html</loc>
-    <lastmod>2014-11-11T13:05:26+11:00</lastmod>
+    <loc>/modal_output/change-client-id.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/coming-soon.html</loc>
-    <lastmod>2014-11-06T17:18:54+11:00</lastmod>
+    <loc>/modal_output/coming-soon.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/create-email-alert.html</loc>
-    <lastmod>2014-11-06T17:16:11+11:00</lastmod>
+    <loc>/modal_output/create-email-alert.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/download-search.html</loc>
-    <lastmod>2014-11-06T17:43:53+11:00</lastmod>
+    <loc>/modal_output/datepicker-example.html</loc>
+    <lastmod>2014-11-20T15:21:52+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/email-document.html</loc>
-    <lastmod>2014-11-11T19:41:23+11:00</lastmod>
+    <loc>/modal_output/download-search.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/email-results.html</loc>
-    <lastmod>2014-11-06T17:13:58+11:00</lastmod>
+    <loc>/modal_output/email-document.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/email-search.html</loc>
-    <lastmod>2014-11-11T19:38:04+11:00</lastmod>
+    <loc>/modal_output/email-results.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/export-document.html</loc>
-    <lastmod>2014-11-11T19:26:34+11:00</lastmod>
+    <loc>/modal_output/email-search.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/export-results.html</loc>
-    <lastmod>2014-11-11T19:46:51+11:00</lastmod>
+    <loc>/modal_output/export-document.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/print-document.html</loc>
-    <lastmod>2014-11-11T19:34:03+11:00</lastmod>
+    <loc>/modal_output/export-results.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/print-results.html</loc>
-    <lastmod>2014-11-06T17:00:01+11:00</lastmod>
+    <loc>/modal_output/print-document.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/print-search.html</loc>
-    <lastmod>2014-11-11T19:56:14+11:00</lastmod>
+    <loc>/modal_output/print-results.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>/hints/terms-and-connectors.html</loc>
-    <lastmod>2014-11-05T10:37:29+11:00</lastmod>
+    <loc>/modal_output/print-search.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>/modal_output/terms-and-connectors.html</loc>
+    <lastmod>2014-11-19T12:39:27+11:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
