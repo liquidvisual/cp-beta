@@ -22,11 +22,11 @@
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"> -->
 
-    <link rel="stylesheet" href="/assets/css/optimized.bd1f.css">
+    <link rel="stylesheet" href="/assets/css/optimized.29d2.css">
 
-    <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
+    <!-- IE8 Override -->
+
 
     <script src="/assets/scripts/priority-optimized.c73e.js"></script>
 
@@ -179,7 +179,7 @@
         
             <!-- START CHECKPOINT OUTPUT -->
 
-<section id="sidebar" style="height: 273px;">
+<section id="sidebar">
     <h1>Search Templates</h1>
     <ul id="mysearch" class="toplevel">
         <li class="">
@@ -213,6 +213,9 @@
 <!-- END CHECKPOINT OUTPUT -->
         
 
+        <!-- Bottom space to offset footer -->
+        <div class="lv-spacer"></div>
+
     </section> <!-- .secondary-nav -->
 </div> <!-- .lv-inner -->
         </nav>
@@ -221,9 +224,7 @@
         <main class="lv-main">
             <div class="row">
                 <div class="columns">
-                    
-
-<div class="row">
+                    <div class="row">
     <div class="columns">
         <h3 class="left">Cases</h3>
         <!-- Optional hint on mobile -->
@@ -318,34 +319,20 @@
                 </div>
                 <div class="medium-9 columns">
                     <select name="Jurisdiction" id="jurisdiction">
-                        <option selected disabled>All Jurisdictions</option>
-                        
-                        <option value="Australian Capital Territory">Australian Capital Territory</option>
-                        
+                        <option value="All" selected>All Jurisdictions</option>
+                        <option value="Australian Captial Territory">Australian Captial Territory</option>
                         <option value="Christmas Island">Christmas Island</option>
-                        
                         <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
-                        
                         <option value="Commonwealth of Australia">Commonwealth of Australia</option>
-                        
                         <option value="New South Wales">New South Wales</option>
-                        
                         <option value="New Zealand">New Zealand</option>
-                        
                         <option value="Norfolk Island">Norfolk Island</option>
-                        
                         <option value="Northern Territory">Northern Territory</option>
-                        
                         <option value="Queensland">Queensland</option>
-                        
                         <option value="South Australia">South Australia</option>
-                        
                         <option value="Tasmania">Tasmania</option>
-                        
                         <option value="Victoria">Victoria</option>
-                        
                         <option value="Western Australia">Western Australia</option>
-                        
                     </select>
                 </div>
             </div>
@@ -771,18 +758,11 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <!-- CDN SCRIPTS -->
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="/assets/scripts/optimized.f96d.js"></script>
 
-    <script src="/assets/scripts/optimized.9f44.js"></script>
+    <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 
-    <!-- PLACE ALL OTHER SCRIPT REFS BELOW HERE -->
-
-    <script>
-        $(document).foundation();
-    </script>
-
-    <!-- Analytics Scripts Go Here -->
+    <!-- Analytics Scripts Go Below Here -->
 
     <!-- No Javascript Warning -->
     <noscript>
