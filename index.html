@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="/assets/css/foundation.c3a5.css">
 
-    <link rel="stylesheet" href="/assets/css/optimized.c7e0.css">
+    <link rel="stylesheet" href="/assets/css/optimized.2ea9.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
@@ -52,27 +52,34 @@
 	<!-- Mobile Hamburgers -->
 	<div class="left">
 		<a class="lv-hamburger left hide-for-large-up" href="#off-canvas-menu-left"><i class="fi-list"></i></a>
-		<a id="context-menu-btn" class="lv-hamburger left  remove " href="#"><i class="fi-results"></i></a>
+		<a id="context-menu-btn" class="lv-hamburger left  removeX " href="#"><i class="fi-results"></i></a>
 	</div>
 
 	<!-- User Menu Hamburger -->
 	<a class="lv-hamburger right hide-for-large-up" href="#off-canvas-menu-right"><i class="fi-results-demographics"></i></a>
 
-	<div class="logo-switcher-wrapper">
+	<div class="lv-logo-wrapper">
 
 		<!-- Logo -->
-		<a title="Checkpoint®" class="logo show-for-medium-up" href="/">
-			<img width="152" src="/assets/img/content/logo.56cd.png" alt="Thomson Reuters Checkpoint">
+		<a title="Checkpoint®" class="lv-logo" href="/">
+			<img class="show-for-medium-up" width="152" src="/assets/img/template/logo.56cd.png" alt="Thomson Reuters Checkpoint">
+			<img class="hide-for-medium-up" width="40" src="/assets/img/template/logo-mobile-black@2x.2836.png" alt="Thomson Reuters Checkpoint">
 		</a>
 
 		<!-- Jurisdiction Select -->
-		<div class="jurisdiction-select">
+		<div class="lv-jurisdiction-select">
 			<i class="fa fa-caret-down"></i>
 			<ul>
-				<li class="first"><a href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a></li>
-				<li class="last"><a href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a></li>
+				<li class="first">
+					<a class="show-for-medium-up" href="#"><i class="flag-icon flag-icon-au"></i>&nbsp; Australia</a>
+					<a class="hide-for-medium-up" href="#">AU</a>
+				</li>
+				<li class="last">
+					<a class="show-for-medium-up" href="#"><i class="flag-icon flag-icon-nz"></i>&nbsp; New Zealand</a>
+					<a class="hide-for-medium-up" href="#">NZ</a>
+				</li>
 			</ul>
-		</div>
+		</div> <!-- .jurisdiction-select -->
 
 	</div> <!-- .logo-switcher-wrapper -->
 
@@ -104,31 +111,53 @@
     <nav class="lv-navigation show-for-large-up">
         <div class="lv-topbar">
             <ul>
-    <li class=" active "><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class=" active ">
+        <a href="/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
     <li class="
 
 
-"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
-    <!-- <li class="
-
-
-"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+">
+        <a href="/research/"><i class="fi-magnifying-glass"></i> Research</a>
+        <ul class="lv-topbar-dropdown">
+            <li><a href="/research/">Basic</a></li>
+            <li><a href="/research/cases/">Cases</a></li>
+            <li><a href="/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/research/cases/">Journals</a></li>
+            <li><a href="/research/cases/">News</a></li>
+            <li><a href="/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </li>
     <li class="
 
 
-"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+">
+        <a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
     <li class="
 
 
-"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+">
+        <a href="#"><i class="fi-wrench"></i> Tools</a>
+    </li>
     <li class="
 
 
-"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+">
+        <a href="/learning/"><i class="fi-info"></i> Learning</a>
+    </li>
     <li class="
 
 
-"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+">
+        <a href="/alerts/"><i class="fi-alert"></i> Alerts</a>
+    </li>
+    <li class="
+
+
+">
+        <a href="#"><i class="fi-folder"></i> Folders</a>
+    </li>
 </ul>
         </div>
     </nav>
@@ -231,8 +260,8 @@
     <div class="lv-content-block-inner">
         
                     <ul>
-                        <li><a href="#">abc</a></li>
-                        <li><a href="#">Some other stuff</a></li>
+                        <li><a href="#">News Services - WTB</a></li>
+                        <li><a href="http://www.checkpointau.com.au/maf/app/fulldocument?endChunk=1&parentguid=AUNZ_CURRAWARE_TOC%7C%7CIca0737b0713a11e49e2888ff8c71c53d&startChunk=1&bcguid=AUNZ_TOC%7C%7CI8f455ebc4c7331ffa567550e53ec5247&docguid=Icbcc6790713a11e49e2888ff8c71c53d">WTB - Issue 49 Table of Contents</a></li>
                     </ul>
                 
     </div>
@@ -386,7 +415,7 @@
     <div class="medium-6 medium-push-6 columns">
         <ul class="lv-footer-links lv-inline-list text-center medium-text-right">
             <li><a href="http://training.thomsonreuters.com.au/products/checkpoint/" target="_blank">Help</a></li>
-            <li class="has-dropdown"><a href="#">Sites</a>
+            <li class="has-dropdown"><span class="anchor">Sites</span></a>
                 <ul class="lv-dropdown">
                     <li><a href="https://www.checkpointworld.com" target="_blank"><i class="fi-web"></i> Checkpoint World</a></li>
                     <li><a href="http://thomsonreuters.com/site/proview/" target="_blank"><i class="fi-web"></i> Proview</a></li>
@@ -417,31 +446,53 @@
     <!-- OFF-CANVAS MENU (LEFT) -->
     <nav id="off-canvas-menu-left" class="hide" aria-hidden="true">
         <ul>
-    <li class=" active "><a href="/"> <i class="fi-home"></i> <span class="home-text">Home</span></a></li>
+    <li class=" active ">
+        <a href="/"><i class="fi-home"></i> <span class="home-text">Home</span></a>
+    </li>
     <li class="
 
 
-"><a href="/research/"><i class="fi-magnifying-glass"></i> Research</a></li>
-    <!-- <li class="
-
-
-"><a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a></li>
+">
+        <a href="/research/"><i class="fi-magnifying-glass"></i> Research</a>
+        <ul class="lv-topbar-dropdown">
+            <li><a href="/research/">Basic</a></li>
+            <li><a href="/research/cases/">Cases</a></li>
+            <li><a href="/research/cases/">Legislation / Commentary</a></li>
+            <li><a href="/research/cases/">Journals</a></li>
+            <li><a href="/research/cases/">News</a></li>
+            <li><a href="/research/cases/">Government and Regulatory</a></li>
+        </ul>
+    </li>
     <li class="
 
 
-"><a href="/tools/"><i class="fi-wrench"></i> Tools</a></li>
+">
+        <a href="/workflow/"><i class="fi-graph-bar"></i> Workflow</a>
+    </li>
     <li class="
 
 
-"><a href="/learning/"><i class="fi-info"></i> Learning</a></li>
+">
+        <a href="#"><i class="fi-wrench"></i> Tools</a>
+    </li>
     <li class="
 
 
-"><a href="/alerts/"><i class="fi-alert"></i> Alerts</a></li>
+">
+        <a href="/learning/"><i class="fi-info"></i> Learning</a>
+    </li>
     <li class="
 
 
-"><a href="/folders/"><i class="fi-folder"></i> Folders</a></li> -->
+">
+        <a href="/alerts/"><i class="fi-alert"></i> Alerts</a>
+    </li>
+    <li class="
+
+
+">
+        <a href="#"><i class="fi-folder"></i> Folders</a>
+    </li>
 </ul>
     </nav>
 
@@ -458,7 +509,7 @@
 
     <!-- ***** JAVASCRIPT ***** -->
 
-    <script src="/assets/scripts/optimized.d65d.js"></script>
+    <script src="/assets/scripts/optimized.d241.js"></script>
 
     <!-- PLACE ALL OTHER SCRIPTS BELOW HERE -->
 
