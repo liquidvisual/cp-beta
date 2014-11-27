@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Checkpoint">
     <title>
         
         
@@ -19,13 +21,14 @@
     </title>
 
     <link rel="canonical" href="/history/">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
 
     <!-- CDN -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
 
     <link rel="stylesheet" href="/assets/css/foundation.c3a5.css">
 
-    <link rel="stylesheet" href="/assets/css/optimized.2ea9.css">
+    <link rel="stylesheet" href="/assets/css/optimized.934d.css">
 
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="/assets/css/optimized-ie8.css">
@@ -90,23 +93,16 @@
 <!-- User Profile -->
 <section class="lv-user-profile text-right show-for-large-up">
 	<div class="left">
-		<strong class="lv-user-profile-title">John Smith</strong>
-		<a class="logout-btn" href="#">LOGOUT</a>
+		<ul class="lv-user-profile-icons lv-inline-list close-gaps">
+		    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
+		    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
+		    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
+		</ul>
 	</div>
-	<div class="right lv-user-profile-pic" href="#">
-		<img src="/assets/img/ui/no-face.d770.png" alt="Profile Pic">
-		<i class="fa fa-caret-down"></i>
-		<div class="lv-user-profile-dropdown">
-			<ul>
-    <li class="hide-for-large-up"><a href="#"><img width="30" src="/assets/img/ui/no-face.d770.png" alt="Profile Icon"> John Smith<br><small>john.smith@thomsonreuters.com</small></a></li>
-    <li><a href="/history/"><i class="fi-clock"></i>&nbsp; History</a></li>
-    <li><a href="/modal_output/change-client-id.html" class="ajax-modal"><i class="fi-torso"></i>&nbsp; Client ID</a></li>
-    <li><a href="/preferences/"><i class="fi-widget"></i>&nbsp; Preferences</a></li>
-    <li class="hide-for-large-up"><a href="#"><i class="fi-male"></i>&nbsp; Help</a></li>
-</ul>
-		</div>
-	</div>
+	<div class="lv-user-text"><i class="fi-torso"></i>&nbsp; <b>JOHN SMITH</b> - <a href="#">Logout</a></div>
 </section>
+
+
     </header>
 
     <!-- NAVIGATION -->
