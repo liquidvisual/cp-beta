@@ -3,4 +3,4 @@ checkpoint-prototype
 
 Client Website
 
-[http://checkpoint.uat.liquidvisual.net](Live Site Here)
+[http://cpbeta.uat.liquidvisual.net](Live Site Here)
